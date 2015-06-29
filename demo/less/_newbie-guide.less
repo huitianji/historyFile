@@ -1,0 +1,914 @@
+@import "_mixins.less";
+.newbie-ico-box{
+  background-image: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-ico-box.png");
+  background-repeat: no-repeat;
+}
+
+.newbie-banner{
+  width: 100%;
+  height: 310px;
+
+  background: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-banner.jpg") no-repeat center center;
+  background-color: #fff;
+  background-size: cover;
+}
+.newbie-title{
+  padding-top: 260px;
+  .clearfix();
+  position: relative;
+  a{
+    display: block;
+    text-align: center;
+    width:300px; height: 50px; line-height: 50px;
+    font-size: 20px;
+    float: left;
+    color:#fff;
+    position: relative;
+    z-index: 1;
+  }
+  .current{
+    background-color: #fff;
+    color:#333;
+  }
+  .newbie-opacity{
+    display: block;
+    position: absolute;
+    left: 0px; bottom:0px;
+    width: 600px; height: 50px;
+    background-color: #fff;
+    .opacity(0.4);
+  }
+}
+.newbie-talble{
+
+}
+.newbie-conditions{
+  width:100%; min-height: 423px;
+  background-color: #fff;
+}
+.newbie-conditions-tile{
+  display: block;
+  font-size: 28px;
+  padding-top: 63px;
+  .newbie-condit-oa{
+    color:#333;
+    padding-left: 20px;
+  }
+}
+.newbie-conditions-list{
+    margin-left: -52px;
+    .clearfix();
+    .newbile-conditions-item{
+      width:228px;
+      float: left;
+      padding-top: 26px;
+      margin-left: 67px;
+    }
+  .newbie-conditions-img{
+    display: block;
+    width:144px; height: 143px;
+    background-position: 0px 0px;
+    margin-left: 42px;
+    &.newbie-conditions-bg2{
+      background-position: -315px 0px;
+    }
+    &.newbie-conditions-bg3{
+      background-position: -630px 0px;
+    }
+    &.newbie-conditions-bg4{
+      background-position: -945px 0px;
+    }
+  }
+  .newbie-conditions-name{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 4px;
+  }
+  .newbie-conditions-infor{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color:#666;
+    line-height: 18px;
+  }
+}
+.newbie-gain{
+  width:100%;
+  min-height: 434px;
+  background-color: #F5F5F5;
+  .newbie-gain-infor{
+    background: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-img2.jpg") no-repeat 20px top;
+    min-height: 235px;
+    margin-top: 27px;
+    padding-left: 667px;
+    p{
+      font-size: 18px; line-height: 30px;
+      padding-bottom: 8px;
+    }
+  }
+}
+.newbie-process{
+  width: 100%;
+  min-height: 594px;
+  background-color: #fff;
+}
+.newbie-process-list{
+  padding-left: 20px;
+  padding-top: 27px;
+  .clearfix();
+  .newbie-process-item{
+    width:240px; height: 260px;
+    border: 1px solid #64b2e9;
+    float: left;
+    padding-left: 20px;
+    .border-radius(4px);
+  }
+  .newbie-process-arrow{
+    display: block;
+    float: left;
+    width:40px;
+    height: 260px;
+    em{
+      display: block;
+      width: 16px; height: 30px;
+      margin-left: 12px;
+      margin-top: 115px;
+      background-position: 0px -8px;
+    }
+  }
+  .newbie-process-strong{
+    display: block;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    color:#53a0e3;
+  }
+  .newbie-process-ul{
+    min-height: 102px;
+    li{
+      height: 30px; line-height: 30px;
+      font-size: 18px; color:#53a0e3;
+      em{
+        display: inline-block;
+        float: left;
+        width:13px; height: 8px;
+        background-position: 0px 0px;
+        margin-top: 11px;
+      }
+      span{
+        padding-left: 8px;
+        float: left;
+      }
+    }
+  }
+  .newbie-process-img{
+    display: block;
+    height: 75px;
+    text-align: right;
+    padding-right: 20px;
+    span{
+      display: inline-block;
+      width:111px;
+      text-align: left;
+    }
+  }
+
+}
+.newbie-process-reg{
+  padding-top: 70px;
+  text-align: center;
+  a{
+    display: inline-block;
+    width:380px; height: 66px; line-height: 66px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #ff6803;
+    color:#fff;
+    .border-radius(4px);
+  }
+}
+.newbie-project-infor{
+  background-color: #f5f5f5;
+  min-height: 677px;
+}
+.newbie-project-lsit{
+  padding-top: 30px;
+  margin-left: -29px;
+  *padding-bottom:30px;
+  .clearfix();
+  .newbie-project-list-item{
+    width:580px; min-height: 480px;
+    background-color: #fff;
+    margin-left: 33px;
+    float: left;
+    margin-bottom: 30px;
+    .border-radius(4px);
+  }
+  .newbie-project-stay-tuned{
+    width:580px; min-height: 480px;
+    background-color: #fff;
+    margin-left: 33px;
+    float: left;
+    margin-bottom: 30px;
+    .border-radius(4px);
+
+    img{
+      margin-top: 92px;
+    }
+    text-align: center;
+  }
+  .newbie-project-title{
+    height: 32px; line-height: 32px;
+    padding: 20px 0px 0px 0px;
+    position: relative;
+    &.newbie-project-basic-ding{
+      .newbie-project-log{
+        background-color: #ffb324;
+      }
+      .newbie-project-floating{
+        background-position: -57px -475px;
+      }
+    }
+  }
+  .newbie-project-log{
+    display: inline-block;
+    background-color: #53a0e3;
+    font-size: 18px;
+    color:#fff;
+    padding: 0px 9px 0px 5px;
+    float: left;
+    position:relative;
+    .border-radius-item(0px,4px,4px,0px);
+    em{
+      font-style: normal;
+      position: absolute;
+      left: auto;
+      top:-4px;
+    }
+    span{
+      padding-left: 10px;
+    }
+  }
+  .newbie-project-floating{
+    position: absolute;
+    left: -5px; top: 20px;
+    width:5px; height: 35px;
+    background-position: -53px -423px;
+  }
+
+
+  .newbie-project-view{
+    display: inline-block;
+    height: 12px;
+    color:#333;
+    padding-top:8px;
+    margin-left: 20px;
+  }
+  .newbie-project-rate{
+    height: 46px; overflow: hidden;
+    padding-left: 30px;
+    padding-top: 27px;
+    .clearfix();
+    span{
+      display: block;
+      float: left;
+      min-height: 50px;
+    }
+
+    .newbie-project-rate-left{
+      em{
+        display: block;
+        height: 12px;
+        color:#999999;
+        font-style: normal;
+      }
+      strong{
+        display: block;
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 36px;
+        color:#ff6803;
+      }
+      b{
+        font-weight: normal;
+        font-size: 24px;
+      }
+    }
+    .newbie-project-rate-w253{
+      width:253px;
+      border-right:1px solid #ececec;
+    }
+    .newbie-project-rate-w170{
+      width: 152px;
+      padding-left: 18px;
+      em{
+        padding-bottom: 5px;
+      }
+    }
+    .newbie-project-rate-w173{
+      width: 155px;
+      padding-left: 18px;
+      border-right:1px solid #ececec;
+      em{
+        padding-bottom: 5px;
+      }
+    }
+    .newbie-project-rate-w175{
+      width: 175px;
+      border-right:1px solid #ececec;
+    }
+    .newbie-project-rate-w250{
+      width:232px;
+      padding-left: 18px;
+      em{
+        padding-bottom: 5px;
+      }
+    }
+  }
+  .newbie-project-information{
+    height: 124px;
+    padding-left: 30px; padding-top: 20px;
+    margin-left: -2px;
+    .clearfix();
+  }
+  .newbie-project-information-item{
+      display: block;
+      width:162px; height: 124px;
+      padding-left: 10px;
+      background-color: #f5f5f5;
+      margin-left:2px;
+    float: left;
+      .border-radius(4px);
+    em{
+      display: block;
+      color:#999;
+      font-style: normal;
+      padding: 17px 0px 6px 0px;
+    }
+    strong{
+      display: block;
+      font-weight: normal;
+      font-size: 18px;
+    }
+    .newbie-project-v1-way{
+      display: block;
+      line-height: 16px;
+      padding-bottom: 3px;
+      span{
+        font-weight: bold;
+        position: relative;
+        i{
+          font-style: normal;
+          position: absolute;
+          left: auto;
+          top:-4px;
+        }
+      }
+      b{
+        font-weight: normal;
+        padding-left:10px;
+      }
+    }
+
+
+  }
+  .newbie-project-cooperation{
+    padding-left: 30px;
+  }
+  .newbie-project-coop-name{
+      display: block;
+      color:#999;
+      padding-top: 15px;
+      padding-bottom: 18px;
+
+  }
+  .newbie-project-coop-logo{
+    .clearfix();
+    margin-left: -20px;
+    span{
+      display: block;
+      width:140px; height: 40px;
+      float: left;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .newbie-project-safeguard{
+    padding-left: 30px;
+    padding-top: 21px;
+    span{
+      display: block;
+      color:#999999;
+      line-height: 23px;
+      em{
+        color:#ff6803;
+        font-style: normal;
+        font-size: 18px;
+        float: left;
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+    .newbie-project-safe-span{
+      font-size: 18px;
+      line-height: 24px;
+      color:#333;
+      padding-bottom: 2px;
+      em{
+        float: none;
+        margin-left: 3px;
+      }
+    }
+  }
+  .newbie-product-advantage{
+    display: block;
+    padding-left: 30px;
+    padding-top: 12px;
+  }
+}
+.newbie-sefity{
+  min-height: 755px;
+  background-color: #fff;
+}
+.newbie-sefity-infor{
+  background: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-img3.jpg") no-repeat 113px 0px;
+  min-height: 591px;
+  position: relative;
+  .newbie-sefity-col{
+    display: inline-block;
+    width:150px;
+    min-height: 100px;
+    position: absolute;
+    left: 141px;top:179px;
+    text-align: center;
+    &.position-a2{
+      left: 910px;
+      top:179px;
+    }
+    &.position-a3{
+      left: 234px;
+      top:393px;
+    }
+    &.position-a4{
+      left: 525px;
+      top:488px;
+    }
+    &.position-a5{
+      width:181px;
+      left: 796px;
+      top:390px;
+    }
+    strong{
+      font-size: 18px;
+    }
+    .newbie-sefity-span{
+      display: block;
+      font-size: 14px;
+      line-height: 22px;
+      color:#666666;
+      padding-top: 7px;
+      b{
+        font-size: 14px;
+      }
+
+    }
+  }
+}
+.newbie-question{
+  min-height: 944px;
+  background-color: #f5f5f5;
+}
+.newbie-question-infor{
+  padding-top: 27px;
+  .clearfix();
+  .newbie-question-left{
+    background: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-img4.jpg") no-repeat left top;
+    width:795px; height: 612px;
+    float: left;
+    padding-left: 64px;
+    p{
+      line-height: 28px;
+      font-size: 18px;
+      padding-right: 120px;
+      &.md-top110{
+        margin-top: 110px;
+      }
+      &.md-top151{
+        margin-top: 151px;
+      }
+      &.md-top15{
+        margin-top: 9px;
+      }
+    }
+
+  }
+  .newbie-question-answer{
+    width: 303px;
+    height: 600px;
+    float: left;
+    border-left: 1px solid #cdcdcd;
+    padding-left: 20px;
+    margin-top: 12px;
+    .newbie-ques-answer{
+      .clearfix();
+      padding-bottom: 4px;
+      span{
+        display: block;
+        float: left;
+        width:34px;
+        font-family: Arial;
+        color:#cdcdcd;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 3px;
+      }
+      strong{
+        display: block;
+        width:260px;
+        float: left;
+        font-size: 18px;
+        color:#666666;
+      }
+      em{
+        display: inline-block;width:260px;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color:#666666;
+        padding-top: 2px;
+      }
+    }
+  }
+  .newbie-span-h16{
+    display: block;
+    height: 16px;
+    overflow: hidden;
+  }
+
+}
+.newbie-phone{
+  min-height: 735px;
+  background-color: #fff;
+}
+.newbie-phone-left{
+  width:1029px;
+  min-height: 735px;
+  float: left;
+  background: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-img5.jpg") no-repeat 322px 70px;
+  ul
+  {
+    padding-top: 205px;
+    width:306px;
+    text-align: right;
+    li{
+      font-size: 24px;
+      padding-bottom: 70px;
+    }
+  }
+}
+.newbie-phone-right{
+  width:153px;
+  float: left;
+  padding-top: 240px;
+  a{
+    display: block;
+    margin-bottom: 7px;
+    &.md-top21{
+      margin-top: 21px;
+    }
+  }
+}
+.newbie-novice{
+  min-height: 411px;
+  background-color: #fff;
+}
+.newbie-novice-box{
+  padding-top: 23px;
+  .clearfix();
+  .newbie-novice-img{
+    display: block;
+    width:660px; min-height: 216px;
+    float: left;
+    background: url("https://static.souyidai.com/www/images/version/newbie-guide/newbie-img8.jpg") no-repeat 167px 0px;
+  }
+  .newbie-novice-list{
+    width:320px;
+    float: left;
+    ul{
+      li{
+        font-size: 18px;
+        height: 19px; line-height: 19px;
+        margin-bottom: 16px;
+        em{
+          display: block;
+          width:14px; height: 19px;
+          margin-right: 9px;
+          float: left;
+          background-position: 0px -38px;
+        }
+      }
+    }
+    .newbie-novice-cs{
+      display: block;
+      color:#999999;
+    }
+    .newbie-novice-btns{
+      display: block;
+      padding-top: 32px;
+      a{
+        display: block;
+        font-size: 24px;
+        color:#fff;
+        text-align: center;
+        width:260px; height: 60px;line-height: 60px;
+        background-color: #ff6803;
+        .border-radius(4px);
+      }
+    }
+
+  }
+}
+.newbie-invest{
+  min-height: 548px;
+  background-color: #f5f5f5;
+  padding-bottom: 30px;
+}
+.newbie-invest-infor{
+  .clearfix();
+  .newbie-invest-infor-left{
+    width:921px;
+    float: left;
+  }
+  .newbie-invest-infor-right{
+    width:259px;
+    float: right;
+  }
+  .newbie-invest-banner{
+    display: block;
+    height: 420px; overflow: hidden;
+    margin-top: 30px;
+  }
+  .newbie-invest-cos{
+    background-color: #fff;
+    min-height: 420px;
+    margin-top: 30px;
+  }
+  .newbie-invest-top{
+    .clearfix();
+    padding-left:20px ;
+  }
+  .newie-invest-imgs{
+    margin-top: 14px;
+    display: block;
+    width:276px;
+    float: left;
+  }
+  .newbie-invest-right{
+      width: 605px;
+    float: left;
+  }
+  .newbie-invest-name{
+    display: block;
+    font-size: 18px;
+    padding-top: 11px;
+  }
+  .newbie-invest-title{
+    margin-top: 11px;
+    height: 58px; line-height: 58px;
+    background-color: #f5f5f5;
+    .clearfix();
+    span{
+      float: left;
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 15px;
+      em{
+        display: inline-block;
+        width:15px; height: 15px;
+        float: left;
+        margin-right: 5px;
+        margin-top: 22px;
+      }
+      .newbie-arrow-a1{
+        background-position: 0px -58px;
+      }
+      .newbie-arrow-a2{
+        background-position: 0px -74px;
+      }
+      .newbie-arrow-a3{
+        background-position: 0px -90px;
+      }
+      .newbie-arrow-a4{
+        background-position: 0px -106px;
+      }
+    }
+  }
+
+}
+.newbie-list-box{
+  padding-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  .details-row{
+    border-right:0px solid #ececec;
+  }
+}
+/*start*/
+.details-row{
+  border: 1px solid #ececec;
+  border-top:2px solid #53a0e3;
+  .clearfix();
+  &.border-top-orange{
+    border-top:2px solid #ff6803;
+  }
+  &.border-top-green{
+    border-top:2px solid #77b716;
+  }
+}
+.details-cols{
+  float: left;
+  width:879px;
+  min-height: 264px;
+  border-right: 1px solid #ececec;
+  .details-th{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ebebeb;
+    padding-left: 19px;
+    .clearfix();
+    span{
+      font-weight: bold;
+      display: block;
+      float: left;
+      .text-left7{
+        padding-left: 7px;
+        font-style: normal;
+      }
+    }
+  }
+
+  .span-w73{
+    width:73px;
+  }
+  .span-w80{
+    width:80px;
+  }
+  .span-w91{
+    width:91px;
+  }
+  .span-w96{
+    width:96px;
+  }
+  .span-w110{
+    width:110px;
+  }
+  .span-w116{
+    width:116px;
+  }
+  .span-w137{
+    width:137px;
+  }
+  .span-w149{
+    width:149px;
+  }
+  .span-w167{
+    width:167px;
+  }
+  .span-w179{
+    width:179px;
+  }
+  .span-w193{
+    width:193px;
+  }
+  .details-item{
+
+  }
+  .item-list{
+    height: 60px; line-height: 60px; overflow: hidden;
+    border-bottom: 1px solid #ebebeb;
+    padding-left: 19px;
+    &.item-list-hover-bg{
+      background-color: #fafafa;
+      cursor: pointer;
+      .span-w193{
+        color: #53a0e3;
+      }
+    }
+    span{
+      display: block;
+      float: left;
+      font-size: 14px;
+      color:#666666;
+      strong{
+        font-weight: normal;
+        font-size: 24px;
+        font-family: Arial;
+        color:#ff6803;
+      }
+      em{
+        font-style: normal;
+        font-size: 14px;
+        font-family: Arial;
+        color:#ff6803;
+      }
+      .num-money{
+        font-weight: normal;
+        color:#666666;
+        font-size: 18px;
+      }
+      i{
+        width:14px; height: 14px;
+        display: block;float: left;
+        margin-top: 23px;margin-right: 5px;
+      }
+    }
+    .item-talbe-index{
+      line-height: normal;
+      td{
+        height: 60px;
+        font-size: 14px;
+        color:#666666;
+        i{
+          width:14px; height: 14px;
+          display: block;float: left;
+          margin-top: 3px;margin-right: 5px;
+        }
+      }
+    }
+  }
+//  .item-loading{
+//    background-image: url("https://static.souyidai.com/www/images/version-home/loading.gif");
+//    background-repeat: no-repeat;
+//    background-position: center center;
+//    background-size: 25px;
+//    height: 183px;
+//    width: 879px;
+//  }
+  .more-projects{
+    height: 40px; line-height: 40px;
+    a{
+      display: block;
+      width:100%;
+      text-align: center;
+      font-size: 18px; color:#666;
+      &:hover{
+        background-color: #fafafa;
+        color: #53a0e3;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

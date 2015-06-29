@@ -1,0 +1,363 @@
+/*头部*/
+@import "_mixins.less";
+body{
+  background: url("https://static.souyidai.com/www/images/new-main-top-bg.png") repeat-x left 0px;
+  background-color: #f5f5f5;
+}
+.borrow-page-top{
+  height: 38px; line-height: 38px;
+  &.page-top33{
+    height: 33px; line-height: 33px;
+  }
+  color:#cecece;
+  a{
+    color:#cecece;
+    &:hover{
+      color:#cecece;
+    }
+  }
+  .borrow-top-right{
+    float: right;
+    a{
+      display: inline-block;
+      float: left;
+      margin-left: 12px;
+      &.ico-weixin{
+        margin-top: 11px;
+        width:22px;
+        height: 16px;
+        background-position: 0px 0px;
+      }
+      &.ico-sina{
+        margin-top: 11px;
+        width:22px;
+        height: 16px;
+        background-position: -30px 0px;
+      }
+      &.ico-phone{
+        margin-top: 9px;
+        width:22px;
+        height: 16px;
+        background-position: -55px 0px;
+      }
+    }
+    span{
+      display: inline-block;
+      float: left;
+      margin-left: 12px;
+
+    }
+  }
+  /*转盘(投资抽iPhone6)*/
+  a.rotary-table{
+    color:#ffea00;
+    font-size: 14px;
+    margin-left: 5px;
+    img{
+      margin-right: 6px;
+    }
+    &:hover{
+      color:#ffea00;
+    }
+    strong{
+      display: inline-block;
+      font-size: 14px;
+      padding: 0px 4px 1px 4px;
+      line-height: 15px; text-align: center;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius:10px;
+      -webkit-border-radius: 10px;
+      background-color: #b11010;
+      color:#ffea00;
+      margin-left: 2px;
+    }
+  }
+  /*转盘(投资抽iPhone6)end*/
+}
+.login-after{
+  a{
+//    margin-right: 30px;
+  }
+}
+.navigation{
+  //  height: 85px;
+  height: 80px;
+  padding-right: 17px;overflow:hidden;
+  .borrow-logo{
+    display: block;
+    float: left;
+    margin-top: 15px;
+  }
+  .nav-list{
+    float: right; margin-top: 21px;
+    position: relative;
+    li{
+      float: left;
+      margin-left: 60px;
+      //      line-height: 82px;
+      line-height: 36px;
+      a{
+        display: block;
+        color:#666;
+        font-size: 14px;
+        padding: 0px 5px;
+      }
+      &.nav-li-active{
+        border-bottom: 3px solid #ff6600;
+        a{
+          //          color:#6cb130;
+          color:#ff6600;
+          font-weight: bold;
+        }
+      }
+      &.nav-li-hover{
+        a{
+          color:#ff6600;
+        }
+
+      }
+      &.nav-hover{
+        position: absolute;
+        border-bottom:3px solid #ff6600;
+        color:#ff6600;
+        //        height: 82px;
+        height: 36px;
+        left: 0px;
+        top:0px;
+        z-index: -1;
+      }
+    }
+
+  }
+}
+.sign-or-reg{
+  width:180px;
+  float: right; margin-top: 23px;
+  a{
+    float:right; border: 1px solid #FF6501; margin-left: 8px; color:#ff6600;
+    font-weight: bold;
+    display: block; width:60px; height: 31px; line-height: 31px; text-align: center;
+    border-radius: 3px; -moz-border-radius: 3px;
+    &.reg-a{
+      background-color: #65b823;
+      color:#fff;
+      border:1px solid #4cab00; width:82px;
+    }
+  }
+}
+/*添加头部手机二维码*/
+a.borrow-mobile{
+//  color:#fff800;
+  position: relative;
+  z-index: 2;
+  &:hover{
+//    color:#fff800;
+    .borrow-mobile-layer{
+      display: block;
+    }
+  }
+  em{
+    display: block;
+    width:12px; height: 17px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 8px;
+    img{
+      vertical-align: top;
+    }
+  }
+  .borrow-mobile-layer{
+        display: none;
+    position: absolute;
+    left: -47px; top: 33px;
+    width:203px; height: 244px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    z-index: 2;
+    cursor: default;
+    .bor-mobile-qr-codes{
+      padding-top: 20px;
+    }
+    .bor-mobile-support-version{
+      font-family: "宋体";
+      color:#888888;
+      text-align: center;
+      font-size: 12px;
+
+      width:142px; height: 16px; line-height: 16px;
+      .border-radius(5px);
+      background-color: #f1f1f1;
+      margin-top: 6px;
+      margin-left: 30px; *margin-left: 0px;
+    }
+    .bor-mobile-qr-text{
+      text-align: center;
+      font-size: 14px;
+      font-family: "\5FAE\8F6F\96C5\9ED1";
+      color:#333;
+    }
+    .ar_up{
+      position: absolute;
+      left: 50%;
+      top: -16px;
+      overflow: hidden;
+      margin-left: -8px;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      border-width: 8px;
+      border-style: dashed dashed solid dashed;
+      border-color: transparent transparent #adadad transparent;
+    }
+    .ar_up_in{
+      position: absolute;
+      left: 50%;
+      top: -15px;
+      overflow: hidden;
+      margin-left: -8px;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      border-width: 8px;
+      border-style: dashed dashed solid dashed;
+      border-color: transparent transparent #fff transparent;
+    }
+  }
+}
+/*添加头部手机二维码end*/
+/*尾部*/
+.footer{
+  margin-top: 30px;
+  &.fixedToBottom{
+    width: 100%;
+    position: absolute; bottom:0px;
+  }
+}
+.new-footer{
+  height: 240px;
+  background-color: #f5f5f5;
+  border-top:none;
+  .about-us-link{
+    height: 30px; line-height: 30px; background-color: #202930; color:#424D53;
+    text-align: center;
+    a{
+      color:#fff; font-family: "宋体";
+      padding: 0px 14px;
+    }
+  }
+  .website{
+    width:730px; margin: 0px auto 0px auto;
+
+  }
+  .webshow-row{
+    padding: 20px 0px 17px 0px;
+    border-bottom:1px solid #DBDBDB;
+  }
+  .web-service{
+    width:314px;
+    border-right:1px solid #DBDBDB;
+    .service-row{
+      color:#787878;
+      span{
+        display: block; float: left;
+        width:15px; height: 15px; margin-top: 1px; margin-right: 5px;
+      }
+    }
+    .tel-row{
+      color: #787878;
+      margin-top: 9px;
+      span{
+        display: block; float: left;
+        width:196px; height: 24px; line-height: 24px; overflow: hidden;
+        font-size: 30px; font-family: Arial;
+      }
+      a{
+        display: block;
+        width:43px; float: left;
+        em{
+          display: block; float: left;
+          width:23px; height: 23px; margin: 0px 10px 0px 10px;
+        }
+      }
+      .bd-right-color{
+        border-right:1px solid #DBDBDB;
+      }
+    }
+  }
+  .web-experian{
+    width:398px;
+    a{
+      margin-left: 34px;
+      display: block; padding-left: 160px; color:#a7a7a7;
+      background: url("https://static.souyidai.com/www/images/experian-footer.png") no-repeat;
+      &:hover{
+        color:#787878;
+        background: url("https://static.souyidai.com/www/images/experian-footer-hover.png") no-repeat;
+      }
+    }
+  }
+  .blogroll{
+    color:#888; padding-left: 40px; padding-top: 15px;
+    a{
+      color:#888; margin-right: 13px;
+      &:hover{
+        color:#ff6600;
+      }
+    }
+  }
+  .picture-link{
+    padding: 11px 0px;
+    height: 40px;
+    text-align: center;
+    a{
+      display:inline-block; margin-right: 17px;
+    }
+    .a1{
+      width:76px; height: 33px;
+      background-position: 0px 3px;
+      &:hover{
+        background-position: -81px 3px;
+      }
+    }
+    .a2{
+      width:64px; height: 35px;
+      background-position: 0px -32px;
+      &:hover{
+        background-position: -72px -32px;
+      }
+    }
+    .a3{
+      width:74px; height: 32px;
+      background-position: 0px -72px;
+      &:hover{
+        background-position: -79px -72px;
+      }
+    }
+    .a4{
+      width:41px; height: 36px;
+      background-position: -5px -109px;
+      &:hover{
+        background-position: -56px -109px;
+      }
+    }
+    .a5{
+      width:35px; height: 36px;
+      background-position: -102px -109px;
+      &:hover{
+        background-position: -142px -109px;
+      }
+    }
+    .a6{
+      width:29px; height: 36px;
+      background-position: -0px -150px;
+      &:hover{
+        background-position: -34px -150px;
+      }
+    }
+  }
+  .new-copyright{
+    text-align: center; color:#888;
+  }
+}

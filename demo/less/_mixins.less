@@ -1,0 +1,79 @@
+/*解决谷歌字体小于12px,opera本来就是10px的字体了,所以阻止缩放*/
+.shrink(){-webkit-transform:scale(0.8);-o-transform:scale(1); display:inline-block}
+//简单的去掉IE10文本框后面的XX的方法
+input::-ms-clear{display:none;}
+//字体：
+//微软雅黑
+@yahei: "\5FAE\8F6F\96C5\9ED1";
+//宋体
+@SimSun:"\5B8B\4F53";
+//
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+  zoom:1;
+}
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+  border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+  border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+  border-top-left-radius: @radius;
+}
+.border-radius(@radius){
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -ms-border-radius: @radius;
+}
+.border-radius-item(@radius1,@radius2,@radius3,@radius4){
+  border-radius: @radius1 @radius2 @radius3 @radius4;
+  -moz-border-radius: @radius1 @radius2 @radius3 @radius4;
+  -webkit-border-radius: @radius1 @radius2 @radius3 @radius4;
+  -ms-border-radius: @radius1 @radius2 @radius3 @radius4;
+}
+//.boxShadow(@x:0,@y:0,@blur:1px,@color:#000){
+//  -moz-box-shadow: @arguments;
+//  -webkit-box-shadow: @arguments;
+//  box-shadow: @arguments;
+//}
+.box-shadow(@style, @c) when (iscolor(@c)) {// .box-shadow(inset 0px 0px 3px,#e5e5e5);
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {//box-shadow(0 0 5px, 30%) =>box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+//css3淡入transition
+.transition(){ //Internet Explorer 9 以及更早版本的浏览器不支持 transition 属性。
+  transition: all 0.15s  ease-in-out;
+  -webkit-transition: all 0.15s  ease-in-out;
+  -moz-transition: all 0.15s  ease-in-out;
+  -o-transition :all 0.15s  ease-in-out;
+}

@@ -1,0 +1,953 @@
+@import "_mixins.less";
+
+.question-aside{
+  width:770px;
+  &.column-width960{
+    width: 960px;
+    .question-title a{
+      width: 319px;
+      &.a-w256{
+        width: 318px;
+      }
+    }
+  }
+}
+.question-menu-list{
+  width:220px;
+  &.margin-top10{
+    margin-top: 10px;
+  }
+  &.column-width230{
+    width: 230px;
+  }
+}
+.answer-seach{
+  height: 147px;
+  border: 1px solid #DFDFDF;
+  .answer-seach-white-border{
+    padding-left: 39px;
+    border: 1px solid #fff;
+    height: 145px;
+    background-image: linear-gradient(to bottom,#fff,#f5f5f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff, endColorstr=#f5f5f5);
+  }
+  .answer-seach-title{
+    display: block;
+    padding-top: 15px;
+    height: 50px; line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px #d6d6d6;
+  }
+  .answer-seach-img{
+    background-position: 0px 0px;
+    width:60px; height: 50px;
+    display: inline-block;
+  }
+}
+.answer-seach-input{//width:628px;
+  width:600px;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 18px;
+  padding-right: 10px;
+  border: 1px solid #ccc;
+  .border-radius-item(3px,0px,0px,3px);
+  font-size: 18px;
+  //  color:#666;
+  color:#ccc;
+  outline: none;
+  box-shadow: inset 0px 0px 1px #ccc,inset 0 1px 6px #f0f0f0,inset 0px 2px 8px #E3E3E3;
+  &.answer-seach-input-focus{
+    border:1px solid #7bb5e7;
+    cursor:text;
+    box-shadow:inset 0px 0px 1px #ccc,inset 0 1px 6px #f0f0f0,inset 0px 2px 8px #E3E3E3,0px 0px 6px #7bb5e7;
+  }
+}
+/*chrome和safari hank*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .answer-seach-input{
+    line-height:normal;
+  }
+}
+.question-title{
+  .clearfix();
+  background-color: #fff;
+  border-right:1px solid #dfdfdf;
+  a{
+    display: inline-block;
+    float: left;
+    width:255px; text-align: center;
+    height: 50px; line-height: 50px;
+    font-size: 16px;
+    color:#666;
+    border: 1px solid #dfdfdf;
+    border-right:0px solid #dfdfdf;
+    &.a-w256{
+      width:256px;
+    }
+    &.question-visitor{
+      height: 49px; line-height: 49px;
+      border-top:2px solid #ff6803;
+      border-bottom:1px solid #fff;
+      font-weight: bold;
+    }
+  }
+  &.question-tab-list{
+    a{
+      cursor: default;
+//      background-color: #fafafa;
+    }
+    .question-tab-a-bg{
+      background-color: #fafafa;
+    }
+    .question-tab-a-left-border{
+      border-left:0px solid red;
+      width:257px;
+    }
+  }
+}
+.question-box{
+  background-color: #fff;
+  border:1px solid #dfdfdf;
+  border-top:0px solid #dfdfdf;
+  min-height: 100px;
+  padding: 0px 30px;
+}
+.question-all{
+//  background-color: #fff;
+//  border:1px solid #dfdfdf;
+//  border-top:0px solid #dfdfdf;
+//  min-height: 100px;
+//  padding: 0px 40px;
+}
+.question-item{
+  .clearfix();
+  padding-bottom: 20px;
+  &.pd-top19{
+    padding-top: 19px;
+  }
+  &.pd-lrt40{
+    padding-top: 19px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  border-bottom: 1px dotted #e2e2e2;
+  .question-item-title{
+    font-size: 18px;
+    color:#ff6803;
+    font-weight: bold;
+    height: 40px; line-height: 40px;
+    span{
+      display: block;
+      height: 40px; overflow: hidden;
+      float: right;
+      color:#ccc;
+      font-size: 12px;
+      font-weight: normal;
+      i{
+       font-style: normal;
+        font-weight: bold;
+        padding: 0px 5px;
+      }
+      em{
+        font-style: normal;
+        color:#ff6803;
+      }
+    }
+    a{
+      font-size: 18px;
+      color:#ff6803;
+      &:hover{
+        color:#ff7d04;
+      }
+    }
+  }
+  .question-item-op{
+    line-height: 25px;
+    font-size: 14px;
+  }
+  .question-bottoms{
+    .clearfix();
+    padding-top: 14px;
+  }
+  .question-praise{
+    float: right;
+    padding-top: 2px;
+    a{
+      color:#666;
+      display: inline-block;
+      margin-left: 27px;
+      height: 15px; line-height: 15px;
+      i{
+        display: inline-block;
+        float: left; margin-right: 5px;
+      }
+    }
+    .question-praise-ico{
+      i{
+        width:12px; height: 15px;
+        background-position: 0px -55px;
+      }
+      &:hover i{
+        background-position: -32px -55px;
+      }
+    }
+    .question-answer-number-ico{
+      i{
+        width:14px; height: 15px;
+        background-position: -15px -55px;
+      }
+      &:hover i{
+        background-position: -46px -55px;
+      }
+    }
+  }
+  .question-record{
+    a{
+      display: inline-block;
+      padding: 0px 10px;
+      height: 21px; line-height: 21px;
+      color:#fff;
+      margin-right: 5px;
+      background-color:#b7d7f3;
+      &:hover{
+        background-color: #53a0e3;
+      }
+    }
+  }
+  .question-answer-row{
+    display: block;
+    height: 25px; line-height: 25px;
+    i{
+      height: 25px; line-height: 25px;
+      display:block;
+      font-size: 18px;
+      float: left;
+      font-style: normal;
+    }
+    em{
+      font-style: normal;
+      display:inline-block;
+      background-position: 0px -73px;
+      color:#fff;
+      height: 19px; line-height: 19px;
+      width:68px;
+      padding-left: 3px;
+      *margin-top: 3px;
+    }
+
+  }
+  .question-fall{
+    color:#ccc;
+    padding-bottom: 13px;
+  }
+  .question-fall-aside{
+    i{
+      font-style: normal;
+      font-weight: bold;
+      padding: 0px 5px;
+    }
+    em{
+      font-style: normal;
+      color:#ff6803;
+    }
+    b{
+      font-weight: normal;
+      color:#666;
+    }
+  }
+}
+.answer-question-page{
+  padding: 20px 0px 45px 0px;
+  text-align: center;
+  a,span{
+    display: inline-block;
+    width:30px; height: 30px; line-height: 30px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+    margin-right: 8px;
+    .border-radius(3px);
+    color:#333;
+  }
+  .answer-que-current{
+    background-color: #f0f0f0;
+    &:hover{
+      background-color: #8db7dc;
+      color:#fff;
+    }
+  }
+}
+.answer-question-pagination{
+  padding: 20px 0px 45px 0px;
+  text-align: center;
+  &.answer-question-pagination-pt10{
+    padding-bottom: 10px;
+  }
+  ul li,ul li a,ul li span{
+    display: inline-block;
+    width:30px; height: 30px; line-height: 30px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+    margin-right: 8px;
+    .border-radius(3px);
+    color:#333;
+    background-color: #f0f0f0;
+  }
+  ul li.active{
+    a,span{
+        background-color: #8db7dc;
+        color:#fff;
+        cursor: default;
+    }
+  }
+}
+
+
+
+.ranking-problem{
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  &.margin-top10{
+    margin-top: 10px;
+  }
+}
+.ranking-title{
+  font-size: 14px;
+  color:#666;
+  height: 38px; line-height: 38px;
+  padding-left: 15px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #DFDFDF;
+}
+.ranking-ul-cols{
+  padding: 7px 0px 12px 0px;
+}
+.ranking-list{
+  color:#666;
+  li{
+    height: 30px; line-height: 30px;
+    font-size: 14px;
+    a{
+      font-size: 14px;
+      color:#666666;
+      &:hover{
+        color:#53a0e3;
+      }
+    }
+  }
+  &.ranking-digital-number{
+    background-position: 15px 7px;
+    padding-left: 38px;
+    li{
+      padding-left: 0px;
+    }
+  }
+  &.ranking-answer{
+    li{
+      a i{
+        font-style: normal;
+        font-weight: bold;
+        color:#dfdfdf;
+        display: inline-block;
+        padding: 0px 11px 0px 15px;
+      }
+    }
+  }
+
+
+}
+.answer-knowledge{
+  height: 45px; line-height: 45px;
+  .clearfix();
+  strong,span,a{
+    float: left;
+    display: inline-block;
+    color:#999;
+  }
+  span{
+    padding: 0px 10px;
+  }
+  strong{
+    font-weight: normal;
+    color:#333;
+    padding-right: 5px;
+  }
+}
+.question-content-box{
+  background-color: #fff;
+  border:1px solid #dfdfdf;
+  min-height: 100px;
+//  padding: 0px 40px;
+}
+.answer-data-box{
+  padding-bottom: 30px;
+  position: relative;
+  padding-left: 78px; padding-right: 40px;
+  .answer-data-line{
+    display: block;
+    width:2px;
+    height: 100%;
+    background-color: #f5f5f5;
+    position: absolute;
+    left: 46px; top:0px;
+  }
+}
+.answer-data-item{
+  border-bottom: 1px dotted #e2e2e2;
+}
+.answer-data-time{
+//  border: 1px solid red;
+  height: 50px;
+  padding: 24px 0px 16px 0px;
+  position: relative;
+  font-family: Arial;
+  .answer-data-day{
+    display: block;
+    float: left;
+      width:55px;
+    color:#53a0e3;
+    font-size: 48px;
+  }
+  .answer-data-year{
+    display: block;
+    margin-top: 5px;
+    *padding-top:5px;
+      i,em{
+        font-style: normal;
+        display: block;
+        color:#ccc;
+      }
+    i{
+      font-family: "\5FAE\8F6F\96C5\9ED1";
+      font-size: 14px;
+    }
+    em{
+      font-size: 24px;
+      height: 21px; line-height: 21px;overflow: hidden;
+    }
+  }
+  .answer-arrow-crile{
+    position: absolute;
+    display: block;
+    width:12px; height: 12px;
+    left: -37px;
+    top:42px;
+    background-position:0px -95px ;
+    background-color: #fff;
+  }
+}
+.answer-infor{
+  font-size: 14px; line-height: 25px;
+  padding-bottom: 20px;
+  p{
+    line-height: 25px;
+  }
+}
+.answer-data-bottom{
+  padding-bottom: 11px;
+  span{
+    color:#ccc;
+    em,i{
+      font-style: normal;
+    }
+    em{
+      color:#ff6803;
+    }
+    i{
+      font-weight: bold;
+      padding: 0px 5px;
+    }
+  }
+  .question-praise-er-ico{
+    float: right;
+    color:#666;
+    display: inline-block;
+    margin-left: 27px;
+    height: 15px; line-height: 15px;
+    i{
+      display: inline-block;
+      float: left; margin-right: 5px;
+      width:12px; height: 15px;
+      background-position: 0px -55px;
+    }
+    &:hover i{
+      background-position: -32px -55px;
+    }
+  }
+}
+/*标签页*/
+.answer-tab{
+  border: 1px solid #dfdfdf;
+  padding: 30px 0px 30px 30px;
+  background-color: #fff;
+  .answer-quickly-find{
+    .clearfix();
+  }
+  .answer-find-name{
+    width:50px; height: 41px; text-align: center;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    .border-radius(3px);
+    line-height: 15px;
+    padding-top: 9px;
+    float: left;
+  }
+  .anser-find-list{
+    padding-top: 10px;
+    a{
+      display: block;
+      font-size: 14px; font-family:Arial;
+      text-transform: uppercase;
+      color:#333;
+      width:30px; height: 30px; line-height: 30px; text-align: center;
+      float: left;
+      .border-radius(4px);
+      margin-left: 5px;
+      &:hover{
+        background-color: #f0f0f0;
+        color:#333;
+      }
+      &.anser-a-visitor{
+        background-color: #53a0e3;
+        color:#fff;
+      }
+    }
+
+  }
+  .anser-find-infor{
+    .clearfix();
+    padding-top: 19px;
+    a{
+      display: block; float: left;
+//      width:98px;
+
+      padding: 0px 20px;
+      height: 28px; line-height: 28px; text-align: center;
+      border:1px solid #f0f0f0;
+      .border-radius(4px);
+      font-size: 14px;
+      margin-right: 5px; margin-bottom: 10px;
+      color:#333;
+      &:hover{
+        background-color: #f0f0f0;
+        color:#333;
+      }
+      &.anser-a-visitor{
+        background-color: #53a0e3;
+        color:#fff;
+        border:1px solid #53a0e3;
+      }
+    }
+
+  }
+}
+.seo-list-more{
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 3px;
+}
+/*理财问答*/
+.margin-top10{
+  margin-top: 10px;
+}
+.financing-wd-aside{
+  width: 960px;
+  float: left;
+}
+.financing-wd-menu{
+  width: 230px;
+  float: right;
+}
+.financing-part1{
+  padding: 0px 30px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  .financing-h1{
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px dotted #dfdfdf;
+    padding: 22px 0px 16px 0px;
+  }
+  .financing-introduction{
+    padding: 23px 0px 24px 0px;
+    p{
+      text-indent: 2em;
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+}
+.financing-part2{
+  border: 1px solid #ececec;
+  background-color: #fff;
+  .answer-question-pagination{
+    padding-top: 0px;
+    padding-bottom: 30px;
+    ul li{
+      *display: inline;
+    }
+  }
+}
+.financing-h2{
+  font-weight: normal;
+  padding-left: 30px;
+  height: 50px; line-height: 50px;
+  font-size: 24px;
+  border-bottom: 1px solid #ececec;
+}
+.financing-list{
+  padding: 21px 0px 21px 30px;
+  .clearfix();
+  li{
+    width: 309px;
+    float: left;
+    height: 30px; line-height: 30px;
+    em{
+      display: block;
+      height: 4px;
+      width: 4px;
+      float: left;
+      background-position: -56px 0;
+      margin-top: 13px;
+      margin-right: 8px;
+    }
+    a{
+      font-size: 14px;
+      color:#333;
+      &:hover{
+        color:#53a0e3;
+      }
+    }
+  }
+}
+.financing-column{
+  margin-left: 25px;
+  margin-right: 30px;
+  padding: 20px 0px 30px 0px;
+  .clearfix();
+  a{
+    display: inline-block;
+    padding: 0px 20px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    font-size: 14px;
+    color:#333;
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+
+    white-space:nowrap;
+
+    .border-radius(4px);
+    &:hover{
+      background-color: #ececec;
+      border: 1px solid #ececec;
+    }
+    &.current{
+      background-color: #53a0e3;
+      border: 1px solid #53a0e3;
+      color:#fff;
+    }
+  }
+}
+.financing-linkto{
+  height: 27px; line-height: 27px;
+  padding-top: 7px;
+  .clearfix();
+  strong{
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    padding-right: 2px;
+  }
+  a{
+    float: left;
+    font-size: 14px;
+    color:#999999;
+  }
+  span{
+    display: block;
+    float: left;
+    width: 1px; height: 12px;
+    background-color:#dfdfdf;
+    margin: 8px 10px 0px 10px;
+  }
+}
+.financing-item{
+  border: 1px solid #ececec;
+  background-color: #fff;
+  .financing-item-title{
+    display: block;
+    height: 30px; line-height: 30px;
+    font-size: 14px;
+    color:#666;
+    padding-left: 10px;
+    border-bottom: 1px solid #ececec;
+    background-color: #fafafa;
+    font-weight: normal;
+  }
+  .financing-ul{
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    li{
+      height: 28px; line-height: 28px;
+      em{
+        display: block;
+        height: 4px;
+        width: 4px;
+        float: left;
+        background-position: -56px 0;
+        margin-top: 12px;
+        margin-right: 8px;
+      }
+      a{
+        font-size: 14px;
+        color:#666;
+        &:hover{
+          color:#53a0e3;
+        }
+      }
+    }
+
+  }
+}
+.financing-tag-cloud{
+  background-color: #ffffff;
+  margin-left: 5px;
+  padding-bottom: 10px;
+  .clearfix();
+  a{
+    display: inline-block;
+    padding: 0 20px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+    white-space: nowrap;
+    .border-radius(4px);
+    &:hover{
+      background-color: #ececec;
+      border: 1px solid #ececec;
+    }
+  }
+}
+.financing-network{
+  border: 1px solid #ececec;
+  background-color: #fff;
+  padding: 0px 30px 0px 30px;
+}
+.financing-network-title{
+  height: 94px;
+  border-bottom: 1px dotted #ececec;
+  font-weight: normal;
+  strong{
+    display: block;
+    font-weight: normal;
+    font-size: 24px;
+    padding: 26px 0px 11px 0px;
+  }
+  .financing-small-title{
+    display: block;
+    color:#999;
+    .clearfix();
+    em{
+      float: left;
+      font-style: normal;
+      margin-right: 10px;
+    }
+    i{
+      font-style: normal;
+    }
+  }
+}
+.financing-network-content{
+  padding-top: 23px;
+  padding-bottom: 25px;
+  p{
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+.financing-pagetab{
+  height: 21px; line-height: 21px;
+  margin-left: -5px;
+  padding-bottom: 16px;
+  .clearfix();
+  a{
+    display: inline-block;
+    height: 21px;
+    padding:0px 10px;
+    background-color: #b7d7f3;
+    color:#fff;
+    margin-left: 5px;
+    float: left;
+    &:hover{
+      background-color: #53a0e3;
+    }
+  }
+}
+.financing-onan{
+  padding-bottom: 26px;
+  .clearfix();
+  a{
+    font-size: 14px;
+    color:#333;
+    &:hover{
+      color: #53a0e3;
+    }
+  }
+}
+.financing-aggregation{
+  padding: 0px 30px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  .answer-question-pagination{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.financing-dateof{
+  color:#ccc;
+  float: right;
+  height: 20px; line-height: 20px;
+}
+.financing-message{
+  padding: 3px 0px 2px 0px;
+}
+.financing-goodnet{
+  background-color: #fff;
+  border: 1px solid #ececec;
+  .answer-question-pagination{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.financing-goodnet-list{
+  padding: 0px 30px;
+
+}
+
+
+#footerbanner {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  _position: absolute;
+  bottom: 0;
+  z-index: 10100;
+  background: #ff2550;
+}
+
+#footerbanner.hide {
+  bottom: -140px;
+  opacity: 0
+}
+
+#footerbanner .fence-wide {
+  width:875px;
+  margin:0 auto;
+  position: relative
+}
+
+#footerbanner .btnClose {
+  width: 45px;
+  height: 45px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background: url(https://static.souyidai.com/www/images/close.png) no-repeat;
+  cursor:pointer;
+  -webkit-transition:all linear .5s;
+  -moz-transition:all linear .5s;
+  -ms-transition:all linear .5s;
+  -o-transition:all linear .5s;
+  transition:all linear .5s;
+}
+#footerbanner .btnClose:hover{
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+#footerbanner .financial {
+  width: 875px;
+  height: 140px;
+  background: url(https://static.souyidai.com/www/images/coupon_financial.gif) no-repeat;
+  _background: url(https://static.souyidai.com/www/images/coupon_financial.gif) no-repeat;
+  position: relative
+}
+
+#footerbanner .financial .book {
+  display: inline-block;
+  *display: inline;
+  width: 178px;
+  height: 46px;
+  text-indent: -9999em;
+  *text-transform: capitalize;
+  *zoom:1;outline: 0;
+  background: url(https://static.souyidai.com/www/images/book.png) no-repeat;
+  position: absolute;
+  right: 77px;
+  bottom: 49px;
+  cursor: pointer;
+  font-size: 0
+}
+
+#footerbanner .financial .book:hover {
+  background-position: 0 -46px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

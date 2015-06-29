@@ -1,0 +1,26 @@
+.txtl{text-align: left;}
+.txtr{text-align: right;}
+.txtc{text-align: center;}
+.user-profile .user-aside .user-infor .security-level{height:11px}.user-profile .user-aside .user-infor .security-level span{display:inline-block;width:25px;height:11px;background-color:#e4e9ed;margin-right:1px}.user-profile .user-aside .user-infor .security-level span.level-left{width:28px;border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;background-color:#ff8502}
+.user-profile .user-aside .user-infor .security-level span.security-middle{background-color: #ffd800}
+.user-profile .user-aside .user-infor .security-level span.security-low{background-color:#ff8502}
+.user-profile .user-aside .user-infor .security-level span.security-high{background-color:#8ec31f}
+.user-profile .user-aside .user-infor .security-level span.level-right{width:28px;border-radius:0 5px 5px 0;-moz-border-radius:0 5px 5px 0;}
+.form-group .from-center .form-input.error-msg{padding-top:0;padding-bottom:0;padding-left:10px;}
+.form-group .from-center .form-select.error-msg{padding:7px 0 7px 10px;}
+.just-layer{min-width:223px;width:auto;white-space:nowrap;}
+.bank-list{position: absolute;width: 228px;background-color: #fff;z-index: 99;}
+.safety-row .safety-hint .text-low{color:#FF3300;}
+.safety-row .safety-hint .text-middle{color:#333333;}
+.safety-row .safety-hint .text-high{color:#009900;}
+.point-to{position: relative;}
+.break-tips{position:absolute;top:12px;left:50%;margin-left:-45px;z-index:99;height:0px;display: none;}
+.from-center .input-group{width:230px;height: 34px;line-height: 34px;}
+.from-center .form-input.smscode{width:98px;}
+.from-center .sendSmsCode{display:inline-block;width:108px;float:right;height:32px;line-height: 32px;margin-left: 10px;text-align: center;background-image:linear-gradient(to bottom, #fff, #e6e6e6);background-color:#e6e6e6;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#e6e6e6);border-radius: 3px;border:1px solid #c2c2c2;color:#222;}
+.invest-notice{
+	float:right;
+	padding-right: 30px;
+	color:#FF6100;
+	font-weight: bolder;
+}

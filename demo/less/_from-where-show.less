@@ -1,0 +1,433 @@
+@import "_mixins.less";
+.frwhere-column{
+  margin-left: -10px;
+  .clearfix();
+  &.margin-top17{
+    margin-top: 17px;
+  }
+}
+.frwhere-item{
+  width: 292px;
+  margin-left: 10px;
+  .clearfix();
+  .frwhere-exhibition{//a
+    display: block;
+    height: 180px;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    transition: all .25s ease;
+    &:hover{
+      .frwhere-exhib-mask{
+        .opacity(0.5);
+      }
+      .frwhere-exhit-btn{
+        display: block;
+        &:hover{
+          background-color: #fff;
+          color:#53a0e3;
+        }
+      }
+    }
+  }
+  .frwhere-img{
+    display: block;
+  }
+  .frwhere-flag{//标题
+    display: block;
+    height: 29px;
+    position: absolute;
+    left: -3px; top:10px;
+    z-index: 1;
+    em{
+      display: block;
+      width: 3px; height: 29px;
+      float: left;
+      background-position: -86px -380px;
+    }
+    i{
+      display: block;
+      float: left;
+      width: 7px; height: 26px;
+      background-position: -90px -380px;
+    }
+  }
+  .frwhere-flag-title{
+    display: block;
+    height: 26px; line-height: 26px;
+    float: left;
+    padding: 0px 9px 0px 15px;
+    font-size: 14px;
+    color:#fff;
+    background-color: #ff6803;
+  }
+  .frwhere-exhib-mask{//mask
+    display: block;
+    width: 292px; height: 180px;
+    background-color: #333;
+    position: absolute;
+    left: 0px; top:0px;
+    .opacity(0);
+    .transition();
+    &:hover{
+      .opacity(0.5);
+    }
+  }
+  .frwhere-exhit-btn{
+    display: none;
+    width: 118px; height: 28px; line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 86px; top:75px;
+    color:#fff;
+    z-index: 1;
+    cursor: pointer;
+    .border-radius(4px);
+  }
+  .frwhere-mark{
+    display: block;
+    width: 53px; height: 43px;
+    border: 1px solid #ececec;
+    text-align: center;
+    float: left;
+    padding-top: 10px;
+    margin-top: 3px;
+    margin-right: 15px;
+    .border-radius(4px);
+    em{
+      display: inline-block;
+      width: 32px; height: 32px;
+    }
+    .frwhere-mark-a1{
+      background-position: 0px -411px;
+    }
+    .frwhere-mark-a2{
+      background-position: -33px -411px;
+    }
+    .frwhere-mark-a3{
+      background-position: -66px -411px;
+    }
+    .frwhere-mark-a4{
+      background-position: -99px -411px;
+    }
+  }
+  .frwhere-mark-infor{
+    display: block;
+    a{
+      display: block;
+      color:#333;
+      font-size: 18px;
+      &:hover{
+        color:#53a0e3;
+      }
+    }
+    span{
+      display: block;
+      line-height: 18px;
+      color:#999999;
+    }
+  }
+}
+.frwhere-bgcolor-ec{
+  background-color: #ececec;
+  .box-shadow(inset 0px 2px 3px, 6%);
+}
+.frwhere-title{
+  height: 56px;
+  font-weight: normal;
+  padding-top: 19px;
+  .clearfix();
+  i{
+    display: block;
+    width: 36px; height: 36px;
+    float: left;
+    background-position: -99px -362px;
+  }
+  strong{
+    display: block;
+    font-weight: normal;
+    float: left;
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  em{
+    display: block;
+    float: left;
+    font-style: normal;
+    font-size: 18px;
+    margin-top: 14px;
+    margin-left: 10px;
+  }
+  .frwhere-mark-v2{
+    background-position: -136px -362px;
+  }
+  .frwhere-mark-v3{
+    background-position: -173px -362px;
+  }
+  .frwhere-mark-v4{
+    background-position: -136px -400px;
+  }
+}
+.frwhere-aside{
+  width:870px;
+  float: left;
+}
+.frwhere-menu{
+  width: 318px;
+  min-height: 611px;
+  float: right;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  .frwhere-nmenu-title{
+    display: block;
+    font-size: 18px;
+    padding-left: 19px;
+    padding-top: 15px;
+    &.pd-bottom8{
+      padding-bottom: 8px;
+    }
+  }
+  .frwhere-menu-list{
+    width: 280px;
+    margin-left: 19px;
+  }
+  .frwhere-stars{
+    display: block;
+    width: 14px; height: 14px;
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color:red;
+    font-size: 14px;
+  }
+  .column-w140{
+    width: 138px;
+  }
+  .column-w130{
+    width: 128px;
+  }
+  .column-w74{
+    width: 74px;
+    .version-open-copy input{
+      width: 74px;
+      color:#999;
+      font-size: 12px;
+      text-align: center;
+      padding-left: 0px;
+    }
+    &.version-open-visitor{//访问后的颜色
+      .version-open-copy{
+        input{
+          color:#333;
+        }
+      }
+    }
+  }
+  .column-w174{
+    margin-left: 4px;
+    background-color: #fff;
+    .version-open-copy input{
+      width: 174px;
+      color:#999;
+      font-size: 12px;
+      text-align: center;
+      padding-left: 0px;
+    }
+    &.version-open-visitor{//访问后的颜色
+      .version-open-copy{
+        input{
+          color:#333;
+        }
+      }
+    }
+  }
+  .frwhere-unit{
+    width: 35px; height: 14px; line-height: 14px;
+    font-size: 14px;
+    color:#999;
+    text-align: right;
+    position: absolute;
+    right: 15px;
+    top: 11px;
+  }
+  .frwhere-radio{
+    height: 16px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    margin-left: -25px;
+    .clearfix();
+  }
+  .frwhere-radio-column{
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 25px;
+    em{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      float: left;
+      background-position: -110px -338px;
+      margin-right: 10px;
+      margin-top: 2px;
+      cursor: pointer;
+      &.checked{
+        background-position: -91px -338px;
+      }
+    }
+    span{
+      font-size: 14px;
+    }
+  }
+}
+.frwhere-submit{
+  width: 280px;
+  margin-top: 20px;
+  input{
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 19px;
+  }
+}
+.frwhere-annotation{
+  text-align: center;
+  font-size: 14px;
+  height: 30px; line-height: 30px;
+  padding-bottom: 13px;
+  em{
+    font-size: 14px;
+    color:red;
+    padding-right: 5px;
+    font-style: normal;
+  }
+}
+.frwhere-validation{
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+}
+.frwhere-valid-column{
+  width: 460px;
+  position: absolute;
+  left: 0px; top:0px;
+
+  .clearfix();
+  .version-btn-code{
+    font-size: 12px;
+  }
+}
+.frwhere-authimg{
+  display: block;
+  width: 96px; height: 38px;
+  float: left;
+  margin-top: 11px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+//行业化展示-首页
+.frwhere-downpayment-left{
+  width: 960px;
+  height:550px;
+  float: left;
+  margin-top: 20px;
+  div {
+    display: none;
+  }
+}
+.frwhere-downpayment-main-first{
+    display:block;
+    width:960px;
+    height:550px;
+    float: left;
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-downpaymentmain.gif") no-repeat;
+}
+.frwhere-downpayment-main-second{
+    display:block;
+    width:960px;
+    height:550px;
+    float: left;
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-changemain.gif") no-repeat;
+}
+.frwhere-downpayment-main-third{
+    display:block;
+    width:960px;
+    height:550px;
+    float: left;
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-redeemmain.gif") no-repeat;
+}
+.frwhere-downpayment-main-forth{
+    display:block;
+    width:960px;
+    height:550px;
+    float: left;
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-mortgagemain.gif") no-repeat;
+}
+.frwhere-downpayment-right{
+  width: 230px;
+  float: right;
+  margin-top: 20px;
+  .frwhere-downpayment-span-img{
+    display: block;
+    width: 230px; height: 130px;margin-bottom: 10px;;
+  }
+  .frwhere-downpayment-a1{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-downpaymentgrey.gif") no-repeat;
+  }
+  .frwhere-downpayment-a2{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-changegrey.gif") no-repeat;
+  }
+  .frwhere-downpayment-a3{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-redeemgrey.gif") no-repeat;
+  }
+  .frwhere-downpayment-a4{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-mortgagegrey.gif") no-repeat;
+  }
+
+  .frwhere-downpayment-b0{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-downpayment.gif") no-repeat;
+  }
+  .frwhere-downpayment-b1{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-change.gif") no-repeat;
+  }
+  .frwhere-downpayment-b2{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-redeem.gif") no-repeat;
+  }
+  .frwhere-downpayment-b3{
+    background: url("https://static.souyidai.com/www/images/version/frwhere/version-frwhere-mortgage.gif") no-repeat;
+  }
+}
+.blank10{
+  height: 10px;
+}
+.frwhere-frame{
+  border: 1px solid #ECECEC;
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
