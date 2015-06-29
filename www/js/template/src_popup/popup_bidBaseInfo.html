@@ -1,0 +1,70 @@
+
+<!-- a 年利率、期限、还款方式显示等 start -->
+<div class="version-popup-row">
+    <div class="version-popup-w213">
+        <span class="version-popup-nameof">
+            {{if baseInfo.url == 6}}    <!-- 定期宝 -->
+                预期年化收益率
+            {{else}}
+                项目年利率
+            {{/if}}
+        </span>
+        <div class="version-popup-digital">
+            <em>
+                {{if serverObj.data.bid.lilv}}
+                    {{serverObj.data.bid.lilv+'%'}}
+                {{else}}
+                    {{(serverObj.data.bidTransfer.rootAnnualRate / 100).toFixed(2)+'%'}}
+                {{/if}}                
+            </em>
+            {{if mycalculate.useInterest}}
+                <span class="inrlabel">
+                    <span>+{{mycalculate.useInterest}}%</span>
+                    <span class="ar_up"></span>
+                </span>
+            {{/if}}
+        </div>
+    </div>
+    <div class="version-popup-w175">
+        <span class="version-popup-nameof">
+            {{if baseInfo.url == 6}}   <!-- 定期宝 -->
+                锁定期
+            {{else}}
+                {{if baseInfo.bidOperType == 1}}剩余{{/if}}期限
+            {{/if}}
+        </span>
+        <div class="version-popup-digital">
+            {{if serverObj.data.bid.qixian}}
+                {{serverObj.data.bid.qixian}}
+            {{else if mycalculate.popupStatus == 2}}
+                {{if serverObj.data.bidTransfer.leftMonth == 0}}
+                    <em>{{serverObj.data.bidTransfer.leftDay}}</em><strong>天</strong>                    
+                {{else}}
+                    <em>{{serverObj.data.bidTransfer.leftMonth}}</em><strong>个月</strong>
+                    {{if serverObj.data.bidTransfer.leftDay != 0}}
+                        <em>{{serverObj.data.bidTransfer.leftDay}}</em><strong>天</strong>
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    <div class="version-popup-w208">
+        <span class="version-popup-nameof">
+            {{if baseInfo.url == 6}}   <!-- 定期宝 -->
+                结算方式
+            {{else}}
+                还款方式
+            {{/if}}
+        </span>
+        <div class="version-popup-digital">
+                <strong>
+                    {{if serverObj.data.bid.fangshi}}
+                        {{serverObj.data.bid.fangshi}}
+                    {{else}}
+                        {{codes.repayMode[serverObj.data.bid.repayMode]}}
+                    {{/if}}
+                </strong>
+        </div>
+    </div>
+</div>
+<!-- a 年利率、期限、还款方式显示等 end -->

@@ -1,0 +1,651 @@
+//css函数
+@import "_mixins.less";
+.cer-guide-page{
+  &.md-top5{
+    margin-top: 5px;
+  }
+}
+.cer-item{
+  width:170px;
+  height: 290px;
+  .border-radius(5px);
+  background-color: #fff;
+  .cer-item-title{
+    height: 50px; line-height: 50px;
+    font-size: 18px;
+//    background-color: #4f85b4;
+    text-align: center;
+    .border-radius-item(5px,5px,0px,0px);
+    font-weight: normal;
+    &.cer-default-bgcolor{//默认标题背景色
+      background-image: linear-gradient(to bottom,#fff,#f5f5f5);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff, endColorstr=#f5f5f5);
+      color:#666;
+    }
+    &.cer-complete-bgcolor{//填写信息完成后的head背景色
+      background-color: #4f85b4;
+      color:#fff;
+    }
+  }
+  .cer-item-content{
+    height:195px;
+    .cer-imgs{
+      display:block;
+      padding-top: 16px; padding-bottom: 15px;
+      text-align: center;
+      i{
+        display: inline-block;
+        height: 62px; width: 62px;
+      }
+    }
+    .cer-basic-img{
+      background-position: 0px 5px;
+    }
+    .cer-person-img{
+      background-position: 0px -65px;
+    }
+    .cer-were-img{
+      background-position: 0px -260px;
+
+    }
+    .cer-upload-img{
+      background-position: 0px -130px;
+
+    }
+    .cer-success-img{
+      background-position: 0px -195px;
+    }
+    .cer-op{
+      line-height: 18px;
+      color:#666;
+      padding: 0px 20px;
+    }
+
+  }
+  .cer-btns{
+    text-align: center;
+  }
+}
+.cer-arrow-row{
+//  width:38px;
+  width:106.6px;
+  height: 290px;
+  text-align: center;
+  strong{
+    display: inline-block;
+    width:14px;
+    height: 30px;
+    margin-top: 125px;
+  }
+  .cer-default-arrow{//默认箭头
+    background-position: 0px -325px;
+  }
+  .cer-complete-arrow{//蓝色箭头
+    background-position: -19px -325px;
+  }
+}
+.cer-five-columns{//存在5列信息/默认为4列
+  .cer-arrow-row{
+    width:37.5px;
+  }
+  .cer-guide-arrow{
+    width:37.5px;
+  }
+}
+.cer-apply{
+  text-align: center;
+  padding: 35px 0px 0px 0px;
+}
+.cer-guide-step{
+  height: 60px;
+}
+.cer-guide-row{
+  display: block;
+  width:170px;
+  height: 50px; line-height: 50px;
+  background-color: #fff;
+  .border-radius(3px);
+  text-align: center;
+  color:#666;
+  .cer-guide-infor{
+    font-size: 18px;
+    span{
+      display: inline-block;
+      width:24px;
+      position: relative;
+      margin-right: 5px;
+      i{
+        display: inline-block;
+        position: absolute;
+        width:24px; height: 24px;
+        top:13px; left: 0px;
+      }
+    }
+    .cer-small-basic-img{
+      background-position: 0px -361px;
+    }
+    .cer-small-person-img{
+      background-position: 0px -389px;
+    }
+    .cer-small-were-img{
+      background-position: 0px -475px;
+
+    }
+    .cer-small-upload-img{
+      background-position: 0px -418px;
+
+    }
+    .cer-small-success-img{
+      background-position: 0px -446px;
+    }
+  }
+  &.cer-complete-guide-bgcolor{
+    background-color: #4f85b4;
+    color:#fff;
+      position: relative;
+      .ar_up_in{
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        overflow: hidden;
+        margin-left: -8px;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        border-width: 8px;
+        border-style: solid dashed dashed dashed;
+        border-color: #4f85b4 transparent transparent transparent;
+      }
+  }
+}
+.cer-guide-arrow{
+  width:106.6px;
+  height: 50px;
+  text-align: center;
+  strong{
+    display: inline-block;
+    width:14px;
+    height: 30px;
+    margin-top: 10px;
+    background-position: 0px -325px;
+  }
+}
+.cer-list{
+  border:1px solid #dfdfdf;
+  .border-radius(5px);
+//  min-height: 600px;
+//  padding-bottom: 10px;
+  background-color: #fff;
+  &.md-top10{
+    margin-top: 10px;
+  }
+  .cer-list-title{
+    height: 49px; line-height: 49px;
+    padding-left: 29px;
+    font-size: 18px; font-weight: normal;
+    border-bottom: 1px solid #dfdfdf;
+    background-image: linear-gradient(to bottom,#fff,#f5f5f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff, endColorstr=#f5f5f5);
+    .border-radius-item(5px,5px,0px,0px);
+    &.md-bottom40{
+      margin-bottom: 40px;
+    }
+  }
+}
+.certific-warm-prompt{
+  padding-left: 213px;
+  padding-bottom: 15px;
+  span{
+    display: block;
+    width: 395px;
+    height: 38px; line-height: 38px;
+    background-color: #eff8ff;
+    border: 1px solid #b7dbf7;
+    font-size: 14px;
+    .clearfix();
+    em{
+      display: block;
+      width: 18px; height: 18px;
+      float: left;
+      background-position: -44px -525px;
+      margin: 10px 5px 0px 10px;
+
+    }
+  }
+}
+/*表单列表项*/
+.ver-item{
+  .clearfix();
+  margin-top: 15px;
+  .ver-name{
+    width:270px;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 14px; color:#666;
+    height: 40px; line-height: 40px;
+  }
+  .ver-center{
+    width:300px;
+//    height: 40px;
+    &.ver-center-line40{
+      line-height: 40px;
+    }
+    .cer-contents{
+      display: block;
+      line-height: 40px;
+      color:#666;
+      font-size: 14px;
+    }
+  }
+  .ver-unit{
+    width:35px; height: 40px; line-height: 40px; text-align: center;
+    font-size: 14px;
+  }
+  .ver-cols-3{
+    width:122px;
+    &.ver-cols-3-w210{
+      width:210px;
+    }
+    padding-left:8px;
+  }
+  .ver-check{
+    min-width: 100px;
+    height: 40px;
+    position: relative;
+    .ver-check-correct{
+      display: none;
+      width:14px;height: 11px;
+      position: absolute;
+      top: 14px;
+      left: 0px;
+      i{
+        display: block;
+        width:14px; height: 11px;
+        background-position: -48px -361px;
+      }
+    }
+    .ver-check-error{
+      display: none;
+      position: absolute;
+      left: 0px;
+      top: 5px;
+      width:200px;
+      min-height: 28px;
+      border: 1px solid #f5d8a7;
+      .border-radius(3px);
+      background-color: #fff6db;
+      strong{
+        display: block;
+        width:16px;
+        float: left;
+        background-position: -29px -361px;
+        margin: 6px 0px 0px 8px;
+      }
+      span{
+        display: block;
+        padding-top: 6px;
+        padding-right: 6px;
+        padding-bottom: 6px;
+        padding-left: 28px;
+      }
+    }
+  }
+  .margin-top10{
+    margin-top: 10px;
+  }
+  .ver-radio-box{
+    .clearfix();
+//    line-height: 40px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 6px;
+    *float:left;
+    .ver-label{
+      span{
+        display: inline-block;
+        width:20px; height: 20px;
+        float: left;
+        background-position: -29px -446px;
+      }
+      .ver-simulation{
+        background-position: -29px -418px;
+      }
+      strong{
+        font-weight: normal;
+        display: inline-block;
+        height: 20px; line-height: 20px; vertical-align: top;
+        float: left;
+        padding-left: 3px;
+        font-size: 14px; color:#666;
+      }
+    }
+
+
+  }
+}
+/*select-input*/
+.ver-select{
+  width:300px;
+  padding-top: 10px; padding-bottom: 10px;
+  border: 1px solid #ccc;
+  .border-radius(3px);
+  font-size: 14px;
+  color:#666;
+  *margin-top:10px;
+  outline: none;
+  &.ver-select-w96{
+    width:96px;
+  }
+  &.ver-select-w145{
+    width:145px;
+  }
+  &.ver-select-w248{
+    width:248px;
+  }
+  &.mg-left6{
+    margin-left: 6px;
+  }
+}
+.ver-spanbox{
+  display: block;
+  width:300px;
+  height: 40px;
+  position: relative;
+  .ver-closed-i{
+    display: none;
+    width: 20px; height: 20px;
+    position: absolute;
+    top:10px; right:6px;
+    background-position: -29px -389px;
+    cursor: pointer;
+  }
+}
+.ver-work-phone{
+  display: block;
+  .clearfix();
+  .mg-left10{
+    margin-left: 10px;
+  }
+}
+.ver-input{//input宽度是300
+  width:260px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 8px;
+  padding-right: 30px;
+  border: 1px solid #ccc;
+  .border-radius(3px);
+  font-size: 14px;
+//  color:#666;
+  color:#ccc;
+  outline: none;
+  .box-shadow(inset 0px 0px 3px,#e5e5e5);
+  &.ver-input-w60{
+    width:42px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  &.ver-input-w160{
+    width:142px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  &.ver-input-w100{
+    width:82px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  &.ver-input-w190{
+    width:172px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  &.ver-input-hover{
+    border:1px solid #e5e5e5;
+    cursor: default;
+    .box-shadow(inset 0px 0px 3px,#e5e5e5);
+  }
+  &.ver-input-visitor{
+    border:1px solid #7bb5e7;
+    cursor: text;
+    box-shadow:inset 0px 0px 3px #e5e5e5,0px 0px 3px #7bb5e7;
+  }
+  &.ver-input-disabled{
+    border:1px solid #e5e5e5;
+    background-color: #f5f5f5;
+  }
+}
+/*chrome和safari hank*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .ver-input{
+    line-height:normal;
+  }
+}
+/*底部提交按钮组*/
+.ver-div-cols{
+  margin-left: 40px; margin-right: 40px;
+  border-top:1px solid #eee;
+  padding: 40px 0px;
+  text-align: center;
+  &.md-top40{
+    margin-top: 40px;
+  }
+  .btn-margin20{
+    margin-left: 20px;
+  }
+  &.text-align-left{
+    text-align: left;
+    padding-left: 250px;
+  }
+}
+/*标题*/
+.cer-lookup{
+  font-size: 18px; color:#ccc;
+  margin: 0px 40px 0px 40px;
+  height: 21px; line-height: 21px;
+  font-weight: normal;
+  position: relative;
+  &.md-top20{
+    margin-top: 20px;
+  }
+  .cer-looup-title-conent{
+    display: block;
+    height: 21px; padding-right: 5px;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute; left: 0px; top: 0px;
+    strong{
+      font-size: 12px;
+      font-weight: normal;
+      padding-left: 5px;
+    }
+  }
+  .cer-bg-line{
+    display: block;
+    width:100%; height: 1px;
+    background-color: #eee;
+    position: absolute; top: 10px; left: 0px;
+    z-index: 0;
+  }
+}
+/*默认高度*/
+.cer-height30{
+  height: 30px;
+}
+/*资料上传*/
+.cer-upload-infor{
+  .clearfix();
+  padding-left: 29px;
+  margin-top: 15px;
+  .cer-upload-item{
+    width:210px; height: 40px;
+    margin-left: 20px;margin-bottom: 20px;
+  }
+  .cer-upload-stauts{
+    display: block;
+    float: left;
+    width:162px; height: 38px; line-height: 38px;
+    border:1px dashed #dfdfdf;
+    border-right:0px dashed #dfdfdf;
+    strong{
+      font-weight: normal;
+      font-size: 14px;
+      color:#666;
+      margin-left: 8px;
+    }
+    i{
+      display: none;
+
+    }
+  }
+  .cer-add-btn{
+    float: left;
+    display: block;
+    font-size: 14px;
+    width:45px; height: 38px; line-height: 38px; text-align: center;
+    border:1px solid #dfdfdf;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom,#fff,#EEEEEE);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff, endColorstr=#EEEEEE);
+    box-shadow: inset 0 1px 3px #fff,inset 0 0 2px #dddddd,inset 0 -2px 3px #e2e2e2;
+  }
+  .cer-upload-success{
+    position: relative;
+    border: 1px solid #81c931;
+    border-right:0px solid #81c931;
+    i{
+      display: block;
+      width:14px; height: 11px;
+      position: absolute; right: 10px; top:14px;
+      background-position: -48px -361px;
+    }
+  }
+  .cer-upload-failure{
+    position: relative;
+    border: 1px solid #f5d8a7;
+    border-right:0px solid #f5d8a7;
+    background-color: #fff6db;
+    i{
+      display: block;
+      width:16px; height: 16px;
+      position: absolute; right: 8px; top:11px;
+      background-position: -29px -361px;
+    }
+  }
+}
+/*正审弹窗*/
+.certifi-layer{
+  position: absolute;
+  left: 500px; top:300px;
+  z-index: 3;
+  width:600px;
+//  min-height: 500px;
+  background-color: #fff;
+  .border-radius(5px);
+  .certifi-layer-title{
+    font-size: 18px;
+    padding-left: 19px;
+    font-weight: normal;
+    height: 50px; line-height: 50px;
+    border-bottom: 1px solid #dfdfdf;
+    span{
+      display: block; margin-top: 18px; margin-right: 20px;
+      width:14px; height: 14px; float: right;
+      background-position: -48px -325px;
+      cursor: pointer;
+    }
+  }
+  .certifi-layer-aside{
+    width:280px;
+    float: left;
+    margin-left: 40px;
+
+  }
+  .certifi-layer-sample{
+    width:240px;
+    float: left;
+  }
+  .certifi-lay-sigle{
+
+  }
+  .certifi-sigle-title{
+    height: 56px; line-height: 56px;
+    font-size: 16px;
+  }
+  .certifi-layer-op{
+    padding-right: 33px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .certifi-sample-title{
+    font-size: 16px;
+    height: 56px; line-height: 56px;
+  }
+  .certifi-layer-recive-img{
+    width:240px; height: 160px; overflow: hidden;
+    background-color: #f6f6f6;
+  }
+  .certifi-file{
+      padding-left: 40px;
+      padding-top: 20px;
+  }
+  .cer-op-row{
+    height: 30px;
+  }
+  .cer-gray-bg{
+    display: inline-block;
+   margin-left: 10px;
+    width:390px; height: 30px; line-height: 30px;
+    background-color: #F4F4F6;
+  }
+  .cer-file-btn{
+    display: inline-block;
+    float: left;
+    input{
+      font-weight: bold;
+    }
+  }
+  .cer-file-name{
+    margin-left: 130px;
+    width:390px;
+    &.cer-file-overflow-y{
+      height: 130px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+  .cer-upload-name{
+    width:390px; height: 30px; line-height: 30px;
+    background-color: #F4F4F6;
+    margin-bottom: 2px;
+    a{
+      display: inline-block;
+      width:20px; height: 20px;
+      background-position: -29px -389px;
+      float: right;
+      margin-top: 6px; margin-right: 20px;
+      &:hover{
+        background-position: -29px -475px;
+      }
+    }
+    i{
+      display: inline-block;
+      width:15px; height: 13px;
+      background-position: -47px -342px;
+      margin-left: 15px; margin-right: 6px; margin-top: 9px;
+      float: left;
+    }
+    strong{
+      font-weight: normal;
+      display: inline-block;
+      float: left;
+    }
+  }
+  .cer-upload-action{
+      padding: 38px 0px;
+     text-align: center;
+    .btn-margin20{
+      margin-left: 20px;
+    }
+  }
+}

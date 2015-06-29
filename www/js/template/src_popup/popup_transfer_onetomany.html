@@ -1,0 +1,351 @@
+
+{{include "./popup_bidBaseInfo"}}
+
+<div class="vertransfer-one-table">
+    <!--title-->
+    <div class="vertransfer-one-title">
+        <!--
+            鼠标滑过(类)：hover
+            例：
+            <span class="hover">
+            屏蔽（部分购买）：disabled
+            例：
+            <span class="disabled">
+        -->
+        <p>
+            <span class="border-left current">
+                <em>全部购买</em>
+            </span>
+            <span class=" {{if (baseInfo.planInvestMoney <= 100000) }} disabled {{/if}}" >
+                <em>部分购买</em>
+                <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_part_tran}}" class="version-ico version-tooltip-css tooltipcol"></a>
+            </span>
+        </p>
+    </div>
+    <!--title-end-->
+    <!--list-->
+    <div class="vertransfer-one-list">
+        <!--item(全部购买)-->
+        <div class="vertransfer-one-item" style="display: block;">
+            <!--1-->
+            <div class="vertransfer-one-cols">
+                <div class="vertransfer-one-left">
+                    <span class="vertransfer-one-proportion ">转让本金</span>
+                    {{if codes.local_tooltip.transfer_principal}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_principal}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </div>
+                <div class="vertransfer-one-right orange">
+                    <span class="vertransfer-one-proportion ">
+                        <span class="font-arial">{{fmtMoney(baseInfo.planInvestMoney,2)}}</span>元
+                    </span>
+                </div>
+            </div>
+            <!--2-->
+            <!--[1]降价-->
+            {{if mycalculate.transfer_type==1}}
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让折扣</span>
+                        {{if codes.local_tooltip.inv_layer_percent}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            转让本金<span class="font-arial"> x {{serverObj.data.bidTransfer.principalDiscountRate/100+'%'}}</span>
+                        </span>
+
+                    </div>
+                </div>
+                <!--3-->
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让折价</span>
+                        {{if codes.local_tooltip.inv_layer_discount}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            直降<span class="font-arial">{{fmtMoney(-serverObj.data.principalDiscount,2)}}</span>元
+                        </span>
+                    </div>
+                </div>
+            {{else if mycalculate.transfer_type==2}}
+            <!--[2]默认价格-->
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让折扣</span>
+                        {{if codes.local_tooltip.inv_layer_percent}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            无
+                        </span>
+
+                    </div>
+                </div>
+            {{else if mycalculate.transfer_type==3}}
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让涨幅</span>
+                        {{if codes.local_tooltip.inv_layer_percent}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            转让本金<span class="font-arial"> x {{serverObj.data.bidTransfer.principalDiscountRate/100+'%'}}</span>
+                        </span>
+
+                    </div>
+                </div>
+                <!--3-->
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让加价</span>
+                        {{if codes.local_tooltip.inv_layer_discount}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            加价<span class="font-arial">{{fmtMoney(serverObj.data.principalDiscount,2)}}</span>元
+                        </span>
+                        <!--提示-->
+                        <span class="vertransfer-one-msg" style="width:280px;">
+                            <span class="vertransger-one-msg-list">
+                                <em class="certifi-img"></em>
+                                <span>
+                                    {{#codes.local_tooltip.inv_layer_tran_raise}}
+                                </span>
+                            </span>
+                            <span class="ar_up"></span>
+                            <span class="ar_up_in"></span>
+                        </span>
+                        <!--提示end-->
+                    </div>
+                </div>
+            <!--[3]涨价-->
+            {{/if}}
+
+            <!--4-->
+            <div class="vertransfer-one-cols">
+                <div class="vertransfer-one-left">
+                    <span class="vertransfer-one-proportion">转让利率</span>
+                    {{if codes.local_tooltip.inv_layer_interest}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </div>
+                <div class="vertransfer-one-right">
+                    <span class="vertransfer-one-proportion ">
+                        <span class="font-arial">{{serverObj.data.bidTransfer.investAnnualRate/100+'%'}}</span>
+                    </span>
+                </div>
+            </div>
+            <!--5-->
+            <div class="vertransfer-one-cols">
+                <div class="vertransfer-one-left">
+                    <span class="vertransfer-one-proportion">转让结息</span>
+                    {{if codes.local_tooltip.transfer_interest}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </div>
+                <div class="vertransfer-one-right">
+                    <span class="vertransfer-one-proportion ">
+                        <span class="font-arial">{{fmtMoney(serverObj.data.interest,2)}}</span>元
+                    </span>
+                </div>
+            </div>
+            <!--end-->
+        </div>
+        <!--item(全部购买)-end-->
+        <!--部分购买-->
+        <div class="vertransfer-one-item" style="display: none"  span-type="buy-part">
+
+            <!--1-->
+            <div class="vertransfer-one-cols">
+                <div class="vertransfer-one-left">
+                    <span class="vertransfer-one-proportion ">转让本金</span>
+                    {{if codes.local_tooltip.transfer_principal}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_principal}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </div>
+                <div class="vertransfer-one-right orange">
+                    <span class="vertransfer-one-inputbox">
+                        <span>元</span>
+                        <input type="text" value="{{baseInfo.planInvestMoney/100}}" id="btn-vertransfer-partmoney" autocomplete="off">
+                    </span>
+                    <!--提示-->
+                    <span class="vertransfer-one-msg"  id="span-buy-part-tips" style="display:none;">
+                        <span class="vertransger-one-msg-list" >
+                            <em class="certifi-img"></em>
+                            <span class="color-black" span-type="buy-span-tips">
+                               投资金额不能大于转让金额
+                            </span>
+                        </span>
+                        <span class="ar_up"></span>
+                        <span class="ar_up_in"></span>
+                    </span>
+                    <!--提示end-->
+                </div>
+            </div>
+            <!--2-->
+            <!--[1]降价-->
+            {{if mycalculate.transfer_type==1}}
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让折扣</span>
+                        {{if codes.local_tooltip.inv_layer_percent}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            转让本金<span class="font-arial"> x {{serverObj.data.bidTransfer.principalDiscountRate/100+'%'}}</span>
+                        </span>
+
+                    </div>
+                </div>
+                <!--3-->
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让折价</span>
+                        {{if codes.local_tooltip.inv_layer_discount}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            直降<span class="font-arial" id="popup-vertransfer-changeMoney">{{fmtMoney(-serverObj.data.principalDiscount,2)}}</span>元
+                        </span>
+                    </div>
+                </div>
+            {{else if mycalculate.transfer_type==2}}
+            <!--[2]默认价格-->
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让折扣</span>
+                        {{if codes.local_tooltip.inv_layer_percent}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            无
+                        </span>
+
+                    </div>
+                </div>
+            {{else if mycalculate.transfer_type==3}}
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让涨幅</span>
+                        {{if codes.local_tooltip.inv_layer_percent}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            转让本金<span class="font-arial"> x {{serverObj.data.bidTransfer.principalDiscountRate/100+'%'}}</span>
+                        </span>
+
+                    </div>
+                </div>
+                <!--3-->
+                <div class="vertransfer-one-cols">
+                    <div class="vertransfer-one-left">
+                        <span class="vertransfer-one-proportion">转让加价</span>
+                        {{if codes.local_tooltip.inv_layer_discount}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                    </div>
+                    <div class="vertransfer-one-right">
+                        <span class="vertransfer-one-proportion ">
+                            加价<span class="font-arial" id="popup-vertransfer-changeMoney">{{fmtMoney(serverObj.data.principalDiscount,2)}}</span>元
+                        </span>
+                        <!--提示-->
+                        <span class="vertransfer-one-msg" style="width:280px;">
+                            <span class="vertransger-one-msg-list">
+                                <em class="certifi-img"></em>
+                                <span>
+                                    {{#codes.local_tooltip.inv_layer_tran_raise}}
+                                </span>
+                            </span>
+                            <span class="ar_up"></span>
+                            <span class="ar_up_in"></span>
+                        </span>
+                        <!--提示end-->
+                    </div>
+                </div>
+            <!--[3]涨价-->
+            {{/if}}
+
+            <!--4-->
+            <div class="vertransfer-one-cols">
+                <div class="vertransfer-one-left">
+                    <span class="vertransfer-one-proportion">转让利率</span>
+                    {{if codes.local_tooltip.inv_layer_interest}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </div>
+                <div class="vertransfer-one-right">
+                    <span class="vertransfer-one-proportion ">
+                        <span class="font-arial">{{serverObj.data.bidTransfer.investAnnualRate/100+'%'}}</span>
+                    </span>
+                </div>
+            </div>
+            <!--5-->
+            <div class="vertransfer-one-cols">
+                <div class="vertransfer-one-left">
+                    <span class="vertransfer-one-proportion">转让结息</span>
+                    {{if codes.local_tooltip.transfer_interest}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </div>
+                <div class="vertransfer-one-right">
+                    <span class="vertransfer-one-proportion ">
+                        <span class="font-arial" id="popup-vertransfer-jiexi">{{fmtMoney(serverObj.data.interest,2)}}</span>元
+                    </span>
+                </div>
+            </div>
+            <!--end-->
+
+        </div>
+        <!--部分购买end-->
+    </div>
+    <!--list-end-->
+</div>
+
+
+
+<!--备注-->
+<div class="vertransfer-one-confoot">
+    <span class="vertransfer-one-moneycols">
+        <span>实际支付金额</span>
+        <strong id="popup-vertransfer-actualPrice">{{fmtMoney(serverObj.data.amount,2)}}</strong>
+        <em>元</em>
+    </span>
+    <span class="vertransfer-one-checkbox">
+        <!--
+            选中：checked
+            例：
+            <em class="version-details-img checked">&nbsp;</em>
+        -->
+       <em class="version-details-img checked" check-type="popup-transfer-checked">&nbsp;</em>
+       <span>
+           若剩余可投金额不足，则自动投满。若使用红包则此选项无效
+       </span>
+        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_cb_agree}}" class="version-ico version-tooltip-css tooltipcol"></a>
+    </span>
+    <span class="vertransfer-one-checkbox ">
+       <em class="version-details-img checked" check-type="popup-transfer-checked">&nbsp;</em>
+       <span>
+           我已阅读并同意<a target="_blank" href="/agreement/sample/transfer">《债权转让协议》</a>
+       </span>
+    </span>
+</div>
+<!--备注-end-->

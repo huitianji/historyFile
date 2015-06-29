@@ -1,0 +1,7 @@
+<script id="tpl" type="text/x-handlebars-template">
+    <ul class="products-list money-list" id="tpl-ul">
+        {{#list}}
+        <li><span class="time-width">{{balanceTime}}</span>{{#if businessType}}<span class="type-with">{{businessType}}</span>{{else}}<span class="type-with">&nbsp;</span>{{/if}}</span>{{# if inAmount}}<span>{{inAmount}}</span>{{else}}<span>&nbsp;</span>{{/if}}{{#if outAmount}}<span>{{outAmount}}</span>{{else}}<span>&nbsp;</span>{{/if}}<span>{{currentTotalBalance}}</span><span class="details-width">{{xxx}} </span></li>
+        {{/list}}
+    </ul>
+</script>

@@ -1,0 +1,41 @@
+<span class="acc-view-list-v1">
+    <span>
+        <strong>预计待收回款</strong>
+    </span>
+    <span class="font-size">{{fmtMoney(amount, 2)}}元</span>
+</span>
+<!--2-->
+<span class="acc-view-list-v1 width-box140">
+    <span>
+        <strong>加权年化收益率</strong>
+    </span>
+    <span class="font-size">{{weighting/100}}%</span>
+</span>
+<!--lines-->
+<span class="divider">&nbsp;</span>
+<!--3-->
+<span class="acc-view-waiting">
+    等待起息<em>{{bidCount}}</em>笔
+</span>
+<!--4-->
+<span class="acc-view-list-v2">
+    <!--趋势-->
+    <span class="acc-view-arrow">
+        <span class="ar_up"></span>
+        <span class="ar_up_in"></span>
+    </span>
+    <!--趋势end-->
+    <!---->
+    <span class="acc-view-list-cols">
+        正常还款中<em>{{normalCount}}</em>笔
+    </span>
+    <span class="acc-view-list-cols">
+        逾期还款中<em>{{lateCount}}</em>笔
+    </span>
+    <!---->
+</span>
+<!--5-->
+<span class="acc-view-list-v3">
+    已结清<em>{{settledCount}}</em>笔
+</span>
+<!---->

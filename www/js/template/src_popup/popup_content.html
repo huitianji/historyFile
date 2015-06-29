@@ -1,0 +1,60 @@
+<!-- 弹出层内容部分 start -->
+<div class="version-popup-title">
+    <span class="version-popup-closed">
+        <a href="javascript:void(0)">
+            <em class="certifi-img">&nbsp;</em>
+        </a>
+    </span>
+    {{include "./popup_title"}}
+</div>
+<!--标题end-->
+<!--内容区域-->
+<div class="version-popup-content">
+    {{if mycalculate.popupStatus == 0}}
+        {{include "./popup_result"}}
+    {{else if mycalculate.popupStatus == 1}}
+        {{include "./popup_invest"}}
+    {{else if mycalculate.popupStatus == 2}}
+        {{include "./popup_transfer_onetomany"}}
+    {{else if mycalculate.popupStatus == 3 || mycalculate.popupStatus == 4}}
+        {{include "./popup_myaccount"}} 
+    {{else if mycalculate.popupStatus == 5}}
+        {{include "./popup_mobile_tip"}}   
+    {{/if}}
+    <div class="blank15">&nbsp;</div>
+</div>
+<!-- 内容区域end -->
+
+<!-- popup-footer -->
+{{if mycalculate.popupStatus != 5}}
+    <div class="version-popup-footer">
+        <div class="version-popup-action">
+           <!-- 禁用类 disabled -->
+            {{if mycalculate.popupStatus == 0}}            
+                <span>
+                    <input type="button" class="version-btn-h30 version-btn-closePopup" value="确认">
+                </span>
+            {{else if mycalculate.popupStatus == 4}}   
+                <span>
+                    <input type="button" class="version-btn-h30 version-btn-bg-darkgrey version-btn-closePopup" value="取消">
+                </span>
+                <span>
+                    <input type="button" class="version-btn-h30  version-btn-sureInvest" value="确认撤销">
+                </span>
+            {{else}}   
+                <span>
+                    <input type="button" class="version-btn-h30 version-btn-bg-darkgrey version-btn-closePopup" value="取消">
+                </span>
+                <span>
+                    {{if mycalculate.isPre}}
+                        <input type="button" class="version-btn-h30 version-stop-btn disabled" disabled value="00分00秒" data-cdtime="1">
+                    {{else}}
+                        <input type="button" class="version-btn-h30 version-btn-sureInvest" value="{{baseInfo.btnName}}">
+                    {{/if}}
+                </span>
+            {{/if}}
+        </div>
+        <span class="version-popup-risk">{{codes.local_tooltip.inv_layer_hint_risk}}</span>
+    </div>
+{{/if}}
+<!-- popup-footer-end -->

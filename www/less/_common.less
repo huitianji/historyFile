@@ -1,0 +1,344 @@
+/*公用部分*/
+
+body{font-size:12px;
+  font-family: "\5FAE\8F6F\96C5\9ED1",Verdana,Arial,Helvetica,sans-serif;
+  color:#333;
+}
+
+body,p,div,ul,li,h1,h2,h3,h4,h5,span,input,table,td,th,textarea,strong,em{ margin: 0px; padding: 0px;}
+ul li{list-style: none;}
+a { text-decoration:none;
+  //  color:#4d5479;
+  //color:#0893d4;
+  color:#53a0e3;
+  font-size:12px;}
+//a{ text-decoration: none; color:#0893d4;}color:#007bb4;
+a:hover {text-decoration:none; color:#007bb4;}
+img { border:none;}
+.lt{ float:left;}
+.rt{ float:right;}
+label, input,select,img{vertical-align:middle; display:inline-block;}
+.clear { width:0px; padding:0px; height:0px; margin:0px; font-size:0px; line-height:0px; clear:both;}
+.cf:before, .cf:after {  content:" "; display:table;}.cf:after { clear:both;}.cf { zoom:1;}
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+  zoom:1;
+}
+.main{
+  border:0px solid red;
+  width: 1000px; margin: 0px auto;
+  &.main-w730{
+    width:730px;
+  }
+  &.main-w960{
+    width:960px;
+  }
+}
+.main-w1200{
+  border:0px solid red;
+  margin: 0px auto;
+  width:1200px;
+}
+/*
+  (container)尺寸width = 1200px;
+  (main)尺寸width = 1000px;
+*/
+.container{
+  width:1200px;
+  margin: 0px auto;
+}
+//1
+/*img-url-end*/
+/*解决谷歌字体小于12px,opera本来就是10px的字体了,所以阻止缩放*/
+.shrink{-webkit-transform:scale(0.8);-o-transform:scale(1); display:inline-block}
+/**/
+p{
+//  line-height:12px;
+}
+.bgcor-white{
+  background-color: #fff;
+}
+.spacing-top30{
+  margin-top: 30px;
+}
+.relative{
+  position: relative;
+}
+.version-pd9-lr{
+  padding: 0px 9px;
+}
+//2
+.ico-time{
+  background-position: -510px -451px;
+}
+.ico-footer-QQ{
+  background-position: -337px -479px;
+  &:hover{
+    background-position: -364px -479px;
+  }
+}
+.ico-footer-email{
+  background-position: -392px -479px;
+  &:hover{
+    background-position: -420px -479px;
+  }
+}
+.backtop{
+  background-position:0px -130px;
+  &:hover{
+    background-position:-130px -130px;
+  }
+}
+/*小贷公司logo*/
+.version-company-logo-default{//小袋图标 默认图标
+
+}
+.version-company-logo-4{//4
+  background-position: 0px -19px;
+}
+.version-company-logo-8{//8
+  background-position: 0px -247px;
+}
+.version-company-logo-7{//7
+  background-position: 0px -57px;
+}
+.version-company-logo-1{//1
+  background-position: 0px -76px;
+}
+.version-company-logo-6{//6
+  background-position: 0px -95px;
+}
+.version-company-logo-5{//5
+  background-position: 0px -114px;
+}
+.version-company-logo-9,.version-company-logo-16{//9
+  background-position: 0px -133px;
+}
+.version-company-logo-10{//10
+  background-position: 0px -152px;
+}
+.version-company-logo-11{//11
+  background-position: 0px -171px;
+}
+.version-company-logo-12{//12
+  background-position: 0px -190px;
+}
+.version-company-logo-13{//13
+  background-position: 0px -209px;
+}
+.version-company-logo-15{//15
+  background-position: 0px -228px;
+}
+.version-company-logo-19{//19
+  background-position: 0px -266px;
+}
+.version-company-logo-17{//17
+  background-position: 0px -285px;
+}
+.version-company-logo-20{//20
+  background-position: 0px -304px;
+}
+.version-company-logo-30{//30
+  background-position: 0px -323px;
+}
+.version-company-logo-28{//28中原
+  background-position: 0px -342px;
+}
+.version-company-logo-31{//31开元
+  background-position: 0px -361px;
+}
+.version-company-logo-24{//24鸿坤
+  background-position: 0px -380px;
+}
+.version-company-logo-33{//33百
+  background-position: 0px -399px;
+}
+.version-company-logo-34,.version-company-logo-35{//34  /35
+  background-position: 0px -418px;
+}
+.version-company-logo-27{//27星巢先河
+  background-position: 0px -437px;
+}
+.version-company-logo-26{//26宏海
+  background-position: 0px -456px;
+}
+.version-company-logo-37{//37友尔诚投资
+  background-position: 0px -475px;
+}
+.version-company-logo-40{//40 绿盾
+  background-position: 0px -494px;
+}
+.version-company-logo-39{//39 吉信logo_14X14
+  background-position: 0px -513px;
+}
+.version-company-logo-42{//42 瀚华担保-14X14
+  background-position: 0px -532px;
+}
+.version-company-logo-41,.version-company-logo-43{//id=41 ,id=43 积之信14X14
+  background-position: 0px -551px;
+}
+.version-company-logo-44{//44 嘉银_14X14_44
+  background-position: 0px -570px;
+}
+.version-company-logo-45{//45 中安金控logo-14X14_45
+  background-position: 0px -589px;
+}
+.version-company-logo-3{//3  亚飞小贷Logo-New14X14_3
+  background-position: 0px -608px;
+}
+.version-company-logo-46{//46  分期乐担保
+  background-position: 0px -627px;
+}
+.version-company-logo-47{//47  众星汇
+  background-position: 0px -646px;
+}
+.version-company-logo-48{//48  优分期
+  background-position: 0px -665px;
+}
+.version-company-logo-49{//银泰-14X14_49
+  background-position: 0px -684px;
+}
+.version-company-logo-50{//宝亚logo_50
+  background-position: 0px -703px;
+}
+.version-company-logo-51{//裕友资产LOGO_51
+  background-position: 0px -722px;
+}
+.version-company-logo-52{//安信资产LOGO_52
+  background-position: 0px -741px;
+}
+.version-company-logo-53{//鑫银logo_53
+  background-position: 0px -760px;
+}
+.version-company-logo-54{//森强LOGO 14X14_54
+  background-position: 0px -779px;
+}
+
+/*分页通用样式*/
+.paging{
+  a{
+    display: inline-block;
+    width:26px; height: 26px; text-align: center; line-height: 26px;
+    margin-left: 15px;
+    background: url("https://static.souyidai.com/www/images/page.png") no-repeat;
+    &.digital-hover{
+      color:#666;
+      background-position:0px -285px;
+    }
+    &.prev{
+      background-position:10px -34px;
+    }
+    &.next{
+      background-position:0px -62px;
+    }
+
+    &.current{
+      color:#fff;
+      background-position:0px -350px;
+      color:#3F80DC;
+
+    }
+  }
+  .digital-dotted{
+    display: inline-block;
+    width: 25px; height: 25px; line-height: 25px;
+    text-align: center;
+    margin-left: 15px;
+  }
+  span{
+    display: inline-block;
+    width: 26px; height: 26px; line-height: 26px;
+    text-align: center;
+    margin-left: 15px;
+    background: url("https://static.souyidai.com/www/images/page.png") no-repeat;
+    &.current{
+      color:#fff;
+      background-position:0px -350px;
+      color:#3F80DC;
+    }
+    &.prev{
+      background-position:10px -34px;
+    }
+    &.next{
+      background-position:0px -62px;
+    }
+  }
+
+  &.page-margin{
+    padding:20px 0px 30px 0px;
+    margin:0px;
+    float: right;
+  }
+}
+/*返回顶部*/
+.back-box{
+  position: fixed;
+  bottom:10px;
+  left:50%;
+  margin-left: 515px;
+  li{
+    height: 62px; width:62px;
+    margin-top: 7px;
+    a{
+      display: block;
+      height: 62px; width:62px;
+      display: block;
+      //      background-image: url("https://static.souyidai.com/www/images/mix.png");
+      //      background-repeat: no-repeat;
+    }
+  }
+}
+/*old(面包屑)*/
+.point-to{
+  height: 50px; line-height: 50px;
+  color:#666;
+  font-size: 14px;
+  a{
+    font-size: 14px;
+  }
+}
+/*new-version(面包屑)*/
+.com-bread-crumbs{
+  height: 35px; line-height: 35px;
+  color:#666;
+}
+.version-bread-crumbs{
+  height: 50px; line-height: 50px;
+  .clearfix();
+  a{
+    display: inline-block;
+    float: left;
+    color:#333;
+    &:hover{
+      color:#53a0e3;
+    }
+  }
+  i{
+    display: inline-block;
+    width:5px; height: 9px;
+    margin-top: 21px;
+    margin-left: 10px; margin-right: 10px;
+    float: left;
+    color:#ccc;
+    background-position: -53px -466px;
+  }
+  span{
+    display: inline-block;
+    float: left;
+  }
+}
+//页面尺寸1200/左侧（main）<=>右侧190（占位符）
+.placeholder{
+  width:190px;
+}
+//字体微软雅黑
+.font-wr{
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+}

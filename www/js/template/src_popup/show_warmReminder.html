@@ -1,0 +1,19 @@
+<!-- 温馨提醒 -->
+<div class="version-popup-lack ">
+    <span><em class="certifi-img"></em>
+        {{if mycalculate.reminder == 1}}
+            <!-- 可用余额不足，已为您调整投资金额 立即充值-->
+            {{#codes.local_tooltip.inv_layer_balance}}
+        {{else if mycalculate.reminder == 2}}
+            {{if serverObj.data.bid.curUserBiddingAmount != 0}}
+                {{replace(replace(codes.local_tooltip.inv_layer_limit_ed,/\{0\}/g,fmtMoney(mycalculate.projectLimitMoney,0)),/\{1\}/g,fmtMoney(serverObj.data.bid.curUserBiddingAmount*100,0))}}
+            {{else}}
+                <!-- 本项目每人投资限额为5,000元，已为您调整投资金额 -->
+                {{replace(codes.local_tooltip.inv_layer_limit,/\{0\}/g,fmtMoney(mycalculate.projectLimitMoney,0))}}
+            {{/if}}
+        {{else if mycalculate.reminder == 3}}
+            <!-- 本项目当前剩余可投金额为{0}元，已为您调整投资金额 -->
+            {{replace(codes.local_tooltip.inv_layer_left,/\{0\}/g,fmtMoney(mycalculate.surplusMoney,0))}}
+        {{/if}}
+    </span>
+</div>

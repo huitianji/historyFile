@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的账户_红包(页面结构1200)</title>
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/page-style.css">
+    <script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+    <style type="text/css">
+        body{
+            background: url("https://static.souyidai.com/www/images/version/version-body-bg.png") repeat-x left top;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+<div class="cf main-offsetHeight">
+    <!--头部-->
+    <!--<div class="main">-->
+        <!--<div class="borrow-page-top page-top33">-->
+            <!--<div class="borrow-top-right">-->
+                <!--<a href="https://help.souyidai.com/help/guide/">新手指引</a><a href="https://help.souyidai.com/help/">帮助中心</a><a href="#" class="ico-borrow ico-phone"></a><span>4000-168-866</span>-->
+            <!--</div>-->
+            <!--<div class="borrow-top-left">-->
+
+                <!--&lt;!&ndash;登录前&ndash;&gt;-->
+                <!--<div id="login_before" style="display: block;"> 您好，欢迎来到搜易贷！<a href="#" onclick="javascript:window.location.href='https://passport.souyidai.com/?backurl='+currentUrl;">[登录]</a><a href="https://passport.souyidai.com/regist">[免费注册]</a></div>-->
+                <!--&lt;!&ndash;登录前end&ndash;&gt;-->
+                <!--&lt;!&ndash;登录后&ndash;&gt;-->
+                <!--<div class="login-after" id="login_after">-->
+                <!--</div>-->
+                <!--&lt;!&ndash;登录后end&ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="navigation">-->
+            <!--<div class="sign-or-reg" id="login_before_t">-->
+                <!--<a href="https://passport.souyidai.com/regist" class="reg-a">免费注册</a>-->
+                <!--<a href="https://passport.souyidai.com" >登录</a>-->
+            <!--</div>-->
+            <!--<span class="borrow-logo"><a href="https://www.souyidai.com"><img src="https://static.souyidai.com/www/images/new-logo.png"></a></span>-->
+            <!--<ul class="nav-list">-->
+                <!--<li id="menu_portal"><a href="https://www.souyidai.com">首页</a> </li>-->
+                <!--<li id="menu_invest"><a href="https://www.souyidai.com/invest">我要投资</a> </li>-->
+                <!--<li id="menu_borrow"><a href="https://www.souyidai.com/borrow/product" >我要借款</a> </li>-->
+                <!--<li id="menu_myaccount"><a href="https://www.souyidai.com/myaccount/capital">我的账户</a> </li>-->
+                <!--<li class="nav-hover"></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--头部end-->
+    <!--改版头部-->
+    <div class="redesign-header">
+        <!--header-top-->
+        <div class="header-top">
+            <div class="weak-nav">
+                <a href="####" class="weak-item-a" data-type="weak-item-a">
+                    <span class="weak-text"><em class="ver-ico-url ico-tel-gray" data-type="ico-tel-em"></em><strong>手机客户端</strong><i data-type="hover-tip-arrow" class="ver-ico-url"></i></span>
+                    <span class="lines-color" data-type="lines-color"></span>
+                    <!--浮层-->
+                    <div class="mobile-client">
+                        <span><img src="https://static.souyidai.com/www/images/version/qr-vr-mobile-codes.png" width="108" height="108"></span>
+                        <strong>掌上投资 更加精彩</strong>
+                    </div>
+                    <!--浮层end-->
+                </a>
+                <a href="####" class="weak-item-a" data-type="weak-item-a1">
+                    <span class="weak-text"><strong>联系我们</strong><i data-type="hover-tip-arrow" class="ver-ico-url"></i></span>
+                    <span class="lines-color"></span>
+                </a>
+                <!--联系我们浮层-->
+                <div class="weak-contact-us" data-type="weak-contact-us">
+                    <!--遮罩-->
+                    <span class="weak-mask-line"></span>
+                    <!--遮罩end-->
+                    <span class="service-time">服务时间：工作日9:00 - 18:00</span>
+                    <span class="service-telphone">4000-168-866</span>
+                    <div class="service-list" data-type="service-list">
+                        <a href="####"><span class="ver-ico-url ico-service-0 "></span>在线客服</a>
+                        <a href="####"><span class="ver-ico-url ico-service-1 "></span>客服邮箱</a>
+                        <a href="####"><span class="ver-ico-url ico-service-2"></span>新浪微博</a>
+                    </div>
+                    <span class="weak-weixin"><img src="https://static.souyidai.com/www/images/version/qr-vr-weixin.png" width="88" height="88"></span>
+                </div>
+                <!--联系我们浮层-end-->
+                <a href="####" class="weak-item-a">
+                    <span class="weak-text"><strong>关于我们</strong></span>
+                    <span class="lines-color"></span>
+                </a>
+                <a href="####" class="weak-item-a">
+                    <span class="weak-text"><strong>新手引导</strong></span>
+                    <span class="lines-color"></span>
+                </a>
+                <a href="####" class="weak-item-a">
+                    <span class="weak-text"><strong>帮助中心</strong></span>
+                </a>
+            </div>
+            <span class="welcome">您好，欢迎来到搜易贷！<a href="####">[登录]</a><a href="####" class="week-reg">[免费注册]</a> </span>
+        </div>
+        <!--header-top-end-->
+        <!--header-menu-->
+        <div class="ver1-navigation">
+            <!--登录前状态-->
+            <div class="intersection" style="display: none;">
+                <a href="####" class="inter-log">登录</a>
+                <a href="####" class="inter-reg">免费注册</a>
+            </div>
+            <!--登录前状态end-->
+            <!--登录后状态-->
+            <div class="ver-after-logging" style="display: block;">
+                <span class="logging-name" data-type="after-logging"><i class="ver-ico-url"></i><strong>137*****388</strong><em></em></span>
+                <div class="logging-up" data-type="logging-up">
+                    <a href="####"><em>28</em><strong>我的消息</strong></a>
+                    <a href="####"><strong>我的红包(6)</strong></a>
+                    <a href="####"><strong>充值</strong></a>
+                    <a href="####"><strong>取现</strong></a>
+
+                    <a href="####"><strong>安全退出</strong></a>
+                </div>
+            </div>
+            <!--登录后状态end-->
+            <span class="ver1-logo"><a href="https://www.souyidai.com"><img src="https://static.souyidai.com/www/images/version/logo.jpg" width="226" height="57"></a></span>
+            <ul class="nav-menu" data-type="nav-menu">
+                <li id="menu_portal"><a href="https://www.souyidai.com">首页</a> </li>
+                <li id="menu_invest"><a href="https://www.souyidai.com/invest">我要投资</a> </li>
+                <li id="menu_borrow"><a href="https://www.souyidai.com/borrow/product" >我要借款</a> </li>
+                <li id="menu_myaccount"><a href="https://www.souyidai.com/myaccount/capital">我的账户</a> </li>
+                <li class="nav-hover"></li>
+            </ul>
+        </div>
+        <!--header-menu-end-->
+    </div>
+    <!--改版头部end-->
+    <!--改版（页面宽度1200）==（结构变更）-->
+    <div class="container">
+        <!--面包屑-->
+        <div class="point-to">我的账户 > 我的投资 > 资金明细 </div>
+        <!--面包屑end-->
+    </div>
+    <div class="container">
+        <!--左侧部分-->
+        <div class="main lt">
+            <div class="content">
+                <!--left-->
+                <div class="menu-xs">
+                    <h3 class="xs-title"><span class="ico ico-funds"></span>我的资金</h3>
+                    <ul class="detail-list">
+                        <li ><a href="####">资金概览</a></li>
+                        <li ><a href="####">资金明细</a></li>
+                        <li><a href="####">充值</a> </li>
+                        <li><a href="####">取现</a></li>
+                    </ul>
+                    <h3 class="xs-title"><span class="ico ico-invest"></span>我的投资</h3>
+                    <ul class="detail-list">
+                        <li ><a href="####">投资列表</a></li>
+                        <li ><a href="####">债权转让</a></li>
+                    </ul>
+                    <h3 class="xs-title"><span class="ico ico-jie"></span>我的借款</h3>
+                    <ul class="detail-list">
+                        <li><a href="####">借款列表</a></li>
+                    </ul>
+                    <h3 class="xs-title"><span class="ico ico-loan"></span>我的账户</h3>
+                    <ul class="detail-list">
+                        <li><a href="####">安全中心</a></li>
+                        <li ><a href="####">银行卡</a></li>
+                        <li class="current-select"><a href="####">红包</a></li>
+                    </ul>
+                </div>
+                <!--left-->
+                <!--right-->
+                <div class="aside-right border-top-bg">
+                    <div class="information">
+                        <!--投资-->
+                        <div class="red-amount">
+                            <div class="red-money">
+                                <div class="red-totalw190">红包总额（元）<strong>200,000,000.00</strong></div>
+                                <p class="red-count"><span class="ico ico-assets-eq"></span></p>
+                                <div class="red-totalw190">回收本息合计（元）<strong>200,000,000.00</strong></div>
+                                <p class="red-count"><span class="ico ico-assets-jia"></span></p>
+                                <div class="red-totalw190">冻结余额（元）<strong>200,000,000.00</strong></div>
+                            </div>
+                            <div class="red-invest">
+                                <input type="button" class="btn btn-w118 btn-fweight-default margin-top30" value="立即投资">
+                            </div>
+                        </div>
+                        <!--投资end-->
+                        <!--兑换码-->
+                        <!--btn-nouse-disabled/-->
+                        <div class="exchange-code cf">
+                            <div class="exchange-code-name">兑换码</div>
+                            <div class="exchange-code-right cf">
+                                <span class="exchange-code-span input-blur-focus"><input type="text" data-value="请输入获得的兑换码" value="请输入获得的兑换码"></span>
+                                <span><input type="button" class="btn btn-w120 btn-fweight-default btn-nouse-disabled" id="ver-btn-click-ceshi" value="马上变红包"></span>
+                            </div>
+                        </div>
+                        <!--兑换码end-->
+                        <!--红包列表-->
+                        <div class="red-list margin-top20">
+                            <p class="red-row red-switch"><span class="default-left-bg blue-current">可用红包</span><span class="">已用红包</span><span>已过期红包</span> </p>
+                            <div class="margin-top10">
+                                <!--可用红包-->
+                                <div class="red-item" style="display: block;">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <th>红包金额(元)</th>
+                                            <th>生效时间</th>
+                                            <th>到期时间</th>
+
+                                            <th>红包状态</th>
+                                            <th>红包类型</th>
+                                            <th>使用条件</th>
+                                        </tr>
+                                        <tr>
+                                            <td>500,000,000.00</td>
+                                            <td>2014-01-30</td>
+                                            <td>2014-01-30</td>
+
+                                            <td><span class="unused">未使用</span></td>
+                                            <td>全站通用投资红包</td>
+                                            <td>投资金额大于500.00元</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!--可用红包end-->
+                                <!--已用红包-->
+                                <div class="red-item">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <th>红包金额(元)</th>
+                                            <th>生效时间</th>
+                                            <th>到期时间</th>
+
+                                            <th>红包状态</th>
+                                            <th>红包类型</th>
+                                            <th>使用条件</th>
+                                        </tr>
+                                        <tr>
+                                            <td>500,000,000.00</td>
+                                            <td>2014-01-30</td>
+                                            <td>2014-01-30</td>
+
+                                            <td><span class="hasused">已使用</span></td>
+                                            <td>全站通用投资红包</td>
+                                            <td>投资金额大于500.00元</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!--已用红包end-->
+                                <!--已过期红包-->
+                                <div class="red-item">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <th>红包金额(元)</th>
+                                            <th>生效时间</th>
+                                            <th>到期时间</th>
+
+                                            <th>红包状态</th>
+                                            <th>红包类型</th>
+                                            <th>使用条件</th>
+                                        </tr>
+                                        <tr>
+                                            <td>500,000,000.00</td>
+                                            <td>2014-01-30</td>
+                                            <td>2014-01-30</td>
+
+                                            <td><span class="outdata">已过期</span></td>
+                                            <td>全站通用投资红包</td>
+                                            <td>投资金额大于500.00元</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!--已过期红包end-->
+                            </div>
+
+
+                        </div>
+                        <!--红包列表end-->
+                    </div>
+                    <!--温馨提示-->
+                    <div class="hint-box">
+                        <h3>温馨提示</h3>
+                        <div class="hint-box-content">
+                            温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示
+                        </div>
+                    </div>
+                    <!--温馨提示end-->
+                </div>
+                <!--right-end-->
+            </div>
+        </div>
+        <!--左侧部分end-->
+        <!--右侧部分-->
+        <div class="placeholder rt">
+            <span><img src="https://static.souyidai.com/www/images/version/placeholder-pic.jpg" width="190" height="350"></span>
+        </div>
+        <!--右侧部分end-->
+    </div>
+    <!--改版（页面宽度1200）==（结构变更）end-->
+</div>
+<!--新版弹窗-->
+<!--遮罩-->
+<div class="version-mask popup-mask "></div>
+<div class=" version-layer web-layer" id="version-layer">
+    <div class="ver-content-mask"></div>
+    <div class="version-conbox">
+        <div class="ver-layer-title">
+            <div class="ver-pwclose">
+                <a href="####" title="关闭" class="shut-down">
+                    <div class="pwclose">
+                        <span class="pwclose_h"></span>
+                        <span class="pwclose_s"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="ver-layer-h1"><span>兑换成功</span></div>
+        </div>
+        <!--2-->
+        <div class="ver-infor-status-box" style="display: block;">
+            <!--兑换成功（恭喜您，已成功兑换5个红包）<img src="../images/version/ico-ok.png">-->
+            <div  style="display: none">
+                <div class="ver-layer-status pd-83-85"><span class="version-bigico ver-layer-img-ok">&nbsp;</span><span class="ver-layer-msg">恭喜您，已成功兑换5个红包</span></div>
+                <div class="ver-layer-message">马上到可用红包里看看吧！ </div>
+            </div>
+            <!--使用红包end-->
+            <!--来晚了一步，兑换码已过期-->
+            <div  style="display: none;">
+                <div class="ver-layer-status pd-83-85"><span class="version-bigico ver-layer-img-false">&nbsp;</span><em>来晚了一步，兑换码已过期</em></div>
+            </div>
+            <!--end-->
+            <!--兑换码确误，请稍后重试-->
+            <div  style="display: none;">
+                <div class="ver-layer-status pd-83-85"><span class="version-bigico ver-layer-img-false">&nbsp;</span><em>兑换码确误，请稍后重试</em></div>
+            </div>
+            <!--end-->
+            <!--错误次数过多，请第二天再试-->
+            <div  style="display: none;">
+                <div class="ver-layer-status pd-83-85"><span class="version-bigico ver-layer-img-false">&nbsp;</span><em>错误次数过多，请第二天再试</em></div>
+            </div>
+            <!--end-->
+            <!--您的兑换码已被使用-->
+            <div  style="display: block;">
+                <div class="ver-layer-status pd-83-85"><span class="version-bigico ver-layer-img-false">&nbsp;</span><em>您的兑换码已被使用</em></div>
+            </div>
+            <!--end-->
+
+        </div>
+        <!--2end-->
+        <!--end-->
+        <div class="ver-layer-bottom">
+            <div class="ver-layer-buttons">
+                <!--<input type="button" class="ver-btn ver-btn-cancel shut-down" value="取消">-->
+                <input type="button"  class="ver-btn" value="确认">
+            </div>
+            <span class="ver-layer-risk">&nbsp;</span>
+        </div>
+        <!---->
+    </div>
+</div>
+<!--新版弹窗end-->
+<!--footer-->
+<div class="footer new-footer">
+    <div class="about-us-link">
+        <div class="main">
+            <a href="https://help.souyidai.com/about/aboutus.htm" target="_blank">关于我们</a>
+            |<a href="https://help.souyidai.com/about/contactus.htm" target="_blank">联系我们</a>
+            |<a href="https://help.souyidai.com/about/career.htm" target="_blank">加入我们</a>
+            |<a href="https://help.souyidai.com/about/media/" target="_blank">媒体报道</a>
+            |<a href="https://help.souyidai.com/about/legal/" target="_blank">法律法规</a>
+            |<a href="https://help.souyidai.com/about/security.htm" target="_blank">安全保障</a>
+            |<a href="https://help.souyidai.com/about/partner.htm" target="_blank">合作伙伴</a>
+            |<a href="https://help.souyidai.com/help/guide/" target="_blank">新手引导</a>
+            |<a href="https://help.souyidai.com/help/" target="_blank">帮助中心</a>
+        </div>
+    </div>
+    <div class="website">
+        <div class="webshow-row cf">
+            <div class="web-service lt">
+                <p class="service-row"><span class="ico ico-time"></span>客服工作时间 9:00-18:00（国家法定节假日除外）</p>
+                <p class="tel-row"><span class="bd-right-color">4000-168-866</span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAxMzk0MV8xODA2ODFfNDAwMDE2ODg2Nl8yXw" target="_blank" class="bd-right-color"><em class="ico ico-footer-QQ"></em></a><a href="mailto:kefu@souyidai.com"><em class="ico ico-footer-email"></em></a></p>
+            </div>
+            <div class="web-experian lt">
+                <a href="http://www.experian.com/" target="_blank">搜易贷银行级风控体系使用由全球第一大征信机构Experian特别定制的评分卡与风控模型</a>
+            </div>
+        </div>
+        <p class="blogroll">友情链接：<a href="http://www.focus.cn/" rel="nofollow" target="_blank">搜狐焦点</a>
+            <a href="http://money.sohu.com/" rel="nofollow" target="_blank">搜狐理财</a>
+            <a href="https://pay.sina.com.cn/" rel="nofollow">微钱包</a>
+            <a href="http://18.ifeng.com/" rel="nofollow" target="_blank">凤凰理财超市</a>
+            <a href="http://www.hexun.com/" rel="nofollow" target="_blank">和讯</a>
+            <a href="http://www.rong360.com/" rel="nofollow" target="_blank">融360</a>
+            <a href="http://www.p2peye.com/" rel="nofollow" target="_blank">网贷天眼</a>
+            <a href="http://www.wangdaizhijia.com/" rel="nofollow" target="_blank">网贷之家</a>
+        <p class="picture-link">
+            <a target="_blank" href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.souyidai.com&amp;lang=zh_cn" title="VeriSign加密服务" class="ico-footer a2">
+            </a>
+        </p>
+        <p class="new-copyright">版权所有 © 2014 搜易贷 搜狐集团（NASDAQ：SOHU）旗下公司 All Rights Reserved 京ICP备14032951号</p>
+    </div>
+</div>
+<!--<SCRIPT language=JavaScript src="https://static.souyidai.com/pv/spv20140822.js"></SCRIPT>-->
+<!--footer-end-->
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script>
+    $(function(){
+        $("#ver-btn-click-ceshi").on("click",function(){
+            showComLayer($(".version-mask"),$("#version-layer"));
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

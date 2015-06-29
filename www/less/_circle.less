@@ -1,0 +1,140 @@
+.verxon-circle{//进度颜色值
+  width:54px; height: 54px;
+  position: absolute;
+  /*background-color: #0cc;*/
+  background-color: #e7e6e6;
+//  background-color: #81c931;
+  border-radius: 50%;
+  &.verxon-top-left{
+    top:15px; left: 12px;
+  }
+}
+.verxon-pie_left,.verxon-pie_right{
+  width: 54px; height: 54px;
+  position: absolute;
+  top: 0px; left: 0px;
+}
+.verxon-right,.verxon-left{//默认颜色值
+  width: 54px;height: 54px;
+  position: absolute; top: 0px; left: 0px;
+  background-color: #e7e6e6;
+  border-radius: 50%;
+  transform:rote(30deg);
+}
+.verxon-pie_left,.verxon-left{
+  clip: rect(0px,27px,auto,0px);
+}
+.verxon-pie_right,.verxon-right{
+  clip:rect(0px,auto,auto,27px);
+}
+.verxon-mask{
+  position: absolute; top: 5px; left: 5px;
+  width: 44px; height: 44px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  text-align: center; line-height:44px;
+  span{
+    font-size: 14px;
+  }
+}
+.verxon-mask-progress{
+  position: absolute; top:24px; left:22px;
+  width: 32px; height: 28px;
+  text-align: center; line-height:32px;
+  span{
+    font-size: 14px;
+  }
+}
+.verxon-mask-progress-detail{
+  position: absolute; top:16px; left:8px;
+  width: 36px; height: 20px;
+  text-align: center; line-height:20px;
+  span{
+    font-size: 14px;
+  }
+}
+//进度条宽度 48px
+.ver-project-circle{
+  width:48px; height: 48px;
+  position: absolute; left: 0px; top:0px;
+  background-color: #ececec;
+  /*background-color: red;*/
+  border-radius: 50%;
+
+  .ver-project-pie_left,.ver-project-pie_right{
+    width: 48px; height: 48px;
+    position: absolute;
+    top: 0px; left: 0px;
+  }
+  .ver-project-right,.ver-project-left{
+    width: 48px;height: 48px;
+    position: absolute; top: 0px; left: 0px;
+    background-color: #e7e6e6;
+    border-radius: 50%;
+    transform:rote(30deg);
+  }
+  .ver-project-pie_left,.ver-project-left{
+    clip: rect(0px,24px,auto,0px);
+  }
+  .ver-project-pie_right,.ver-project-right{
+    clip:rect(0px,auto,auto,24px);
+  }
+  .ver-project-mask{
+    position: absolute; top:3px; left: 3px;
+    width: 42px; height: 42px;
+    background-color: #f1f8ff;
+    border-radius: 50%;
+    text-align: center; line-height:42px;
+    color:#666;
+    font-size: 14px;
+  }
+  .ver-project-mask span{
+    color:#666;
+    font-size: 14px;
+  }
+
+}
+
+/////进度条宽度 40px
+.verxon2-circle{//进度颜色值
+  width:40px; height: 40px;
+  position: absolute;
+  /*background-color: #0cc;*/
+  background-color: #e7e6e6;
+  //  background-color: #81c931;
+  border-radius: 50%;
+  top:9px;
+}
+.verxon2-pie_left,.verxon2-pie_right{
+  width: 40px; height: 40px;
+  position: absolute;
+  top: 0px; left: 0px;
+}
+.verxon2-right,.verxon2-left{//默认颜色值
+  width: 40px;height: 40px;
+  position: absolute; top: 0px; left: 0px;
+  background-color: #e7e6e6;
+  border-radius: 50%;
+  transform:rote(30deg);
+}
+.verxon2-pie_left,.verxon2-left{
+  clip: rect(0px,20px,auto,0px);
+}
+.verxon2-pie_right,.verxon2-right{
+  clip:rect(0px,auto,auto,20px);
+}
+.details-item div.verxon2-mask{
+  position: absolute; top: 3px; left: 3px;
+  width: 34px; height: 34px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  text-align: center; line-height:32px;
+  color:#666;
+  font-size: 12px;
+  span{
+    font-size: 12px;
+    font-family:Arial;
+    display: inline-block;
+    float: none;
+  }
+}

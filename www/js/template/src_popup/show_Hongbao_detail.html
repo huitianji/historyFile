@@ -1,0 +1,22 @@
+{{if !mycalculate.notUseCoupon}}
+
+    {{if (serverObj.data.hasCoupon && serverObj.data.hasCoupon==1)}}
+    <p data-hbid="0">
+        <a href="####" class="version-popup-sys-title {{if mycalculate.chooseCouponUserId == 0}}active{{/if}}">系统自动匹配最大红包</a>
+    </p>
+    {{/if}}
+    {{each serverObj.data.couponList as coupon i}}
+        <p data-hbid="{{coupon.id}}">
+            {{if coupon.isChecked}}
+                <a href="javascript:;" class="{{if (mycalculate.chooseCouponUserId == coupon.id)}}active{{/if}} ">
+            {{/if}}
+                    <span>{{coupon.expiredDate}}</span>
+                    <em>{{fmtMoney(coupon.minBidAmount,0)}}</em>
+                    <strong>{{fmtMoney(coupon.amount,0)}}</strong>
+            {{if coupon.isChecked}}
+                </a>
+            {{/if}}
+        </p>
+    {{/each}}
+
+{{/if}}

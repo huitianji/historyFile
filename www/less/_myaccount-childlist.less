@@ -1,0 +1,392 @@
+@import "_mixins.less";
+.monthcast-overview{
+  .clearfix();
+  &.gray{
+    .monthcast-bankcart-info{
+      .monthcast-bankcart-info-body{
+        .monthcast-bankcart-info-body-pic{
+          img{
+            -webkit-filter: grayscale(1);/* Webkit */
+            filter:gray;/* IE6-9 */
+            filter: grayscale(1);/* W3C */
+          }
+        }
+      }
+    }
+    .monthcast-transfer-one{
+
+      background-color: #f5f5f5;
+      .monthcast-transfer-icon{
+        background-position: -64px -52px;
+      }
+
+    }
+    .monthcast-transfer-two{
+      background-color: #f5f5f5;
+      .monthcast-transfer-icon{
+        background-position: 0px -46px;
+      }
+      .monthcast-transfer-declare{
+        .monthcast-transfer-detail{
+          font-size: 24px;
+          color: #666666;
+        }
+      }
+      .monthcast-transfer-detail{
+        color:#666;
+      }
+
+    }
+    .monthcast-investdemand{
+      background-color: #f5f5f5;
+      .monthcast-investdemand-icon{
+        background-position: -128px -52px;
+      }
+      .monthcast-investdemand-one{
+        .monthcast-investdemand-cicle{
+          background-position: -22px 0px;
+        }
+      }
+      .monthcast-investdemand-two{
+        .monthcast-investdemand-cicle{
+          background-position: -22px 0px;
+        }
+      }
+    }
+  }
+}
+.monthcast-overview-left{
+  float: left;
+}
+.monthcast-title{
+  font-size: 18px;
+}
+.monthcast-bankcart-info{
+  width: 390px;
+  height: 220px;
+  margin-top: 20px;
+  border: 1px solid #b7d7f3;
+  .border-radius(4px);
+  .monthcast-bankcart-info-head{
+  	display:block;
+  	color: #666666;
+  	padding:19px 0px 19px 20px;
+  }
+  .monthcast-bankcart-info-body{
+  	border-top: 1px solid #b7d7f3;
+  	.monthcast-bankcart-info-body-pic{
+  		display: block;
+  		padding: 35px 0px 25px 20px;
+  		.monthcast-bankpic{
+  			&.gray{
+//  				-webkit-filter: grayscale(1);/* Webkit */
+//				filter:gray;/* IE6-9 */
+//				filter: grayscale(1);/* W3C */
+  			}
+  		}
+  	}
+  	.monthcast-bankcart-info-body-num-ciphertext{
+  		float: left;
+  		display: block;
+  		margin-left: 20px;
+  		text-align: center;
+  		vertical-align: center;
+		color: #333333;
+		font-size: 30px;
+		letter-spacing:14px;
+  	}
+  	.monthcast-bankcart-info-body-num-plaintext{
+  		float: left;
+  		margin-top: -3px;
+  		display: block;
+		color: #333333;
+		font-size: 30px;
+		font-family: Arial;
+  	}
+  }
+}
+.monthcast-btns{
+	margin-top: 80px;
+	.monthcast-btns-edit{
+		display: inline-block;
+		width: 200px;
+		input{
+         height: 40px;
+      }
+	}
+	.monthcast-btns-close{
+		display: inline-block;
+		width: 140px;
+		margin-left: 20px;
+		input{
+		 background-color: white;
+		 color: #a0a0a0;
+		 border: 1px solid #a0a0a0;
+         height: 40px;
+          &:active{
+            background-color:#fff;
+            box-shadow: inset 0px 3px 3px #fff;
+          }
+      }
+	}
+}
+.monthcast-right{
+	float: left;
+	margin-left: 20px;
+	margin-top: 44px;
+}
+.monthcast-transfer-one{
+	float: left;
+	width: 200px;
+	height: 100px;
+  background-color: #ffe296;
+  color:#666;
+	.border-radius(4px);
+
+	.monthcast-transfer-icon{
+	  float: left;
+	  width: 44px;
+	  height: 44px;
+	  margin: 31px 0px 31px 14px;
+      background-position: -64px 0px;
+	}
+	.monthcast-transfer-title{
+		display: inline-block;
+		padding-top: 31px;
+		padding-left: 10px;
+	}
+	.monthcast-transfer-detial{
+		font-size: 24px;
+		padding-left: 10px;
+		&.small{
+			font-size: 18px;
+		}
+	}
+//	&.gray{
+//		background-color: #f5f5f5;
+//		.monthcast-transfer-icon{
+//			background-position: -64px -52px;
+//		}
+//	}
+}
+.monthcast-transfer-two{
+  	float: left;
+  	width: 200px;
+  	height: 100px;
+  	margin-left: 20px;
+    color:#666;
+    background-color: #fff0ca;
+	.border-radius(4px);
+
+	.monthcast-transfer-icon{
+	  float: left;
+	  width: 44px;
+	  height: 44px;
+	  margin: 31px 0px 31px 14px;
+      background-position: 0px 0px;
+	}
+	.monthcast-transfer-title{
+		display:inline-block;
+		padding-top: 31px;
+		padding-left: 10px;
+	}
+  .monthcast-transfer-content{
+    margin-top: 3px;
+    .monthcast-transfer-declare1{
+      display:block;
+      float: left;
+      margin-left: 10px;
+      margin-right: 14px;
+      font-size: 18px;
+    }
+    .monthcast-transfer-detail{
+      display:block;
+      float: left;
+      margin-top: -4px;
+      font-size: 24px;
+      color: #ffce54;
+    }
+    .monthcast-transfer-declare2{
+      margin-left: 14px;
+      font-size: 18px;
+    }
+  }
+	&.gray{
+//		background-color: #f5f5f5;
+//		.monthcast-transfer-icon{
+//			background-position: 0px -46px;
+//		}
+//		.monthcast-transfer-declare{
+//		.monthcast-transfer-detail{
+//			font-size: 24px;
+//			color: #666666;
+//			}
+//		}
+	}
+}
+.monthcast-investdemand{
+	
+  width: 420px;
+  height: 100px;
+  margin-top: 120px;
+  color:#666;
+  .border-radius(4px);
+  background-color: #dbeaf8;
+  .monthcast-investdemand-icon{
+    float: left;
+    width: 44px;
+    height: 44px;
+    margin: 31px 0px 31px 14px;
+    background-position: -128px 0px;
+  }
+  .monthcast-investdemand-title{
+      display:inline-block;
+      padding-top: 25px;
+      padding-left: 10px;
+  }
+  .monthcast-investdemand-one{
+      padding-left: 67px;
+      .monthcast-investdemand-cicle{
+          margin-top: 3px;
+          color: white;
+          width: 18px;
+          height: 18px;
+          text-align: center;
+          background-position: 0px 0px;
+      }
+      .monthcast-investdemand-character{
+          padding-left: 30px;
+          text-align: center;
+          font-size: 18px;
+      }
+  }
+      .monthcast-investdemand-two{
+      padding-left: 67px;
+      .monthcast-investdemand-cicle{
+          margin-top: 3px;
+          color: white;
+          width: 18px;
+          height: 18px;
+          text-align: center;
+          background-position: 0px 0px;
+      }
+      .monthcast-investdemand-character{
+          padding-left: 30px;
+          text-align: center;
+          font-size: 18px;
+      }
+  }
+  &.gray{
+//		background-color: #f5f5f5;
+//		.monthcast-investdemand-icon{
+//			background-position: -128px -52px;
+//		}
+//		.monthcast-investdemand-one{
+//			.monthcast-investdemand-cicle{
+//      		background-position: -22px 0px;
+//    		}
+//		}
+//		.monthcast-investdemand-two{
+//			.monthcast-investdemand-cicle{
+//      		background-position: -22px 0px;
+//    		}
+//		}
+  }
+  .monthcast-official{
+    display: block;
+    font-size: 18px;
+    padding-left: 10px;
+    line-height: 36px;
+  }
+
+}
+.monthcast-transfer-three{
+	clear: both;
+	width: 200px;
+	height: 100px;
+	margin-top: 205px;
+	.border-radius(4px);
+	background-color: #ffe296;
+	.monthcast-transfer-icon{
+	  float: left;
+	  width: 44px;
+	  height: 44px;
+	  margin: 31px 0px 31px 14px;
+      background-position: -64px 0px;
+	}
+	.monthcast-transfer-title{
+		display: inline-block;
+		padding-top: 31px;
+		padding-left: 10px;
+	}
+	.monthcast-transfer-detial{
+		font-size: 24px;
+		padding-left: 10px;
+	}
+}
+.monthcast-transfer-four{
+	clear: both;
+	width: 200px;
+	height: 100px;
+	margin-top: 20px;
+	.border-radius(4px);
+	background-color: #ffe296;
+	.monthcast-transfer-icon{
+	  float: left;
+	  width: 44px;
+	  height: 44px;
+	  margin: 31px 0px 31px 14px;
+      background-position: -64px 0px;
+	}
+	.monthcast-transfer-title{
+		display: inline-block;
+		padding-top: 31px;
+		padding-left: 10px;
+	}
+	.monthcast-transfer-detial{
+		font-size: 18px;
+		padding-left: 10px;
+	}
+}
+.monthcast-default{
+  .monthcast-action{
+    display: block;
+    text-align: center;
+    a{
+      display: inline-block;
+      width: 280px; height: 60px; line-height: 60px;
+      text-align: center;
+      font-size: 24px;
+      color:#fff;
+      background-color: #ff6803;
+      .border-radius(4px);
+    }
+  }
+  .monthcast-banner{
+    display: block;
+    height: 486px;
+    background: url("https://static.souyidai.com/www/images/version/fixed-investment.gif") no-repeat;
+    margin-bottom: 30px;
+    position: relative;
+    a{
+      font-size: 16px;
+      color:#fff;
+      position: absolute;
+      top:174px; left:130px;
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

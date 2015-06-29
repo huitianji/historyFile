@@ -1,0 +1,18 @@
+{{if (mycalculate.useInterest == 0)}}
+<p data-jxid="-1">
+    <a href="javascript:;" class="version-popup-sys-title {{if mycalculate.useInterest == 0}}active{{/if}}">不使用加息券</a>
+</p>
+{{/if}}
+{{each serverObj.data.raiseInterestCouponList as interest i}}
+    <p data-jxid="{{interest.id}}">
+        {{if mycalculate.useInterest == 0}}
+            <a href="javascript:;" class="">
+        {{/if}} 
+            <span>{{interest.expiredTime}}</span>
+            <em>{{fmtMoney(interest.minBidAmount,0)}}</em>
+            <strong>{{interest.raiseInterest/100}}%</strong>
+        {{if mycalculate.useInterest == 0}}
+            </a>
+        {{/if}}
+    </p>
+{{/each}}

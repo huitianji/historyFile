@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要投资打通</title>
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/add.css">
+    <script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+</head>
+<body>
+<input type="hidden" data-type="login_user_name" name="login_user_name" value="name">
+<div class="main main-offsetHeight">
+    <div class="page-top"><span>欢迎致电：400-068-1176</span><span>服务时间：9:00 - 21:00</span><span class="user-name reg-sign"><a href="####" class="registration">注册</a><a href="####" class="sign-in">登录</a></span></div>
+    <div class="nav">
+        <span class="logo"><img src="https://static.souyidai.com/www/images/logo.png"></span>
+        <ul class="nav-list">
+            <li class=""><a href="####">首页</a> </li>
+            <li class="nav-li-active" ><a href="####">我要投资</a> </li>
+            <li><a href="####" >我要借款</a> </li>
+            <li ><a href="####">我的账户</a> </li>
+            <li class="nav-hover"></li>
+        </ul>
+    </div>
+    <!---->
+    <!--drop-list-->
+    <div class="drop-list relative" id="drop-list">
+        <div class="top-up">
+            <p style="display: none"><a href="####">充值</a></p>
+            <span><em class="ico ico-balance"></em>888,464,888.00元</span>
+            <span><em class="ico ico-red-packet"></em>888,464,888.00元</span>
+        </div>
+        <ul class="drop-title">
+            <li  class="drop-active" ><a href="####" class="drop-border-left">全部可投标</a> </li>
+            <li><a href="####">焦点首付贷</a> </li>
+            <li><a href="####">爱居贷</a> </li>
+            <li><a href="####">融资贷</a> </li>
+
+            <li><a href="####">转让债权标</a> </li>
+            <li><a href="####">固定还款日标</a> </li>
+        </ul>
+        <div class="drop-tender-box">
+            <!--01-->
+            <div class="tender-list cf" style="display: block">
+                <div class="tender-title">
+                    <span class="tender-sw205">借款标题</span>
+                    <span class="tender-sw80">担保方式</span>
+                    <span class="tender-sw130">担保方</span>
+                    <span class="tender-sw110">标的金额(元)</span>
+
+                    <span class="tender-sw70">年利率</span>
+                    <span class="tender-sw70">借款期限</span>
+                    <span class="tender-sw130">还款方式</span>
+                    <span class="tender-sw70">当前进度</span>
+
+                    <span class="tender-sw120">快速投标(元)</span>
+                </div>
+                <!--账户余额-->
+                <input data-target="total" type="hidden" value="600">
+                <!--账户余额end-->
+                <div id="tender-items">
+                    <!--tender-item1-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu tooltipcol" data-text="ok"></span><span class="ico ico-turn tooltipcol" data-text="测试文章"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-danbao"></em><span title="六汉字加图标六汉字加图标">六汉字加图标</span></p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw130 tender-p-center" >按月还息，按月还息</p>
+                        <div class="schedules">
+                            <div>
+                                <div class="circle schedules-circle">
+                                    <div class="pie_left"><div class="left"></div></div>
+                                    <div class="pie_right"><div class="right"></div></div>
+                                    <div class="mask"><span>20</span>%</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tender-pw120 lt">
+                            <p class="quickly" style="display: none;">
+                                <input class="quickly-input" type="text" value="400">
+                                <span class="bid btn-submit big-bg-color">快速投标</span>
+                                <span class="subtraction plus ">一</span>
+                                <span class="subtraction subtract">+</span>
+                            </p>
+                            <div class="pre-bid-open">
+                                <strong>开标倒计时</strong>
+                                <span class="invest-datetime" data-opentime="2014/10/14 13:14:39">0:0:0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tender-item1-end-->
+                    <!--tender-item2(2014-09-22转的情况)-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912002</a><span class="ico ico-turn tooltipcol" data-text="测试"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-danbao"></em><span title="六汉字加图标六汉字加图标">六汉字加图标</span></p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw130 tender-p-center" >按月还息，按月还息</p>
+                        <div class="schedules">
+                            <div>
+                                <div class="circle schedules-circle">
+                                    <div class="pie_left"><div class="left"></div></div>
+                                    <div class="pie_right"><div class="right"></div></div>
+                                    <div class="mask"><span>50</span>%</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tender-pw120 lt">
+                            <div class="transfer-turn">
+                                <strong>100,000,000.00</strong>
+                                <span class="md-left25">快速投标</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--tender-item2（2014-09-22转的情况）-end-->
+                    <!--tender-item3-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-danbao"></em><span title="六汉字加图标六汉字加图标">六汉字加图标</span></p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw130 tender-p-center" >按月还息，按月还息</p>
+                        <div class="schedules">
+                            <div>
+                                <div class="circle schedules-circle">
+                                    <div class="pie_left"><div class="left"></div></div>
+                                    <div class="pie_right"><div class="right"></div></div>
+                                    <div class="mask"><span>50</span>%</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="quickly">
+                            <input class="quickly-input" type="text" value="400">
+                            <span class="bid btn-submit big-bg-color">快速投标</span>
+                            <span class="subtraction plus ">一</span>
+                            <span class="subtraction subtract">+</span>
+                        </p>
+                    </div>
+                    <!--tender-item3-end-->
+                    <!--tender-item4-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw120 tender-p-center" >按月还息到期还本</p>
+                        <div class="schedules">
+                            <div class="circle schedules-circle">
+                                <div class="pie_left"><div class="left"></div></div>
+                                <div class="pie_right"><div class="right"></div></div>
+                                <div class="mask"><span>10</span>%</div>
+                            </div>
+                        </div>
+                        <p class="quickly">
+                            <input class="quickly-input" type="text" value="400">
+                            <span class="bid btn-submit big-bg-color">快速投标</span>
+                            <span class="subtraction plus ">一</span>
+                            <span class="subtraction subtract">+</span>
+                        </p>
+                    </div>
+                    <!--tender-item4-end-->
+                    <!--tender-item5-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw120 tender-p-center" >按月还息到期还本</p>
+                        <div class="schedules">
+                            <div class="circle schedules-circle">
+                                <div class="pie_left"><div class="left"></div></div>
+                                <div class="pie_right"><div class="right"></div></div>
+                                <div class="mask"><span>10</span>%</div>
+                            </div>
+                        </div>
+                        <p class="quickly">
+                            <input class="quickly-input" type="text" value="400">
+                            <span class="bid btn-submit big-bg-color">快速投标</span>
+                            <span class="subtraction plus ">一</span>
+                            <span class="subtraction subtract">+</span>
+                        </p>
+                    </div>
+                    <!--tender-item5-end-->
+                    <!--tender-item6-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw120 tender-p-center" >按月还息到期还本</p>
+                        <div class="schedules">
+                            <div class="circle schedules-circle">
+                                <div class="pie_left"><div class="left"></div></div>
+                                <div class="pie_right"><div class="right"></div></div>
+                                <div class="mask"><span>10</span>%</div>
+                            </div>
+                        </div>
+                        <p class="quickly">
+                            <input class="quickly-input" type="text" value="400">
+                            <span class="bid btn-submit big-bg-color">快速投标</span>
+                            <span class="subtraction plus ">一</span>
+                            <span class="subtraction subtract">+</span>
+                        </p>
+                    </div>
+                    <!--tender-item6-end-->
+                </div>
+                <!---->
+                <!--page-->
+
+                <div class="paging page-margin">
+                    <a href="####" class="arrow-left prev">&nbsp;<b style="display: none">left</b></a>
+                    <span class="current prev">&nbsp;</span>
+                    <span class="current">0</span>
+
+                    <a href="####" class="digital-active">1</a><a href="####">2</a><a href="####">3</a><span class="digital-dotted">...</span><a href="####">6</a>
+                    <span>...</span>
+                    <span class="current next">&nbsp;</span>
+                    <a href="####" class="arrow-right next">&nbsp;<b style="display: none">right</b></a>
+                </div>
+                <!--page-->
+                <!---->
+            </div>
+            <!--01end-->
+            <!--02-->
+            <div  class="tender-list">
+                002
+            </div>
+            <!--02end-->
+            <!--03-->
+            <div  class="tender-list">
+                003
+            </div>
+            <!--03end-->
+            <!--04-->
+            <div  class="tender-list">
+                004
+            </div>
+            <!--04end-->
+        </div>
+    </div>
+    <!--drop-list-end-->
+    <!--近期已满标-->
+    <div class="drop-list">
+        <ul class="drop-title">
+            <li class="drop-active"><a href="####" class="drop-border-left">近期已满标</a> </li>
+        </ul>
+        <div class="drop-tender-box">
+            <!--01-->
+            <div class="tender-list cf" style="display: block">
+                <div class="tender-title">
+                    <span class="tender-sw205">借款标题</span>
+                    <span class="tender-sw80">担保方式</span>
+                    <span class="tender-sw130">担保方</span>
+                    <span class="tender-sw110">标的金额(元)</span>
+
+                    <span class="tender-sw70">年利率</span>
+                    <span class="tender-sw70">借款期限</span>
+                    <span class="tender-sw120">还款方式</span>
+                    <span class="tender-sw80">当前状态</span>
+                    <span class="tender-sw110">起息日期</span>
+                </div>
+                <!--tender-item1-->
+                    <div class="tender-item">
+                        <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                        <p class="tender-pw80 tender-p-center">本息保障22</p>
+                        <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                        <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                        <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                        <p class="tender-pw120 tender-p-center" >等额本息</p>
+                        <p class="tender-pw80 tender-p-center">审核中</p>
+                        <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                    </div>
+                <!--tender-item1-end-->
+                <!--tender-item2-->
+                <div class="tender-item">
+                    <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                    <p class="tender-pw80 tender-p-center">本息保障22</p>
+                    <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                    <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                    <p class="tender-pw120 tender-p-center" >等额本息</p>
+                    <p class="tender-pw80 tender-p-center">审核中</p>
+                    <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                </div>
+                <!--tender-item2-end-->
+                <!--tender-item3-->
+                <div class="tender-item">
+                    <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                    <p class="tender-pw80 tender-p-center">本息保障22</p>
+                    <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                    <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                    <p class="tender-pw120 tender-p-center" >等额本息</p>
+                    <p class="tender-pw80 tender-p-center">审核中</p>
+                    <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                </div>
+                <!--tender-item3-end-->
+                <!--tender-item4-->
+                <div class="tender-item">
+                    <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                    <p class="tender-pw80 tender-p-center">本息保障22</p>
+                    <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                    <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                    <p class="tender-pw120 tender-p-center" >等额本息</p>
+                    <p class="tender-pw80 tender-p-center">审核中</p>
+                    <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                </div>
+                <!--tender-item4-end-->
+                <!--tender-item5-->
+                <div class="tender-item">
+                    <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                    <p class="tender-pw80 tender-p-center">本息保障22</p>
+                    <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                    <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                    <p class="tender-pw120 tender-p-center" >等额本息</p>
+                    <p class="tender-pw80 tender-p-center">审核中</p>
+                    <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                </div>
+                <!--tender-item5-end-->
+                <!--tender-item6-->
+                <div class="tender-item">
+                    <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                    <p class="tender-pw80 tender-p-center">本息保障22</p>
+                    <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                    <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                    <p class="tender-pw120 tender-p-center" >等额本息</p>
+                    <p class="tender-pw80 tender-p-center">审核中</p>
+                    <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                </div>
+                <!--tender-item6-end-->
+                <!--tender-item7-->
+                <div class="tender-item">
+                    <p class="loan tender-pw205"><a href="####">首付贷SWD143912001</a><span class="ico ico-new-gu"></span><span class="ico ico-turn"></span></p>
+                    <p class="tender-pw80 tender-p-center">本息保障22</p>
+                    <p class="tender-pw130"><em class="em-w18 ico ico-kaifash"></em>六汉字加图标</p>
+                    <p class="tender-pw110 tender-p-text-right">125,300,000</p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>18</strong>%</span></p>
+                    <p class="tender-pw70 tender-p-center"><span class="num-scale"><strong>6</strong>个月</span></p>
+
+                    <p class="tender-pw120 tender-p-center" >等额本息</p>
+                    <p class="tender-pw80 tender-p-center">审核中</p>
+                    <p class="tender-pw110 tender-p-center">2014-04-06</p>
+                </div>
+                <!--tender-item7-end-->
+                <!---->
+                <!--page-->
+
+                <div class="paging page-margin">
+                    <a href="####" class="arrow-left prev">&nbsp;<b style="display: none">left</b></a>
+                    <span class="current prev">&nbsp;</span>
+                    <span class="current">0</span>
+
+                    <a href="####" class="digital-active">1</a><a href="####">2</a><a href="####">3</a><span class="digital-dotted">...</span><a href="####">6</a>
+                    <span>...</span>
+                    <span class="current next">&nbsp;</span>
+                    <a href="####" class="arrow-right next">&nbsp;<b style="display: none">right</b></a>
+                </div>
+                <!--page-->
+                <!---->
+            </div>
+            <!--01end-->
+        </div>
+    </div>
+    <!--近期已满标end-->
+</div>
+<!--footer-->
+<div class="footer fixedToBottom">
+    <div class="footer-box">
+        <div class="footer-infromation">
+            <p><a href="####">公司介绍</a><a href="####">加入我们</a><a href="####">联系我们</a><a href="####">意见反馈</a><a href="####">权利说明</a><a href="####">帮助中心</a><a href="####">论坛</a>
+                <br>
+                &copy; 搜易贷 (souyidai.com) | 京ICP备12345678号
+            </p>
+            <p class="link">友情链接： <a href="####">慧聪金融</a>
+                <a href="####">易观智库</a>
+                <a href="####">好贷网</a>
+                <a href="####">银率网</a>
+                <a href="####">和讯银行</a>
+                <a href="####">国美在线</a>
+                <a href="####">财经道</a>
+                <a href="####">电商服务</a>
+                <a href="####">ShopEx</a>
+
+                <a href="####">58投资担保</a>
+                <br>
+                <a href="####">网贷之家</a><a href="####">挖财社区</a><a href="####">随手记</a><a href="####">融360理财</a>
+            </p>
+        </div>
+        <div class="footer-img">
+            <a href="####"><span class="ico-mixbg wx"></span><br>搜易贷微信</a>
+            <a href="####"><span class="ico-mixbg wb"></span><br>新浪微博</a>
+        </div>
+    </div>
+</div>
+<!--footer-end-->
+<!--弹窗-->
+<div class="popup-mask" style="width:2500px; height: 1300px; display: block;"></div>
+<!--快速投标-->
+<div class="popup checkedbox" style="display: block; left: 600px; top:400px;">
+    <h1 class="title-row"><a href="####" class="ico closed"></a><span class="roof-aside"><strong>融资贷RUAF140039</strong><em class="ico ico-new-gu"></em><em class="ico ico-zhuan"></em></span></h1>
+    <div class="show-rows">
+        <p class="p-tips">标的金额：<strong>231,233,690.78</strong>元</p>
+        <div class="information-list cf">
+            <p class="rate-num">年利率<span><strong>12.5% </strong></span></p>
+            <p class="deadline">借款期限<span><strong>6</strong>个月</span></p>
+            <p class="pattern">还款方式<span><strong>每月还息，到期还本</strong></span></p>
+        </div>
+    </div>
+    <p class="this-invest"><span>本次投资</span><strong>1,500,000.00</strong>元</p>
+    <!--有红包可使用-->
+    <div class="invest-red-envelope" style="display: block;">
+        <p class="relative"><span>使用余额</span><strong>1950.00</strong>元<a href="####" class="tooltip-css ico ico-tooltip tooltipcol" data-text="测试"></a></p>
+        <p><span>使用红包</span><strong>50.00</strong>元</p>
+    </div>
+    <!--有红包可使用end-->
+    <!--有红包使用条件-->
+    <div class="invest-red-conditions" style="display: block;">你的账户有未使用的红包，<a href="####">点此查看使用条件</a></div>
+    <!--有红包使用条件end-->
+    <p class="reading-agreement"><input type="checkbox" class="protocol-checkbox" ><label>我已阅读并同意<a href="###">借贷协议</a></label></p>
+    <p class="bottom-submit margin-top40 cf">
+        <a href="####" class="btn btn-w170 btn-default-color ">再考虑下</a>
+        <!--<a href="####" class="btn btn-w170 btn-confirm-submit btn-stop-click">确认，立即投标</a>-->
+        <input type="button" data-type="confirm-submit" class="btn btn-w170 btn-stop-click" value="确认，立即投标" disabled>
+    </p>
+</div>
+<!--快速投标end-->
+<!--投标成功-->
+<div class="popup" style="display: none">
+    <h1 class="title-row"><a href="####" class="ico closed"></a><span class="roof-aside">投标成功</span></h1>
+    <p class="successful margin-top30"><em class="popup-emarrow ico ico-big-succeed"></em>恭喜您，已成功投资 <strong>5,123,456,000.00</strong>元</p>
+    <p class="bottom-submit margin-top30 cf"><a href="####" class="btn btn-w170 btn-default-color ">返回投资列表</a><a href="####" class="btn btn-w170">确定</a></p>
+</div>
+<!--投标成功end-->
+<!--投标失败(余额不足)-->
+<div class="popup" style="display: none">
+    <h1 class="title-row"><a href="####" class="ico closed"></a><span class="roof-aside">投标失败</span></h1>
+    <p class="be-defeated margin-top30"><em class=" ico ico-big-waring"></em>抱歉，您的余额不足，<a href="####">立即充值</a></p>
+    <p class="submit-w170 margin-top30 cf"><a href="####" class="btn btn-w170">确定</a></p>
+</div>
+<!--投标失败(余额不足)end-->
+<!--投标失败（已满标）-->
+<div class="popup" style=" top: 300px; left: 500px; display: none;">
+    <h1 class="title-row"><a href="####" class="ico closed"></a><span class="roof-aside">投标失败</span></h1>
+    <p class="be-defeated margin-top30"><em class=" ico ico-big-waring"></em>抱歉，已满标，下次继续努力</p>
+    <p class="bottom-submit margin-top30 cf"><a href="####" class="btn btn-w170 btn-default-color reload-closed">返回投资列表</a><a href="####" class="btn btn-w170 shut-down">确定</a></p>
+</div>
+<!--投标失败（已满标）end-->
+<!--投标失败（超过可投额）-->
+<div class="popup"  style="display:none; ">
+    <h1 class="title-row"><a href="####" class="ico closed"></a><span class="roof-aside">投标失败</span></h1>
+    <p class="be-defeated margin-top30"><em class=" ico ico-big-waring"></em>标的剩余可投金额不足，请减少投资额</p>
+    <p class="bottom-submit margin-top30 cf"><a href="####" class="btn btn-w170 btn-default-color ">返回投资列表</a><a href="####" class="btn btn-w170">确定</a></p>
+</div>
+<!--投标失败（超过可投额）end-->
+<style type="text/css">
+    /*#op{    */
+        /*text-align: center;*/
+        /*height: 50px;*/
+        /*font-size:20px; font-weight: bold;*/
+        /*border: 1px solid red;*/
+    /*}*/
+    /*#op img{*/
+        /*margin-top: 10px;*/
+        /*vertical-align:top; margin-right: 3px;*/
+    /*}*/
+</style>
+<!--<div  class="popup" style="display:block; left: 500px; top: 400px;">-->
+    <!--<h1 class="title-row"><a href="####" class="ico closed"></a><span class="roof-aside">投标失败</span></h1>-->
+    <!--<p id="op">-->
+        <!--<table border="0" cellspacing="0" cellpadding="0">-->
+            <!--<tr>-->
+                <!--<td><img src="images/csh.png"></td>-->
+                <!--<td>标的剩余可投金额不足，请减少投资额</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</p>-->
+
+    <!--<p><a href="####" class="btn btn-w170 btn-default-color ">返回投资列表</a><a href="####" class="btn btn-w170">确定</a></p>-->
+<!--</div>-->
+<!--弹窗end-->
+<!---->
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/dateTime.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/tooltip.js"></script>
+<!---->
+</body>
+</html>

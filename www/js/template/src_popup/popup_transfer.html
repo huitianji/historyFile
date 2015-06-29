@@ -1,0 +1,113 @@
+<div class="version-popup-invest-transfer">
+    <!--<1>利率、期限、还款方式-->    
+    {{include "./popup_bidBaseInfo"}}
+    <!--<1>利率、期限、还款方式end-->
+    <div class="version-poput-amount">
+        转让价格{{if codes.local_tooltip.bid_sum_tran}}<a href="javascript:;" data-text="{{codes.local_tooltip.bid_sum_tran}}" class="version-ico version-tooltip-css tooltipcol"></a>
+        {{/if}}<span>{{fmtMoney(serverObj.data.bidTransfer.amount,2)}}元</span></div>
+    <!--<2>list-->
+    <div class="version-popup-list">
+        <!--[1]降价-->
+        {{if mycalculate.transfer_type==1}}
+        <div class="version-popup-price-changes">
+            <!--转让本金-->
+            {{include "./popup_benjin"}}
+            <!--转让本金end-->
+            <!--转让折扣-->
+            <div class="version-popup-list-item">
+                <span class="version-popup-use-name">转让折扣</span>
+                <span class="version-popup-variable">
+                    转让本金<strong> x {{serverObj.data.bidTransfer.principalDiscountRate/100+'%'}}</strong>
+                    {{if codes.local_tooltip.inv_layer_percent}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </span>
+            </div>
+            <!--转让折扣end-->
+            <!--转让折价-->
+            <div class="version-popup-list-item">
+                <span class="version-popup-use-name">转让折价</span>
+                <span class="version-popup-variable">
+                    <span class="orange-color">直降<strong>{{fmtMoney(-serverObj.data.bidTransfer.principalDiscount,2)}}</strong>元</span>
+                    {{if codes.local_tooltip.inv_layer_discount}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </span>
+            </div>
+            <!--转让折价end-->
+            <!--转让利率-->
+            {{include "./popup_lilv"}}
+            <!--转让利率end-->
+            <!--转让结息-->
+            {{include "./popup_jiexi"}}
+            <!--转让结息end-->
+        </div>
+        <!--[1]降价end-->
+        {{else if mycalculate.transfer_type==2}}
+        <!--[2]默认价格-->
+        <div class="version-popup-price-changes">
+            <!--转让本金-->
+            {{include "./popup_benjin"}}
+            <!--转让本金end-->
+            <!--转让折扣-->
+            <div class="version-popup-list-item">
+                <span class="version-popup-use-name">转让折扣</span>
+                <span class="version-popup-variable">
+                    无
+                </span>
+            </div>
+            <!--转让折扣end-->
+
+            <!--转让利率-->
+            {{include "./popup_lilv"}}
+            <!--转让利率end-->
+            <!--转让结息-->
+            {{include "./popup_jiexi"}}
+            <!--转让结息end-->
+        </div>
+        <!--[2]默认价格end-->
+        {{else if mycalculate.transfer_type==3}}
+        <!--[3]涨价-->
+        <div class="version-popup-price-changes">
+            <!--转让本金-->
+            {{include "./popup_benjin"}}
+            <!--转让本金end-->
+            <!--转让涨幅-->
+            <div class="version-popup-list-item">
+                <span class="version-popup-use-name">转让涨幅</span>
+                <span class="version-popup-variable">
+                    转让本金<strong> x {{serverObj.data.bidTransfer.principalDiscountRate/100+'%'}}</strong>
+                    {{if codes.local_tooltip.inv_layer_percent}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </span>
+            </div>
+            <!--转让涨幅end-->
+            <!--转让加价-->
+            <div class="version-popup-list-item">
+                <span class="version-popup-use-name">转让加价</span>
+                <span class="version-popup-variable">
+                    <span class="orange-color">加价<strong>{{fmtMoney(serverObj.data.bidTransfer.principalDiscount,2)}}</strong>元</span>
+                    {{if codes.local_tooltip.inv_layer_discount}}
+                        <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    {{/if}}
+                </span>
+            </div>
+            <!--转让加价end-->
+            <!--转让利率-->            
+            {{include "./popup_lilv"}}
+            <!--转让利率end-->
+            <!--转让结息-->
+            {{include "./popup_jiexi"}}
+            <!--转让结息end-->
+        </div>
+        {{/if}}
+        <!--[3]涨价end-->
+        <!--复选框-->
+        <div class="version-popup-checkbox">
+            <span><em><input type="checkbox" id="v_chk_promiss" checked="checked"></em><label for="v_chk_promiss">{{codes.local_tooltip.inv_layer_cb_agree}}</label><a target="_blank" href="/agreement/sample/transfer">《债权转让协议》</a> </span>
+        </div>
+        <!--复选框end-->
+    </div>
+    <!--<2>list-end-->
+</div>

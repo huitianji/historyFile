@@ -1,0 +1,9 @@
+<div class="version-popup-list-item">
+    <span class="version-popup-use-name">转让本金</span>
+    <span class="version-popup-variable">
+        <strong>{{fmtMoney(serverObj.data.bidTransfer.principal,2)}}</strong>元 
+        {{if codes.local_tooltip.transfer_principal}}
+            <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_principal}}" class="version-ico version-tooltip-css tooltipcol"></a>
+        {{/if}}
+    </span>
+</div>

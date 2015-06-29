@@ -1,0 +1,32 @@
+<div class="version-popup-use">
+    <i class="version-popup-use-i modify-structure">使用加息券</i>
+    <span class="version-popup-recive">
+        <!-- <i class="ver-ico-url an"></i>  an - 展开 -->
+        {{if mycalculate.showInterest && mycalculate.useInterest != 0}}
+            <i class="ver-ico-url"></i>
+            <strong style="#999">加息{{ mycalculate.useInterest }}%</strong>
+        {{else if mycalculate.showInterest && serverObj.data.raiseInterestCouponList.length > 0}}
+            <i class="ver-ico-url"></i>
+            <strong style="#999" data-id="-1">请选择加息券</strong>
+        {{else if serverObj.data.raiseInterestCouponList.length == 0}}
+            <!--无加息券 -->
+            <strong style="#999">无加息券</strong>
+        {{/if}}
+    </span>
+    <span class="version-popup-use-tip">
+        <a href="javascrpt:;" data-text="{{codes.local_tooltip.inv_layer_addinterest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+    </span>
+</div>
+{{if mycalculate.showInterest && serverObj.data.raiseInterestCouponList.length != 0 }}
+    <div class="version-popup-an" style="display:none;">
+        <div class="version-popup-th">
+            <!-- icon-down  降序 ico-up  升序  -->
+            <span class="">过期日期</span>
+            <span class="">起投金额</span>
+            <span class="">加息利息</span>
+        </div>
+        <div class="version-popup-ul" data-popup-type="jiaxi">
+            {{include './show_jiaxi_detail'}}
+        </div>
+    </div>
+{{/if}}

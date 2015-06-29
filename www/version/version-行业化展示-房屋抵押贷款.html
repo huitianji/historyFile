@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="renderer" content="webkit">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>version-行业化展示-房屋抵押贷款</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/add.css">-->
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/page-style.css">
+    <style type="text/css">
+        body{
+            background: url("https://static.souyidai.com/www/images/version/version-body-bg.png") repeat-x left top;
+            background-color: #f5f5f5;
+        }
+        /* 算算更放心 */
+        .cal_wrap{
+            padding: 30px 30px 0 30px;      
+            background: #fff;
+            width: 808px;
+        }
+        .cal_box .cal_title{
+            font-size: 24px;
+            height: 34px;
+            line-height: 34px;
+            color: #333;
+            margin-right: 60px;
+        }
+        .cal_box >p{
+            /*text-align: center;*/
+            line-height: 34px;
+            font-size: 18px;
+            color: #333;
+        }
+        .cal_box >p input{
+            width: 110px;
+            height: 18px;
+            line-height: 18px;
+            padding: 7px 9px;
+            border: 1px solid #ececec;
+            text-align: right;
+            margin: 0 10px;
+            outline: 0;
+        }
+        .cal_box > p .cal_error{
+            display: inline-block;
+            height: 16px;
+            width: 200px;
+            background: url("https://static.souyidai.com/www/images/version/frwhere/cal-imgs/cal_error.png") no-repeat;
+            color: #f00;
+            font-size: 12px;
+            line-height: 16px;
+            margin-left: 10px;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .cal_bg{
+            position: relative;
+            padding: 30px 8px 40px 8px;
+            width: 800px;
+            height: 80px;
+        }
+        .cal_bg > a{
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            top: 30px;
+        }
+        #cal_left{
+            left: 0;
+            background: url("https://static.souyidai.com/www/images/version/frwhere/cal-imgs/cal_left.png") no-repeat;
+        }
+        #cal_right{
+            right: 12px;
+            background: url("https://static.souyidai.com/www/images/version/frwhere/cal-imgs/cal_right.png") no-repeat;
+        }
+        #cal_move_dot{
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            background: url("https://static.souyidai.com/www/images/version/frwhere/cal-imgs/cal_move_money.png") no-repeat;
+        }
+        .cal_mark{
+            cursor: pointer;
+            height: 80px;
+        }
+        .cal_mark > div{
+            height: 5px;
+            position: absolute;
+            left: 37px;
+            top: 40px;
+        }
+        .cal_init_bg{
+            width: 730px;
+            background-color: #ececec;
+        } 
+        .cal_move_bg{
+            width: 0px;
+            background-color: #ffb324;
+        }
+        .cal_mark_top{
+            position: absolute;
+            left: 25px;
+            top: 60px;
+            height: 50px;
+            margin-left: -8px;
+        }
+        .cal_mark_top li{
+            list-style: none;
+            float: left;
+            width: 91px;
+            height: 50px;
+        }
+        .cal_mark_top li span:after{
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 26px;
+            margin-left: 20px;
+            background-color: #ccc;
+        }
+        .cal_mark_top li p{
+            text-align: center;
+            width: 38px;
+            font-size: 18px;
+            color: #999;
+        }
+        .cal_mark_top li.cal_li_span{
+            width: 40px;
+            text-align: left;
+        }
+
+        /*借款列表*/
+        .cal_list{
+            border: 1px solid #ececec;
+            width: 806px;
+        }
+        .cal_list ul{
+            padding: 0 28px;
+        }
+        .cal-list-top{
+            background: #fafafa;
+        }
+        .cal_list li{
+            list-style: none;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #333;
+            width: 140px;
+        }
+        .cal_list .cal_list_money{
+            width: 110px;
+            padding-right: 60px;
+            text-align: right;
+        }
+        input::-ms-clear { display: none; } 
+    </style>
+</head>
+<body>
+<div class="cf main-offsetHeight">
+    <!--head(version1)-->
+    <!--改版头部-->
+    <div class="redesign-header">
+        <!--header-top-->
+        <div class="header-top">
+            <div class="weak-nav">
+                <a href="####" class="weak-item-a" data-type="weak-item-a">
+                    <span class="weak-text"><em class="ver-ico-url ico-tel-gray" data-type="ico-tel-em"></em><strong>手机客户端</strong><i data-type="hover-tip-arrow" class="ver-ico-url"></i></span>
+                    <span class="lines-color" data-type="lines-color"></span>
+                    <!--浮层-->
+                    <div class="mobile-client">
+                        <span><img src="https://static.souyidai.com/www/images/version/qr-vr-mobile-codes.jpg" width="108" height="108"></span>
+                        <strong>掌上投资 更加精彩</strong>
+                    </div>
+                    <!--浮层end-->
+                </a>
+                <a href="####" class="weak-item-a" data-type="weak-item-a1">
+                    <span class="weak-text"><strong>联系我们</strong><i data-type="hover-tip-arrow" class="ver-ico-url"></i></span>
+                    <span class="lines-color"></span>
+                </a>
+                <!--联系我们浮层-->
+                <div class="weak-contact-us" data-type="weak-contact-us">
+                    <!--遮罩-->
+                    <span class="weak-mask-line"></span>
+                    <!--遮罩end-->
+                    <span class="service-time">服务时间：工作日9:00 - 18:00</span>
+                    <span class="service-telphone">4000-168-866</span>
+                    <div class="service-list" data-type="service-list">
+                        <a href="####"><span class="ver-ico-url ico-service-0 "></span>在线客服</a>
+                        <a href="####"><span class="ver-ico-url ico-service-1 "></span>客服邮箱</a>
+                        <a href="####"><span class="ver-ico-url ico-service-2"></span>新浪微博</a>
+                    </div>
+                    <span class="weak-weixin"><img src="https://static.souyidai.com/www/images/version/qr-vr-weixin.png" width="88" height="88"></span>
+                </div>
+                <!--联系我们浮层-end-->
+                <a href="####" class="weak-item-a">
+                    <span class="weak-text"><strong>关于我们</strong></span>
+                    <span class="lines-color"></span>
+                </a>
+                <a href="####" class="weak-item-a">
+                    <span class="weak-text"><strong>新手引导</strong></span>
+                    <span class="lines-color"></span>
+                </a>
+                <a href="####" class="weak-item-a">
+                    <span class="weak-text"><strong>帮助中心</strong></span>
+                </a>
+            </div>
+            <span class="welcome">您好，欢迎来到搜易贷！<a href="####">[登录]</a><a href="####" class="week-reg">[免费注册]</a> </span>
+        </div>
+        <!--header-top-end-->
+        <!--header-menu-->
+        <div class="ver1-navigation">
+            <!--登录前状态-->
+            <div class="intersection" style="display: none;">
+                <a href="####" class="inter-log">登录</a>
+                <a href="####" class="inter-reg">免费注册</a>
+            </div>
+            <!--登录前状态end-->
+            <!--登录后状态-->
+            <div class="ver-after-logging" style="display: block;">
+                <span class="logging-name" data-type="after-logging"><i class="ver-ico-url"></i><strong>137*****388</strong><em></em></span>
+                <div class="logging-up" data-type="logging-up">
+                    <a href="####"><em>28</em><strong>我的消息</strong></a>
+                    <a href="####"><strong>我的红包(6)</strong></a>
+                    <a href="####"><strong>充值</strong></a>
+                    <a href="####"><strong>取现</strong></a>
+
+                    <a href="####"><strong>安全退出</strong></a>
+                </div>
+            </div>
+            <!--登录后状态end-->
+            <span class="ver1-logo"><a href="https://www.souyidai.com"><img src="https://static.souyidai.com/www/images/version/logo.gif" width="265" height="99"></a></span>
+            <ul class="nav-menu" data-type="nav-menu">
+                <li ><a href="">首页</a> </li>
+                <li ><a href="">我要投资</a> </li>
+                <li>
+                    <a href="">
+                        <span>我要借款</span>
+                        <em>&nbsp;</em>
+                    </a>
+                    <div class="borrow-drop-down" data-type="borrow-drop-down">
+                        <div class="borrow-drop-down-list">
+                            <a href="####">购房首付贷</a>
+                            <a href="####">购房首付贷</a>
+                            <a href="####">购房首付贷</a>
+                            <a href="####">购房首付贷</a>
+                        </div>
+                        <span class="ar_up"></span>
+                        <span class="ar_up_in"></span>
+                    </div>
+                </li>
+                <li ><a href="" >安全保障</a> </li>
+                <li ><a href="">业务模式</a> </li>
+                <li ><a href="">我的帐户</a> </li>
+                <li class="nav-hover"></li>
+            </ul>
+        </div>
+        <!--header-menu-end-->
+    </div>
+    <!--改版头部end-->
+    <!--head(version1)end-->
+    <!--面包屑-->
+    <div class="container">
+            <div class="version-bread-crumbs">
+                <!--
+                    末级导航不可点击用span标签
+                -->
+                <a href="https://www.souyidai.com"> 首页</a>
+                <i class="certifi-img">&nbsp;</i>
+                <a href="https://www.souyidai.com/info/fangyidai.htm">我要借款</a>
+                <i class="certifi-img">&nbsp;</i>
+                <span>房屋抵押贷款</span>
+            </div>
+        </div>
+
+    <!--面包屑end-->
+    <!--内容部分-->
+    <div class="container">
+
+        <div class="cf">
+            <!--left-->
+            <div class="frwhere-aside">
+                <!--picture-->
+                <div>
+                    <img src="https://static.souyidai.com/www/images/version/frwhere/frwhere-d-v1.gif" width="870" height="327">
+                </div>
+                <div class="blank10"></div>
+                <div class="frwhere-frame">
+                    <div>
+                        <img src="https://static.souyidai.com/www/images/version/frwhere/frwhere-d-v2.gif" width="868" height="379">
+                    </div>
+                    <!--算算更放心-->
+                        <div class="cal_wrap">
+                        <div class="cal_box">
+                            <p>
+                                <span class="cal_title">算算更放心</span>
+                                <span>我要借款</span><input type="text" id="cal_input" autocomplete="off">万元<span class="cal_error" id="cal_error" style="display:none;">请输入1到100之间的整数</span>
+                            </p>
+                            <div class="cal_bg">
+                                <a href="javascript:;" id="cal_left"></a>
+                                <a href="javascript:;" id="cal_right"></a>
+                                <div class="cal_mark" id="cal_slider_box">
+                                    <div class="cal_init_bg" id="cal_init_bg"></div>
+                                    <div class="cal_move_bg" id="cal_move_bg" style="width: 365px;"></div>
+                                    <a href="javascript:;" class="cal_move_dot" id="cal_move_dot" style="left: 390px;"></a>
+                                    <ul class="cal_mark_top">
+                                        <li>
+                                            <span></span>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>5</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>10</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>30</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>50</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>100</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>200</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>500</p>
+                                        </li>
+                                        <li class="cal_li_span">
+                                            <span></span>
+                                            <p>1000</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cal_list">
+                                <ul class="cal-list-top cf">
+                                    <li>借款期限</li>
+                                    <li>月费率</li>
+                                    <li>手续费</li>
+                                    <li>还款方式</li>
+                                    <li class="cal_list_money">还款总额</li>
+                                </ul>
+                                <ul id="cal_month_list" class="cf">
+                                    <li>3个月</li>
+                                    <li>1.60%</li>
+                                    <li>2%</li>
+                                    <li>先息后本</li>
+                                    <li class="cal_list_money">213,600.00</li>
+                                
+                                    <li>6个月</li>
+                                    <li>1.40%</li>
+                                    <li>2%</li>
+                                    <li>先息后本</li>
+                                    <li class="cal_list_money">220,800.00</li>
+                                
+                                    <li>12个月</li>
+                                    <li>0.78%</li>
+                                    <li>3%</li>
+                                    <li>等额本息</li>
+                                    <li class="cal_list_money">224,720.00</li>
+                                
+                                    <li>24个月</li>
+                                    <li>0.78%</li>
+                                    <li>3%</li>
+                                    <li>等额本息</li>
+                                    <li class="cal_list_money">243,440.00</li>
+                                
+                                    <li>36个月</li>
+                                    <li>0.78%</li>
+                                    <li>3%</li>
+                                    <li>等额本息</li>
+                                    <li class="cal_list_money">262,160.00</li>
+                                </ul>
+                            </div>
+                            <div class="cal_btn">
+                                <!-- <a id="cal_btn" href="javascript:;">立即借款</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--算算更放心end-->
+                </div>
+                <div class="blank10"></div>
+                <div>
+                    <img src="https://static.souyidai.com/www/images/version/frwhere/frwhere-d-v3.gif" width="870" height="540">
+                </div>
+                <div class="blank10"></div>
+                <div>
+                    <img src="https://static.souyidai.com/www/images/version/frwhere/frwhere-d-v4.gif" width="870" height="345" usemap="#Map">
+                    <map name="Map">
+                      <area shape="rect" coords="27,82,292,246" href="https://www.souyidai.com/info/shoufudai.htm" onFocus="this.blur()" target="_blank">
+                      <area shape="rect" coords="301,83,569,245" href="https://www.souyidai.com/info/huanfangdai.htm" onFocus="this.blur()" target="_blank">
+                      <area shape="rect" coords="575,82,846,245" href="https://www.souyidai.com/info/shuloudai.htm" onFocus="this.blur()" target="_blank">
+                    </map>
+                </div>
+               
+                <!--picture-end-->
+            </div>
+            <!--left-end-->
+            <!--right-->
+            <div class="frwhere-menu">
+                <span class="frwhere-nmenu-title">立即申请，一步到位</span>
+                <div class="frwhere-menu-list">
+                    <!--
+                        focus -> version-open-focus
+                        <span class="version-open-item  version-open-focus">
+
+                        visitor -> version-open-visitor
+                        <span class="version-open-item version-open-visitor">
+
+                        false ->version-open-border-false
+                        <span class="version-open-item version-open-border-false">
+
+                        银行卡号、手机号、验证码
+
+                        下拉菜单-》类--version-bank-select
+                        <span class="version-open-item version-open-visitor version-bank-select">
+                    -->
+                    <!--按钮-->
+                    <div class="frwhere-radio">
+                        <span class="frwhere-radio-column">
+                            <em class="version-details-img checked" data-val="1">&nbsp;</em>
+                            <span>一手房</span>
+                        </span>
+                        <span class="frwhere-radio-column">
+                            <em class="version-details-img" data-val="2">&nbsp;</em>
+                            <span>二手房</span>
+                        </span>
+                    </div>
+                    <!--按钮-end-->
+                    <!--item(房屋所在城市)-->
+                    <span class="version-open-item" id="city">
+                            <span class="version-open-mark">
+                                <em class="version-details-img ico-mark-v7">&nbsp;</em>
+                            </span>
+                            <span class="version-open-copy">
+                                <span class="version-open-recive">房屋所在城市</span>
+                            </span>
+                            <span class="ver-ico-url ico-bank-select-down"></span>
+                            <!--city-->
+                            <span class="version-city-list">
+                                <a href="####">北京</a>
+                                <a href="####">北京</a>
+                                <a href="####">北京</a>
+                                <a href="####">北京</a>
+                            </span>
+                            <!--city-end-->
+                            <span class="version-details-img ico-mark-closed"></span>
+                        </span>
+                    <!--item(房屋所在城市)-end-->
+                    <!--item(房屋所在区县)-->
+                    <span class="version-open-item" id="county">
+                            <span class="version-open-mark">
+                                <em class="version-details-img ico-mark-v7">&nbsp;</em>
+                            </span>
+                            <span class="version-open-copy">
+                                <span class="version-open-recive">房屋所在区县</span>
+                            </span>
+                            <span class="ver-ico-url ico-bank-select-down"></span>
+                            <!--city-->
+                            <span class="version-city-list">
+                                <a href="####">北京</a>
+                                <a href="####">北京</a>
+                                <a href="####">北京</a>
+                                <a href="####">北京</a>
+                            </span>
+                            <!--city-end-->
+                            <span class="version-details-img ico-mark-closed"></span>
+                        </span>
+                    <!--item(房屋所在区县)-end-->
+                    <!--item-->
+                     <span class="version-open-item">
+                        <span class="version-open-mark">
+                            <em class="version-details-img ico-mark-v8">&nbsp;</em>
+                        </span>
+                        <span class="version-open-copy">
+                            <span class="version-open-recive">楼盘/小区名称</span>
+                        </span>
+                        <span class="ver-ico-url ico-bank-select-down"></span>
+                         <span class="version-bank-list">
+                            <span>请先选择城市</span>
+                             <a href="####">楼盘</a>
+                        </span>
+                        <span class="version-details-img ico-mark-closed"></span>
+                    </span>
+                    <!--item-end-->
+
+                    <!--item-->
+                    <span class="version-open-item">
+                        <span class="version-open-mark">
+                            <em class="version-details-img ico-mark-v9">&nbsp;</em>
+                        </span>
+                        <span class="version-open-copy">
+                            <input type="text" value="" placeholder="房屋总价" id="houseArea">
+                        </span>
+                        <span class="version-details-img ico-mark-closed"></span>
+                        <span class="frwhere-unit">万元</span>
+                    </span>
+                    <!--item-end-->
+                    <!--item-->
+                    <span class="version-open-item">
+                        <span class="version-open-mark">
+                            <em class="version-details-img ico-mark-v10">&nbsp;</em>
+                        </span>
+                        <span class="version-open-copy">
+                            <input type="text" value="" placeholder="借款金额" id="amount">
+                        </span>
+                        <span class="version-details-img ico-mark-closed"></span>
+                        <span class="frwhere-unit">万元</span>
+                    </span>
+                    <!--item-end-->
+                    <!--item-->
+                    <span class="version-open-item" id="periods">
+                        <span class="version-open-mark">
+                            <em class="version-details-img ico-mark-v11">&nbsp;</em>
+                        </span>
+                        <span class="version-open-copy">
+                            <span class="version-open-recive">一个月</span>
+                        </span>
+                        <span class="ver-ico-url ico-bank-select-down"></span>
+                        <!--city-->
+                        <span class="version-city-list">
+                            <a href="####">北京</a>
+                            <a href="####">北京</a>
+                            <a href="####">北京</a>
+                            <a href="####">北京</a>
+                        </span>
+                        <!--city-end-->
+                        <span class="version-details-img ico-mark-closed"></span>
+                    </span>
+                    <!--item-end-->
+                    <!--item-->
+                    <span class="version-open-item">
+                        <span class="version-open-mark">
+                            <em class="version-details-img ico-mark-v1">&nbsp;</em>
+                        </span>
+                        <span class="version-open-copy">
+                            <input type="text" value="" placeholder="姓名" id="userName">
+                        </span>
+                        <span class="version-details-img ico-mark-closed"></span>
+                        <span class="frwhere-stars">*</span>
+                    </span>
+                    <!--item-end-->
+                    <!--item-->
+                    <span class="version-open-item">
+                        <span class="version-open-mark">
+                            <em class="version-details-img ico-mark-v5">&nbsp;</em>
+                        </span>
+                        <span class="version-open-copy">
+                            <input type="text" value="" placeholder="手机号" id="mobile">
+                        </span>
+                        <span class="version-details-img ico-mark-closed"></span>
+                        <span class="frwhere-stars">*</span>
+                    </span>
+                    <!--item-end-->
+                    <!--tel-图片验证-->
+                    <div class="frwhere-validation">
+
+                        <div class="frwhere-valid-column">
+                            <span class="version-open-item column-w74 lt ">
+                                <span class="version-open-copy">
+                                    <input type="text" value="图片验证码" placeholder="">
+                                </span>
+                            </span>
+                            <span class="frwhere-authimg">
+                                <img src="xxx.jpg" width="96" height="38">
+                            </span>
+                            <span class="verification-code lt">
+                                <!--
+                                    禁用状态类 -》disabled
+                                    <input type="button" class="version-btn-code disabled" value="获取验证码" disabled>
+                                -->
+                                <input type="button" class="version-btn-code" value="发送短信验证码">
+                            </span>
+                            <span class="version-open-item column-w174 lt version-open-visitor ">
+                                <span class="version-open-copy">
+                                    <input type="text" value="短信验证码" placeholder="">
+                                </span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <!--tel-图片验证-end-->
+                </div>
+                <div class="frwhere-submit">
+                    <input type="button" class="version-btn-h30" value="提交申请">
+                </div>
+                <div class="frwhere-annotation"><em>*</em>搜易贷会在1个工作日内与您电话联系</div>
+            </div>
+            <!--right-end-->
+        </div>
+    </div>
+    <!--内容部分-end-->
+
+</div>
+<!--底部(footer-version1)-->
+<div class="blank30"></div>
+<div class="version-tail " data-type="footer">
+    <div class="container">
+        <div class="boot-links">
+            <a href="####" class="a-one-left0">关于我们</a>
+            <a href="####">联系我们</a>
+            <a href="####">加入我们</a>
+            <a href="####">媒体报道</a>
+
+            <a href="####">安全保障</a>
+            <a href="####">新手引导</a>
+            <a href="####">产品介绍</a>
+            <a href="####">帮助中心</a>
+
+            <a href="####">系统公告</a>
+            <a href="####">法律法规</a>
+            <a href="####" class="rt">手机客户端</a>
+        </div>
+        <div class="tail-content">
+            <!--1-->
+            <div class="tail-w196">
+                <a href="https://help.souyidai.com/info/cooperate.htm" target="_blank"><em class="ver-ico-url"></em>首付贷/首传贷<i>+</i></a>
+                <a href="https://help.souyidai.com/info/cooperate.htm" target="_blank" class="mg-tp7"><em class="ver-ico-url"></em>信易贷合作</a>
+            </div>
+            <div class="tail-w330">
+                <div class="tail-any" data-type="tail-any">
+                    <a href="####" class="tail-iphone-cols">
+                        <span class="tail-iphone"><em class="ver-ico-url ico-ver-iphone "></em>苹果客户端下载</span>
+                        <!--<span class="tail-hover-bg ver-iphone-img">-->
+                        <!--<img src="www-style/images/version-home/qr-vr-iphone.jpg" width="80" height="80">-->
+                        <!--</span>-->
+                    </a>
+                    <a href="####" class="tail-iphone-cols">
+                        <span class="tail-iphone"><em class="ver-ico-url ico-ver-android "></em>安卓客户端下载</span>
+                        <!--<span class="tail-hover-bg ver-iphone-img">-->
+                        <!--<img src="www-style/images/version-home/qr-vr-iphone.jpg" width="80" height="80">-->
+                        <!--</span>-->
+                    </a>
+                    <a href="####" class="tail-iphone-cols">
+                        <span class="tail-iphone"><em class="ver-ico-url ico-ver-wap "></em>手机浏览器访问</span>
+                        <!--<span class="tail-hover-bg ver-iphone-img">-->
+                        <!--<img src="www-style/images/version-home/qr-vr-iphone.jpg" width="80" height="80">-->
+                        <!--</span>-->
+                    </a>
+                    <!---->
+                    <div>
+                        <div class="flicking " style="display: block">
+                            <span><img src="https://static.souyidai.com/www/images/version/qr-vr-iphone.jpg" width="80" height="80"></span>
+                            <div class="flicking_up_in"></div>
+                        </div>
+                        <div class="flicking" >
+                            <span><img src="https://static.souyidai.com/www/images/version/qr-vr-android.jpg" width="80" height="80"></span>
+                            <div class="flicking_up_in flicking-tp42"></div>
+                        </div>
+                        <div class="flicking">
+                            <span><img src="https://static.souyidai.com/www/images/version/qr-vr-wap.jpg" width="80" height="80"></span>
+                            <div class="flicking_up_in flicking-tp78"></div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+            <div class="tail-w366">
+                <div class="tail-expres">
+                    <!--<a href="http://www.experian.com/">-->
+                    <!--<em></em>-->
+                    <!--<span>搜易贷银行级风控体系使用由全球第一大征信机构Experian特别定制的评分卡与风控模型</span>-->
+                    <!--</a>-->
+                    <span  class="tail-picture">
+                        <a href="####" class="tail-bd-color">
+                            <span class="ver-ico-url">&nbsp;</span>
+                        </a>
+                        <a href="####" class="">
+                            <strong class="ver-ico-url">&nbsp;</strong>
+                        </a>
+                    </span>
+                    <span class="tail-prompts">
+                        搜易贷与国际著名的征信机构Experian和FICO云决<br>策平台合作，使用特别定制的评分卡与风控模型
+                    </span>
+                </div>
+            </div>
+            <div class="tail-w250">
+                <span class="tail-time">服务时间：工作日9:00 - 18:00</span>
+                <span class="tail-tel-num">4000-168-866</span>
+                <div class="tail-mouble">
+                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAxMzk0MV8xODA2ODFfNDAwMDE2ODg2Nl8yXw" target="_blank" class="tail-kefu"><em class="ver-ico-url cus-positon1"></em>在线客服</a>
+                    <a href="mailto:kefu@souyidai.com" class="tail-kefu"><em class="ver-ico-url cus-positon2"></em>客服邮箱</a>
+                    <a href="####" data-type="tail-weixin"><i class="ver-ico-url cus-positon4"></i></a>
+                    <a href="http://weibo.com/souyidai" target="_blank"><em class="ver-ico-url cus-positon3"></em></a>
+                    <!--微信浮层-->
+                    <div  class="micro" data-type="micro">
+                        <span><img src="https://static.souyidai.com/www/images/version/qr-vr-weixin.png" width="89" height="89"></span>
+                        <p class="micro_up_in"></p>
+                    </div>
+                    <!--end-->
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="tail-copyright">
+            <div class="tail-ton-left" data-type="tail-ton-box">
+                <a href="####" class="ver-nor-mx tail-ton-0">
+                    <span class="ver-nor-mx">&nbsp;</span>
+                </a>
+                <a href="####" class="ver-nor-mx tail-ton-1">
+                    <span class="ver-nor-mx">&nbsp;</span>
+                </a>
+                <a href="####" class="ver-nor-mx tail-ton-2">
+                    <span class="ver-nor-mx">&nbsp;</span>
+                </a>
+
+                <a href="####" class="ver-nor-mx tail-ton-3">
+                    <span class="ver-nor-mx">&nbsp;</span>
+                </a>
+                <a href="####" class="ver-nor-mx tail-ton-4">
+                    <span class="ver-nor-mx">&nbsp;</span>
+                </a>
+            </div>
+            <div class="tail-ton-aside">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <div>版权所有 &copy; 2014 搜易贷（北京）网络技术有限公司 Copyright 2014 souyidai.com, All Rights Reserved</div>
+                            <!--<div class="cf tail-ling-box">-->
+                                <!--<strong class="tail-linking">友情链接：</strong>-->
+                                <!--<span class="tail-linking-a">-->
+                                <!--<a href="####">搜狐焦点</a>-->
+                                <!--<a href="####">搜狐理财</a>-->
+                                <!--<a href="####">微钱包</a>-->
+
+                                <!--<a href="####">凤凰理财超市</a>-->
+                                <!--<a href="####">和讯</a>-->
+                                <!--<a href="####">融360</a>-->
+
+                                <!--<a href="####">网贷天眼</a>-->
+                                <!--<a href="####">网贷之家</a>-->
+                                <!--</span>-->
+                            <!--</div>-->
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!---->
+
+    </div>
+</div>
+<!--底部(footer-version1)end-->
+
+
+<script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/version-topfooter.js"></script>
+<script src="https://static.souyidai.com/www/js/template.js"></script>
+<script src="https://static.souyidai.com/www/js/codeset.js"></script>
+<script src="https://static.souyidai.com/www/js/codeset-obj.js"></script>
+<script src="https://static.souyidai.com/www/js/applyloan.js"></script>
+
+<script type="text/html" id="tempt_month_li">
+        {{ each list as item i}}
+            <li>{{item.month}}个月</li>
+            <li>{{item.rate}}</li>
+            <li>{{item.counterRate}}</li>
+            <li>{{item.type}}</li>
+            <li class="cal_list_money">{{item.lastMonthRepay}}</li>
+        {{/each}}
+    </script>
+    <script>
+        
+window.onload = function(){
+    // 首付贷滑动条
+    var slider = {
+        tWidth : 0,                                 //滑动总长度
+        arrSmall : [4, 5, 4, 4, 5, 5, 6, 5],        //每段中需要拆分的段数
+        arrMoney : [4, 5, 20, 20, 50, 100, 300, 500],    //每段的总钱数
+        startValue : 1,
+        endValue : 1000,
+        eLen : 0
+    };
+    //借款金额滑动条
+    var oSlider = new Slider({
+        oCalInput: document.getElementById('cal_input'),            //动态修改滑动条的input框
+        oInitBg: document.getElementById('cal_init_bg'),            //滑动条默认背景
+        oMove: document.getElementById('cal_move_dot'),             //滑动条拖拽的按钮
+        oMoveBg: document.getElementById('cal_move_bg'),            //滑动条滚动背景
+        oRight: document.getElementById('cal_right'),               //右侧前进按钮
+        oLeft: document.getElementById('cal_left'),                 //左侧后退按钮
+        slider: slider,                                             //滑动条配置参数
+        dd: 22,                                                     //滑动条离左侧的宽度
+        oTempt: document.getElementById('cal_month_list'),          //模板
+        oBox: document.getElementById('cal_slider_box'),
+        oError: document.getElementById('cal_error'),
+        dyd:true
+    })
+    oSlider.init();
+} 
+    </script>
+
+</body>
+</html>

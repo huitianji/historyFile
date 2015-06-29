@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要借款-爱居贷（正审）</title>
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/add.css">
+    <script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+    <script language="javascript" src="https://static.souyidai.com/www/js/areacode.js"></script>
+    <script language="javascript" src="https://static.souyidai.com/www/js/threeMenuLinkCode.js"></script>
+    <script language="javascript" src="https://static.souyidai.com/www/js/borrow_check.js"></script>
+    <script language="javascript" src="https://static.souyidai.com/www/js/data.js"></script>
+    <script language="javascript" src="https://static.souyidai.com/www/js/jquery.upload.js"></script>
+    <script>
+        var buildPeriods={"1":[{"12":"1年"},{"24":"2年"},{"36":"3年"}],"2":[{"36":"3年"},{"48":"4年"},{"60":"5年"}]};//楼盘可贷款年限
+        var buildRepayMode ="";
+    </script>
+</head>
+<body class="love-home">
+<div class="cf main main-offsetHeight">
+    <div class="borrow-page-top">
+        <div class="borrow-top-right">
+            <a href="####">新手指引</a><a href="####">帮助中心</a><a href="####" class="ico-borrow ico-weixin"></a><a href="####" class="ico-borrow ico-sina"></a><a href="####" class="ico-borrow ico-phone"></a><span>4008-901-280</span>
+        </div>
+        <div class="borrow-top-left hellow">您好，欢迎来到搜易贷！<a href="####">[登录]</a><a href="####">[免费注册]</a></div>
+    </div>
+    <div class="navigation">
+        <span class="borrow-logo"><img src="images/borrow_logo.png"></span>
+        <ul class="nav-list">
+            <li ><a href="####">首页</a> </li>
+            <li><a href="####">我要投资</a> </li>
+            <li class="nav-li-active"><a href="####" >我要借款</a> </li>
+            <li ><a href="####">我的账户</a> </li>
+            <li class="nav-hover"></li>
+        </ul>
+    </div>
+    <div class="point-to">首页>我要借款>爱居贷  </div>
+    <div class="borrow-title">
+        <span class="lead-xs">进入我的借款<a href="####">查看详情</a></span>
+        <strong>爱居贷</strong>当前状态：<em>申请资料填写...</em>
+    </div>
+    <div>
+    <!--借款申请信息 <h1 class="pre-trial border-bottom-none">-->
+    <div class="demand-xs" id="borrowing-information">
+        <h1 class="pre-trial">
+            <div class="caption-state">
+                <span class="state"><strong class="ico-borrow ico-true"></strong><em class="unedited">未完成</em></span>
+                <a href="####" class="editor btn-preserve-oneQ"><strong class="ico-borrow ico-editor"></strong><em class="btn-editor">编辑</em></a>
+            </div>
+            <strong>借款申请信息</strong>
+        </h1>
+        <div class="pre-row">
+            <div class="checking demand-marbot">
+                <!--
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">借款标题</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="title" type="text" value="title">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">借款用途</label>
+                    <div class="fild-center">
+                        <select class="fild-select">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                -->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">所选楼盘</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select buildings" name="houseId">
+                            <option>请选择</option>
+                            <option citycode="110000" city="北京市" provincecode="110000" province="北京市" housename="瀛嘉汇" value="1北京市 瀛嘉汇">北京市 瀛嘉汇</option>
+                            <option citycode="110000" city="北京市" provincecode="110000" province="北京市" housename="瀛嘉汇2" value="2北京市 瀛嘉汇2">北京市 瀛嘉汇2</option>
+                        </select>
+                        <input type="hidden" name="houseName" value="${bidVo.houseName}"/>
+                        <input type="hidden" name="houseProvince" value="${bidVo.houseProvince}"/>
+                        <input type="hidden" name="houseProvinceCode" value="${bidVo.houseProvinceCode}"/>
+                        <input type="hidden" name="houseCity" value="${bidVo.houseCity}"/>
+                        <input type="hidden" name="houseCityCode" value="${bidVo.houseCityCode}"/>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">购房银行贷款申请期限</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="unit">年</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">借款金额</label>
+                    <div class="fild-center">
+                        <input class="fild-input sum-money required" name="_amount" type="text" value="">
+                    </div>
+                    <div class="unit">元</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">借款期限</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select" name = "periods">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">年化利率</label>
+                    <div class="fild-center">
+                        10%~14%
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">还款方式</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select" name="repayMode">
+                            <option>请选择</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">借款描述</label>
+                    <div class="fild-center">
+                        <textarea class="fild-input required"></textarea>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+        </div>
+    </div>
+    <!--个人信息--><!--<div class="checking demand-marbot com-data">-->
+    <form action="" method="post">
+    <div class="demand-xs margin-top10" id="personal-details">
+        <!--<h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em>未编辑</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor"></strong>编辑</a> </div><strong>个人信息</strong></h1>-->
+        <h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em class="unedited">未完成</em></span><a href="####" class="editor btn-preserve-personal"><strong class="ico-borrow ico-editor"></strong><em class="btn-editor">编辑</em></a> </div><strong>个人信息</strong></h1>
+
+        <div class="pre-row">
+            <h2 class="pre-title"><span class="ico-borrow ico-file"></span>基本资料</h2>
+            <div class="checking demand-marbot com-data">
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">真实姓名</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="name" type="text" value="name">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">身份证号</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">手机号码</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">婚姻状态</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select marital_status">
+                            <option>请选择</option>
+                            <option selected>已婚</option>
+                            <option>未婚</option>
+                            <option>离异</option>
+                            <option>丧偶</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">最高学历</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select">
+                            <option>请选择</option>
+                            <option>博士及以上</option>
+                            <option>硕士</option>
+                            <option>本科</option>
+                            <option>大专</option>
+                            <option>高职</option>
+                            <option>高中</option>
+                            <option>中专</option>
+                            <option>初中及以下</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!--户籍地址-->
+                <div class="fild-group cf threeMenuLine">
+                    <label class="fild-name borrow-fild-width">户籍地址0k</label>
+                    <div class="fild-center fild-width">
+                        <div class="fild-row">
+                            <div>
+                                <input type="hidden" name="province" data-type="opt" value="">
+                                <select class="fild-select fild-select-width113 lt sheng" default-province="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="hidden" name="city" data-type="opt" value="">
+                                <select class="fild-select fild-select-width113 margin-left7 lt shi" default-city="">
+                                    <option>请选择</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="hidden" name="county" data-type="opt" value="">
+                                <select class="fild-select fild-select-width113 rt xian" default-county="">
+                                    <option>请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">&nbsp;</label>
+                    <div class="fild-center fild-width">
+                        <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!--现居地址-->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">现居地址</label>
+                    <div class="fild-center fild-width">
+                        <div class="fild-row">
+                            <select class="fild-select fild-select-width113 lt">
+                                <option>请选择</option>
+                            </select>
+                            <select class="fild-select fild-select-width113 margin-left7 lt">
+                                <option>请选择</option>
+                            </select>
+                            <select class="fild-select fild-select-width113 rt">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">&nbsp;</label>
+                    <div class="fild-center fild-width">
+                        <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">现居住地居住年限</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select">
+                            <option>请选择</option>
+                            <option>6个月以下</option>
+                            <option>6个月~1年</option>
+                            <option>1年~2年</option>
+                            <option>2年~5年</option>
+                            <option>5年以上</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group fild-group-radio cf">
+                    <label class="fild-name borrow-fild-width">子女数目</label>
+                    <div class="fild-center fild-radio fild-width">
+                        <input type="radio" name="radio"><label>没有</label><input type="radio" name="radio"><label>1个</label><input type="radio" name="radio"><label>2个</label><input type="radio" name="radio"><label>3个以上</label>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group fild-group-radio cf">
+                    <label class="fild-name borrow-fild-width">名下房产情况</label>
+                    <div class="fild-center fild-radio fild-default-radio fild-width">
+                        <input type="radio" name="radio"><label>没有</label><input type="radio" name="radio"><label>已有一套</label><input type="radio" name="radio"><label>已有两套</label><input type="radio" name="radio"><label>已有三套及以上</label>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group fild-group-radio cf">
+                    <label class="fild-name borrow-fild-width">名下车辆情况</label>
+                    <div class="fild-center fild-radio fild-width">
+                        <input type="radio" name="radio"><label>没有</label><input type="radio" name="radio"><label>有</label>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="pre-title"><span class="ico-borrow ico-file"></span>职业信息</h2>
+            <div class="checking demand-marbot">
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">职业类别</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select proposer-select-change"  name="jobType" default-value="">
+                            <option>工薪族</option>
+                            <option selected="selected">企业主</option>
+                            <option >个体户</option>
+                        </select>
+                    </div>
+                </div>
+                <!--选项卡-->
+                <div class="groups-row personal_information">
+                    <!--工薪族-->
+                    <div style="display: block">
+                    <!--开始-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">工作单位名称</label>
+                        <div class="fild-center">
+                            <input class="fild-input required " name="form-cs" type="text" value="1工薪族">
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">所属行业</label>
+                        <div class="fild-center">
+                            <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                            <select class="fild-select">
+                                <option>请选择</option>
+                                <option>制造业</option>
+                                <option>IT</option>
+                                <option>政府机构</option>
+                                <option>媒体、广告</option>
+
+                                <option>零售</option>
+                                <option>批发</option>
+                                <option>教育培训</option>
+                                <option>公共事业</option>
+
+                                <option>交通运输业</option>
+                                <option>房产</option>
+                                <option>政府机构</option>
+                                <option>媒体、广告</option>
+                            </select>
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">单位性质</label>
+                        <div class="fild-center">
+                            <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                            <select class="fild-select">
+                                <option>请选择</option>
+                                <option>政府机关</option>
+                            </select>
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--工作电话-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">工作电话</label>
+                        <div class="fild-center fild-width">
+                            <div class="fild-row">
+                                <span><input type="text" class="fild-input fild-input-width72"><input type="text" class="fild-input fild-input-width152 margin-left7"><input type="text" class="fild-input fild-input-width112 margin-left7"></span>
+                            </div>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">所在部门</label>
+                        <div class="fild-center">
+                            <input class="fild-input required" type="text" value="">
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">担任职务</label>
+                        <div class="fild-center">
+                            <input class="fild-input required" type="text" value="">
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <!--现单位入职日期-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">现单位入职日期</label>
+                        <div class="fild-center fild-width">
+                            <div class="fild-row">
+                                <input type="text" class="fild-input fild-input-width112" onclick="SelectDate(this,'yyyy-MM-dd')"><input type="text" class="fild-input fild-input-width112 margin-left7" onclick="SelectDate(this,'yyyy-MM-dd')">
+                            </div>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--工作单位地址-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">工作单位地址</label>
+                        <div class="fild-center fild-width">
+                            <div class="fild-row">
+                                <select class="fild-select fild-select-width113 lt">
+                                    <option>请选择</option>
+                                </select>
+                                <select class="fild-select fild-select-width113 margin-left7 lt">
+                                    <option>请选择</option>
+                                </select>
+                                <select class="fild-select fild-select-width113 rt">
+                                    <option>请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">&nbsp;</label>
+                        <div class="fild-center fild-width">
+                            <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">个人月收入</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">家庭月收入</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">月家庭日常支出</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">其他收入</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--结束-->
+                    </div>
+                    <!--工薪族end-->
+                    <!--企业主-->
+                    <div style="display: none">
+                    <!--开始-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">工作单位名称</label>
+                        <div class="fild-center">
+                            <input class="fild-input required form-cs" type="text" value="2企业主">
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">所属行业</label>
+                        <div class="fild-center">
+                            <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                            <select class="fild-select">
+                                <option>请选择</option>
+                                <option>制造业</option>
+                                <option>IT</option>
+                                <option>政府机构</option>
+                                <option>媒体、广告</option>
+
+                                <option>零售</option>
+                                <option>批发</option>
+                                <option>教育培训</option>
+                                <option>公共事业</option>
+
+                                <option>交通运输业</option>
+                                <option>房产</option>
+                                <option>政府机构</option>
+                                <option>媒体、广告</option>
+                            </select>
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">私营企业类型</label>
+                        <div class="fild-center">
+                            <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                            <select class="fild-select">
+                                <option>请选择</option>
+                                <option>私营股份制企业</option>
+                            </select>
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--工作电话-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">工作电话</label>
+                        <div class="fild-center fild-width">
+                            <div class="fild-row">
+                                <input type="text" class="fild-input fild-input-width72"><input type="text" class="fild-input fild-input-width152 margin-left7"><input type="text" class="fild-input fild-input-width112 margin-left7">
+                            </div>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!--担任职务-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">担任职务</label>
+                        <div class="fild-center">
+                            <input class="fild-input required" type="text" value="">
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group fild-group-radio cf">
+                        <label class="fild-name borrow-fild-width">是否为实际控股人</label>
+                        <div class="fild-center fild-radio fild-width">
+                            <input type="radio" name="radio"><label>是</label><input type="radio" name="radio"><label>否</label>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">股份占比</label>
+                        <div class="fild-center">
+                            <input class="fild-input required" type="text" value="">
+                        </div>
+                        <div class="unit">%</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">企业实际经营年限</label>
+                        <div class="fild-center">
+                            <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                            <select class="fild-select">
+                                <option>请选择</option>
+                                <option>6个月以下</option>
+                                <option>6个月~1年</option>
+                                <option>1年~2年</option>
+                                <option>2年~5年</option>
+                                <option>5年以上</option>
+                            </select>
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <!--工作单位地址-->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">工作单位地址</label>
+                        <div class="fild-center fild-width">
+                            <div class="fild-row">
+                                <select class="fild-select fild-select-width113 lt">
+                                    <option>请选择</option>
+                                </select>
+                                <select class="fild-select fild-select-width113 margin-left7 lt">
+                                    <option>请选择</option>
+                                </select>
+                                <select class="fild-select fild-select-width113 rt">
+                                    <option>请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">&nbsp;</label>
+                        <div class="fild-center fild-width">
+                            <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">员工数量</label>
+                        <div class="fild-center">
+                            <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                            <select class="fild-select">
+                                <option>请选择</option>
+                                <option>10人以下</option>
+                                <option>10~100人</option>
+                                <option>100~500人</option>
+                                <option>500人以上</option>
+                            </select>
+                        </div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group fild-group-radio cf">
+                        <label class="fild-name borrow-fild-width">经营场地</label>
+                        <div class="fild-center fild-radio fild-width">
+                            <input type="radio" name="radio"><label>租用</label><input type="radio" name="radio"><label>月经营收入</label>
+                        </div>
+                        <div class="error-box error200">
+                            <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">月经营收入</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">个人月收入</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">家庭月收入</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="fild-group cf">
+                        <label class="fild-name borrow-fild-width">月家庭日常支出</label>
+                        <div class="fild-center">
+                            <input class="fild-input sum-money required" name="tel" type="text" value="">
+                        </div>
+                        <div class="unit">元</div>
+                        <div class="error-box">
+                            <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--结束-->
+                    </div>
+                    <!--企业主end-->
+                    <!--个体户-->
+                    <!--个体户end-->
+                </div>
+
+            </div>
+            <h2 class="pre-title"><span class="ico-borrow ico-file"></span>信用信息</h2>
+            <div class="checking demand-marbot">
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">信用卡张数</label>
+                    <div class="fild-center">
+                        <input class="fild-input sum-money required"  name="tel" type="text" value="158.1">
+                    </div>
+                    <div class="unit">张</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">信用卡最高授信额度</label>
+                    <div class="fild-center">
+                        <input class="fild-input sum-money required" name="tel" type="text" value="">
+                    </div>
+                    <div class="unit">元</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">信用卡最长卡龄</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="unit">年</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">信用卡/贷款总额</label>
+                    <div class="fild-center">
+                        <input class="fild-input sum-money required" name="tel" type="text" value="">
+                    </div>
+                    <div class="unit">元</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">信用卡/贷款月还款额</label>
+                    <div class="fild-center">
+                        <input class="fild-input sum-money required" name="tel" type="text" value="">
+                    </div>
+                    <div class="unit">元</div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </form>
+
+    <!--联系人信息-->
+    <div class="demand-xs margin-top10" id="contact-information">
+        <!--<h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em>未编辑</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor ico-preserve"></strong>保存</a> </div><strong>联系人信息</strong></h1>-->
+        <h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em class="unedited">未完成</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor"></strong><em class="btn-editor">编辑</em></a> </div><strong>联系人信息</strong></h1>
+        <div class="pre-row">
+            <div class="checking demand-marbot">
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">家庭联系人</label>
+                    <div class="fild-center fild-width">
+                        <div class="fild-row">
+                            <input class="fild-input fidld-input-width113 lt  required" name="tel" type="text" value="">
+                            <input class="fild-input fidld-input-width220 rt  required" name="tel" type="text" value="">
+                        </div>
+                        <div class="fild-row-xs">
+                            <input type="radio" name="radio" checked><label>父母</label><input type="radio" name="radio" ><label>子女</label><input type="radio" name="radio" ><label>其他亲属</label>
+                        </div>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">工作联系人</label>
+                    <div class="fild-center fild-width">
+                        <div class="fild-row">
+                            <input class="fild-input fidld-input-width113 lt  required" name="tel" type="text" value="">
+                            <input class="fild-input fidld-input-width220 rt  required" name="tel" type="text" value="">
+                        </div>
+                        <div class="fild-row-xs">
+                            <input type="radio" name="radio" checked><label>同事</label><input type="radio" name="radio" ><label>朋友</label>
+                        </div>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                        <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">其他联系人</label>
+                    <div class="fild-center fild-width">
+                        <div class="fild-row">
+                            <input class="fild-input fidld-input-width113 lt  required" name="tel" type="text" value="">
+                            <input class="fild-input fidld-input-width220 rt  required" name="tel" type="text" value="">
+                        </div>
+                        <div class="fild-row-xs">
+                            <input type="radio" name="radio" checked><label>同事</label><input type="radio" name="radio" ><label>朋友</label>
+                        </div>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                        <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+            </div>
+        </div>
+    </div>
+    <!--申请人资料上传-->
+    <!--ico-plus默认ico-true正确ico-warning错误警告-->
+    <!--
+    a href="####"><span class="ico-borrow ico-plus"></span>这是假的</a>
+    <a href="####" class="upload-success"><span class="ico-borrow ico-true"></span>上传成功显示成这样</a>
+    <a href="####" class="upload-failed"><span class="ico-borrow ico-warning"></span>默认文字上传失败状态</a>
+    <a href="####" class="upload-failed"><span class="ico-borrow ico-warning"></span>默认文字上传失败状态</a>
+    -->
+    <div class="demand-xs margin-top10">
+        <!--<h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em>未编辑</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor ico-preserve"></strong>保存</a> </div><strong>申请人资料上传</strong></h1>-->
+        <h1 class="pre-trial" ><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em class="unedited">未完成</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor"></strong><em class="btn-editor">编辑</em></a> </div><strong>申请人资料上传</strong></h1>
+        <!---->
+        <div class="pre-row" id="proposer" >
+            <!--申请人工薪-->
+            <div style="display: block;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息1<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####" class="upload-failed"><span class="ico-borrow ico-warning" ></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>工作证明<div class="select-hidden"><span>劳动合同</span><span>在职证明</span><span>工作证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>收入证明<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span><span>单位开具居住证明</span></div></a>
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>社保缴费记录</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人完税证明</a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--申请人工薪end-->
+            <!--申请人企业主-->
+            <div style="display: none;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息2<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--经营信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>经营信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>营业执照副本</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>公司章程</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>公司验资报告</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地证明<div class="select-hidden"><span>房屋租赁合同</span><span>房产证明</span><span>土地使用权证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地水电煤账单</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人银行流水<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>银行对公流水<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span></div></a>
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>银行开户许可证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>企业法人代码证书</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>税务登记证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>资产负债表</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>损益表</a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--申请人企业主end-->
+            <!--申请人工商户-->
+            <div style="display: none;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息3<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--经营信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>经营信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>营业执照副本</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地证明<div class="select-hidden"><span>房屋租赁合同</span><span>房产证明</span><span>土地使用权证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地水电煤账单</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人银行流水<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span></div></a>
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>银行开户许可证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>企业法人代码证书</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>税务登记证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>资产负债表</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>损益表</a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--申请人工商户 end-->
+        </div>
+        <!---->
+    </div>
+    <!--申请人资料上传end-->
+    <!--共待人信息-->
+    <div class="demand-xs margin-top10 total_others" id="total-others">
+        <!--<h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em>未编辑</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor ico-preserve"></strong>保存</a> </div><strong>共贷人信息</strong></h1>-->
+        <h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em class="unedited">未完成</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor"></strong><em class="btn-editor">编辑</em></a> </div><strong>共待人信息</strong></h1>
+        <div class="pre-row">
+            <h2 class="pre-title"><span class="ico-borrow ico-file"></span>基本资料</h2>
+            <div class="checking demand-marbot">
+                <!---->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">真实姓名</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">身份证号</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">手机号码</label>
+                    <div class="fild-center">
+                        <input class="fild-input required" name="tel" type="text" value="">
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">最高学历</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select">
+                            <option>请选择</option>
+                            <option>博士及以上</option>
+                            <option>硕士</option>
+                            <option>本科</option>
+                            <option>大专</option>
+                            <option>高职</option>
+                            <option>高中</option>
+                            <option>中专</option>
+                            <option>初中及以下</option>
+                        </select>
+                    </div>
+                    <div class="error-box">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!--户籍地址-->
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">户籍地址</label>
+                    <div class="fild-center fild-width">
+                        <div class="fild-row">
+                            <select class="fild-select fild-select-width113 lt">
+                                <option>请选择</option>
+                            </select>
+                            <select class="fild-select fild-select-width113 margin-left7 lt">
+                                <option>请选择</option>
+                            </select>
+                            <select class="fild-select fild-select-width113 rt">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">&nbsp;</label>
+                    <div class="fild-center fild-width">
+                        <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group fild-group-radio cf">
+                    <label class="fild-name borrow-fild-width">名下房产情况</label>
+                    <div class="fild-center fild-radio fild-default-radio fild-width">
+                        <input type="radio" name="radio"><label>没有</label><input type="radio" name="radio"><label>已有一套</label><input type="radio" name="radio"><label>已有两套</label><input type="radio" name="radio"><label>已有三套及以上</label>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="fild-group fild-group-radio cf">
+                    <label class="fild-name borrow-fild-width">名下车辆情况</label>
+                    <div class="fild-center fild-radio fild-width">
+                        <input type="radio" name="radio"><label>没有</label><input type="radio" name="radio"><label>有</label>
+                    </div>
+                    <div class="error-box error200">
+                        <span class="ico-reg ico-ok"></span>
+                        <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                            <span class="error-receive"></span>
+                        </span>
+                    </div>
+                </div>
+                <!---->
+            </div>
+            <!--0职业信息-->
+            <h2 class="pre-title"><span class="ico-borrow ico-file"></span>职业信息</h2>
+            <div class="checking demand-marbot">
+                <div class="fild-group cf">
+                    <label class="fild-name borrow-fild-width">职业类别</label>
+                    <div class="fild-center">
+                        <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                        <select class="fild-select others-select-change">
+                            <option >工薪族</option>
+                            <option >企业主</option>
+                            <option selected="selected">个体户</option>
+                            <option >无工作</option>
+                        </select>
+                    </div>
+                </div>
+                <!--选项卡-->
+                <div class="groups-row there_information">
+                    <!--工薪族-->
+                    <div style="display: block">
+                        <!---->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">工作单位名称</label>
+                            <div class="fild-center">
+                                <input class="fild-input required" type="text" value="1">
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">所属行业</label>
+                            <div class="fild-center">
+                                <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                                <select class="fild-select">
+                                    <option>请选择</option>
+                                    <option>制造业</option>
+                                    <option>IT</option>
+                                    <option>政府机构</option>
+                                    <option>媒体、广告</option>
+
+                                    <option>零售</option>
+                                    <option>批发</option>
+                                    <option>教育培训</option>
+                                    <option>公共事业</option>
+
+                                    <option>交通运输业</option>
+                                    <option>房产</option>
+                                    <option>政府机构</option>
+                                    <option>媒体、广告</option>
+                                </select>
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">单位性质</label>
+                            <div class="fild-center">
+                                <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                                <select class="fild-select">
+                                    <option>请选择</option>
+                                    <option>政府机关</option>
+                                </select>
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!--工作电话-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">工作电话</label>
+                            <div class="fild-center fild-width">
+                                <div class="fild-row">
+                                    <input type="text" class="fild-input fild-input-width72"><input type="text" class="fild-input fild-input-width152 margin-left7"><input type="text" class="fild-input fild-input-width112 margin-left7">
+                                </div>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">所在部门</label>
+                            <div class="fild-center">
+                                <input class="fild-input required" type="text" value="">
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!--担任职务-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">担任职务</label>
+                            <div class="fild-center">
+                                <input class="fild-input required" type="text" value="">
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!---->
+                        <!--现单位入职日期-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">现单位入职日期</label>
+                            <div class="fild-center fild-width">
+                                <div class="fild-row">
+                                    <input type="text" class="fild-input fild-input-width112" onclick="SelectDate(this,'yyyy-MM-dd')"><input type="text" class="fild-input fild-input-width112 margin-left7" onclick="SelectDate(this,'yyyy-MM-dd')">
+                                </div>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!--工作单位地址-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">工作单位地址</label>
+                            <div class="fild-center fild-width">
+                                <div class="fild-row">
+                                    <select class="fild-select fild-select-width113 lt">
+                                        <option>请选择</option>
+                                    </select>
+                                    <select class="fild-select fild-select-width113 margin-left7 lt">
+                                        <option>请选择</option>
+                                    </select>
+                                    <select class="fild-select fild-select-width113 rt">
+                                        <option>请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">&nbsp;</label>
+                            <div class="fild-center fild-width">
+                                <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!--个人月收入-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">个人月收入</label>
+                            <div class="fild-center">
+                                <input class="fild-input sum-money required" name="tel" type="text" value="">
+                            </div>
+                            <div class="unit">元</div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!--其他收入-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">其他收入</label>
+                            <div class="fild-center">
+                                <input class="fild-input sum-money required" name="tel" type="text" value="">
+                            </div>
+                            <div class="unit">元</div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                    <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                        <span class="error-receive"></span>
+                                    </span>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                    <!--企业主-->
+                    <div style="display:none;">
+                        <!--开始-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">工作单位名称</label>
+                            <div class="fild-center">
+                                <input class="fild-input required" type="text" value="2">
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">所属行业</label>
+                            <div class="fild-center">
+                                <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                                <select class="fild-select">
+                                    <option>请选择</option>
+                                    <option>制造业</option>
+                                    <option>IT</option>
+                                    <option>政府机构</option>
+                                    <option>媒体、广告</option>
+
+                                    <option>零售</option>
+                                    <option>批发</option>
+                                    <option>教育培训</option>
+                                    <option>公共事业</option>
+
+                                    <option>交通运输业</option>
+                                    <option>房产</option>
+                                    <option>政府机构</option>
+                                    <option>媒体、广告</option>
+                                </select>
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">私营企业类型</label>
+                            <div class="fild-center">
+                                <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                                <select class="fild-select">
+                                    <option>请选择</option>
+                                    <option>私营股份制企业</option>
+                                </select>
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!--工作电话-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">工作电话</label>
+                            <div class="fild-center fild-width">
+                                <div class="fild-row">
+                                    <input type="text" class="fild-input fild-input-width72"><input type="text" class="fild-input fild-input-width152 margin-left7"><input type="text" class="fild-input fild-input-width112 margin-left7">
+                                </div>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!--担任职务-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">担任职务</label>
+                            <div class="fild-center">
+                                <input class="fild-input required" type="text" value="">
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group fild-group-radio cf">
+                            <label class="fild-name borrow-fild-width">是否为实际控股人</label>
+                            <div class="fild-center fild-radio fild-width">
+                                <input type="radio" name="radio"><label>是</label><input type="radio" name="radio"><label>否</label>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                            </div>
+                        </div>
+                        <!--股份占比-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">股份占比</label>
+                            <div class="fild-center">
+                                <input class="fild-input required" type="text" value="">
+                            </div>
+                            <div class="unit">%</div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">企业实际经营年限</label>
+                            <div class="fild-center">
+                                <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                                <select class="fild-select">
+                                    <option>请选择</option>
+                                    <option>6个月以下</option>
+                                    <option>6个月~1年</option>
+                                    <option>1年~2年</option>
+                                    <option>2年~5年</option>
+                                    <option>5年以上</option>
+                                </select>
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!---->
+                        <!--工作单位地址-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">工作单位地址</label>
+                            <div class="fild-center fild-width">
+                                <div class="fild-row">
+                                    <select class="fild-select fild-select-width113 lt">
+                                        <option>请选择</option>
+                                    </select>
+                                    <select class="fild-select fild-select-width113 margin-left7 lt">
+                                        <option>请选择</option>
+                                    </select>
+                                    <select class="fild-select fild-select-width113 rt">
+                                        <option>请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">&nbsp;</label>
+                            <div class="fild-center fild-width">
+                                <input class="fild-input fild-input-width352" value="请填写具体街道地址，具体至单元号">
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!--员工数量-->
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">员工数量</label>
+                            <div class="fild-center">
+                                <!--<input class="fild-input required" id="tel" name="tel" type="text" value="">-->
+                                <select class="fild-select">
+                                    <option>请选择</option>
+                                    <option>10人以下</option>
+                                    <option>10~100人</option>
+                                    <option>100~500人</option>
+                                    <option>500人以上</option>
+                                </select>
+                            </div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group fild-group-radio cf">
+                            <label class="fild-name borrow-fild-width">经营场地</label>
+                            <div class="fild-center fild-radio fild-width">
+                                <input type="radio" name="radio"><label>租用</label><input type="radio" name="radio"><label>月经营收入</label>
+                            </div>
+                            <div class="error-box error200">
+                                <span class="ico-reg ico-ok"></span>
+                            <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                <span class="error-receive"></span>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">月经营收入</label>
+                            <div class="fild-center">
+                                <input class="fild-input sum-money required" name="tel" type="text" value="">
+                            </div>
+                            <div class="unit">元</div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="fild-group cf">
+                            <label class="fild-name borrow-fild-width">个人月收入</label>
+                            <div class="fild-center">
+                                <input class="fild-input sum-money required" name="tel" type="text" value="">
+                            </div>
+                            <div class="unit">元</div>
+                            <div class="error-box">
+                                <span class="ico-reg ico-ok"></span>
+                                <span class="error-meg"><em class="ico-reg ico-error-arrow"></em><strong class="ico-reg ico-error-mark"></strong>
+                                    <span class="error-receive"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <!---->
+                        <!--结束-->
+                    </div>
+                    <!--个体户-->
+
+                    <!--无工作-->
+                    <div style="display:none;">
+                    <!--开始-->
+                        <div style="height: 500px;">无工作</div>
+                    <!--结束-->
+                    </div>
+                    <!--无工作end-->
+                </div>
+            </div>
+            <!---->
+        </div>
+    </div>
+    <!--共贷人资料上传-->
+    <div class="demand-xs margin-top10 total_others">
+        <!--<h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em>未编辑</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor ico-preserve"></strong>保存</a> </div><strong>共贷人资料上传</strong></h1>-->
+        <h1 class="pre-trial"><div class="caption-state"><span class="state"><strong class="ico-borrow ico-true"></strong><em class="unedited">未完成</em></span><a href="####" class="editor"><strong class="ico-borrow ico-editor"></strong><em class="btn-editor">编辑</em></a> </div><strong>共贷人资料上传</strong></h1>
+        <div class="pre-row" id="common-people">
+            <!--共贷人工薪-->
+            <div style="display: block;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息1<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+
+                        <a href="####" colName=""><span class="ico-borrow ico-plus"></span>工作证明<div class="select-hidden" ><span>劳动合同</span><span>在职证明</span><span>工作证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>收入证明<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>社保缴费记录</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人完税证明</a>
+
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span><span>单位开具居住证明</span></div></a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--共贷人工薪end-->
+            <!--共贷人企业主-->
+            <div style="display: none;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息2<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--经营信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>经营信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>营业执照副本</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>公司章程</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>公司验资报告</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地证明<div class="select-hidden"><span>房屋租赁合同</span><span>房产证明</span><span>土地使用权证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地水电煤账单</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人银行流水<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>银行对公流水<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>银行开户许可证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>企业法人代码证书</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>税务登记证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>资产负债表</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>损益表</a>
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span></div></a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--共贷人企业主end-->
+            <!--共贷人工商户-->
+            <div style="display: none;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息3<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--经营信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>经营信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>营业执照副本</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地证明<div class="select-hidden"><span>房屋租赁合同</span><span>房产证明</span><span>土地使用权证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>经营地水电煤账单</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人银行流水<div class="select-hidden"><span>银行流水</span><span>网银截屏</span></div></a>
+
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>银行开户许可证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>企业法人代码证书</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>税务登记证</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>资产负债表</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>损益表</a>
+
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span></div></a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--共贷人工商户end-->
+            <!--共贷人无工作-->
+            <div style="display: none;">
+                <!--身份证信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-card"></span>身份证信息4<strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证正面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>身份证反面</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>本人手持身份证正面</a>
+                    </div>
+                </div>
+                <!--户口簿信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-booklet"></span>户口簿信息 <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿首页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿户主页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人页</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>户口簿本人变更页</a>
+                    </div>
+                </div>
+                <!--其他信息-->
+                <div>
+                    <h2 class="pre-title border-none"><span class="ico-borrow ico-other"></span>其他信息  <strong class="color-red">*</strong></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>征信报告</a>
+                    </div>
+                </div>
+                <!--增信信息 -->
+                <div>
+                    <h2 class="pre-title border-none"><p class="pre-op-left"><span class="ico-borrow ico-sq-credit"></span>增信信息</p><span class="tips"><strong class="ico-borrow ico-tips"></strong><em>温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度</em></span></h2>
+                    <div class="section-row paddings cf">
+                        <a href="####"><span class="ico-borrow ico-plus"></span>房产证明<div class="select-hidden"><span>房产证</span><span>购房合同</span><span>抵押借款合同</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>车辆证明<div class="select-hidden"><span>车辆行驶证</span><span>机动车登记证</span></div></a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>保单</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>股票/基金/债券</a>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>社保缴费记录</a>
+                        <a href="####"><span class="ico-borrow ico-plus"></span>个人完税证明</a>
+
+                        <div class="marital-status">
+                            <span></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>单身证明</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>离婚证书</a></span>
+                            <span><a href="####"><span class="ico-borrow ico-plus"></span>结婚证书</a><a href="####"><span class="ico-borrow ico-plus"></span>死亡证明</a></span>
+                        </div>
+
+                        <a href="####"><span class="ico-borrow ico-plus"></span>居住证明<div class="select-hidden"><span>水电煤账单</span><span>固话网费账单</span><span>房屋租赁合同</span><span>居委会证明</span></div></a>
+                    </div>
+                </div>
+                <!--end-->
+            </div>
+            <!--共贷人无工作end-->
+        </div>
+    </div>
+    </div>
+    <!--信息-->
+    <div><a href="" class="btn-new-groups btn-borrow-submit">确认并提交</a> </div>
+</div>
+<!--弹窗-->
+<div class="popup-mask" style="width:2500px; height: 1277px; display:none;"></div>
+<div class="borrow-layer" style="display:none;">
+    <h1 class="layer-title"><span class="ico ico-close btn-close" id="btn-closed"></span><span>上传资料</span></h1>
+    <div class="upload-data">
+        <div class="material">
+            <div class="material-row">
+                <span class="single-item" style="display:none;">手持身份证正面</span>
+                <select class="multiple-item fild-select" style="display:block;">
+                    <option>请选择一项上传资料</option>
+                    <option>00000</option>
+                    <option>11111</option>
+                    <option>22222</option>
+                    <option>33333</option>
+
+                </select>
+            </div>
+            <p class="explanation" id="content">这里是解释文字:这里是解释文字:这里是解释文字:这里是解释文字:这里是解释文字:这里是解释文字这里是解释文字。</p>
+        </div>
+        <div class="sample">
+            <span class="sample-title">样例</span>
+            <p><img src="images/bannerbg.png"></p>
+        </div>
+    </div>
+    <div class="select-file cf">
+        <!--<a href="####" class="btn-select-file">选择文件</a>-->
+        <input type="button" id="btnSelectFile" class="btn-select-file btn-default-file-color" value="选择文件" disabled>
+        <div>
+            <p class="default-format" style="display: none">支持图片格式为png、jpg、jpeg、bmp，大小不超过10MB</p>
+            <p class="upload-format" style="display: block"><span class="ico-borrow ico-cancel" id="btn-close-upload"></span><span class="ico-borrow ico-upload-fujian"></span><em>shengfenzheng.......jpg</em></p>
+        </div>
+    </div>
+    <div class="button-row">
+        <a href="#####" class="btn-cancel">取消</a><a href="####" class="bg-color btn-upload">上传</a>
+    </div>
+</div>
+<!--弹窗end-->
+
+<!--footer-->
+<div class="footer  borrow-footer fixedToBottom">
+    <div class="main">
+       <div class="exprerian">
+           <div class="exprerian-left"><a href="####">搜易贷银行级风控体系使用由全球第一大征信机构Experian特别定制的评分卡与风控模型</a> </div>
+           <div class="service">
+              <p class="service-top"><span class="ico-borrow ico-phone"></span>客服热线（9:00-21:00）</p>
+              <p class="service-cen">400-890-1280</p>
+              <p class="service-bottom"><a href="####" class="ico-borrow ico-weixin"></a><a href="####" class="ico-borrow ico-sina"></a><a href="####" class="ico-borrow ico-tengx"></a><a href="####" class="ico-borrow ico-email"></a><a href="####" class="ico-borrow ico-walkman"></a></p>
+           </div>
+           <div class="mobile-phone">
+               <p>手机客户端下载</p>
+               <p class="mobile-box"><a href="####" class="ico-borrow ico-iphone">iPhone</a><a href="####" class="ico-borrow ico-android">Android</a> </p>
+           </div>
+       </div>
+       <p class="about_us"><a href="####">关于我们</a><a href="####">联系我们</a><a href="####">加入我们</a><a href="####">媒体报道</a><a href="####">法律法规</a><a href="####">安全保障</a><a href="####">合作伙伴</a><a href="####">新手引导</a><a href="####">帮助中心</a><a href="####">论坛</a><a href="####">意见反馈</a><a href="####">站点地图</a><a href="####">友情链接</a> </p>
+       <p class="brand-row cf"><a href="####" class="ico-borrow ico-one"></a><a href="####" class="ico-borrow ico-two"></a><a href="####" class="ico-borrow ico-three"></a><a href="####" class="ico-borrow ico-four"></a><a href="####" class="ico-borrow ico-five"></a><a href="####" class="ico-borrow ico-six"></a> </p>
+        <p class="copy-row">©2014  搜易贷  Copyright 2014 souyidai.com, All Rights Reserved</p>
+    </div>
+</div>
+<!--footer-end-->
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/uploadjson.js"></script>
+</body>
+</html>

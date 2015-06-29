@@ -1,0 +1,128 @@
+<!-- 五：弹出结果 提示模板 start -->
+<div class="version-popup-suc-fail">
+    {{if mycalculate.result_reminder}}
+    <!--温馨提示-->
+        <div class="version-popup-sweet">
+            <!-- 扫尾投资成功 -->
+            <span><em class="certifi-img"></em>{{codes.local_tooltip.inv_layer_suc_tail}}</span>
+        </div>
+    {{/if}}
+    <!--温馨提示end-->
+    <!--<1>成功投资-->
+    {{if serverObj.errorCode == 0}}
+    <div class="version-popup-cols">
+        <span class="version-popup-icon  version-bigico version-bigico-success md-left103"></span>
+        <div class="version-popup-prompt">
+            <span class="version-popup-prompt-name">
+                {{if baseInfo.bidOperType == 1}}
+                    <!-- 转让成功提示 -->
+                    {{codes.local_tooltip.inv_layer_suc_tran}}
+                {{else}}
+                    <!-- 新标投资成功提示 -->
+                    {{codes.local_tooltip.inv_layer_suc}}
+                {{/if}}
+            <em>{{fmtMoney(mycalculate.investMoney,2)}}</em><strong>元</strong></span>
+            <div class="version-poput-small"><span>本次投资使用余额：{{fmtMoney(mycalculate.usedAmount,2)}}元</span><span>使用红包：
+                {{if serverObj.data.couponAmount }}
+                    {{fmtMoney(serverObj.data.couponAmount,2)}}元
+                {{else}}
+                    0元
+                {{/if}}</span>
+            </div>
+        </div>
+    </div>
+    <!--<1>成功投资end-->
+    <!--<2>抱歉，您的余额不足，立刻充值-->
+    {{else if serverObj.errorCode == 1}}
+    <div class="version-popup-cols">
+        <span class="version-popup-icon  version-bigico version-bigico-fail md-left103"></span>
+        <div class="version-popup-prompt">
+            <span class="version-popup-prompt-name"><strong>{{codes.local_tooltip.inv_layer_fail_balance}}</strong><a href="/myaccount/capital/deposit">立刻充值</a></span>
+        </div>
+    </div>
+    <!--<2>抱歉，您的余额不足，立刻充值end-->
+    <!--<3>投资失败，剩余金额不足-->
+    {{else if serverObj.errorCode == 2}}
+    <div class="version-popup-cols">
+        <span class="version-popup-icon  version-bigico version-bigico-fail "></span>
+        <div class="version-popup-prompt">
+            <span class="version-popup-prompt-name"><strong>{{codes.local_tooltip.inv_layer_fail_avail}}</strong></span>
+        </div>
+    </div>
+    <!--<3>投资失败，标剩余金额不足end-->
+    <!--<4>投资失败，投资条件不符-->
+    {{else if serverObj.errorCode == 3}}
+    <div class="version-popup-cols">
+        <span class="version-popup-icon  version-bigico version-bigico-fail "></span>
+        <div class="version-popup-prompt">
+            {{if mycalculate.errorId == 1}}
+                <!-- 新手专享不符 -->
+                <span class="version-popup-prompt-name"><strong>{{codes.local_tooltip.inv_layer_fail_case_new}}</strong></span>
+                <div class="version-poput-small"><span>{{#codes.local_tooltip.inv_layer_fail_case_why_new}}</span></div>
+            {{else if mycalculate.errorId == 2}}
+                <!-- 秒杀标条件不符 -->
+                <span class="version-popup-prompt-name"><strong>{{codes.local_tooltip.inv_layer_fail_case_sec}}</strong></span>
+                <div class="version-poput-small"><span>{{#codes.local_tooltip.inv_layer_fail_case_why_sec}}</span></div>
+            {{/if}}
+        </div>
+    </div>
+    <!--<4>投资失败，投资条件不符end-->
+    <!--<5>false单行失败-->
+    {{else if serverObj.errorCode == 4}}
+    <div class="version-popup-only">
+        <span class="version-popup-icon-only  version-bigico version-bigico-fail">&nbsp;</span>
+        <span class="version-popup-prompt-name">
+
+            {{if mycalculate.errorId == 4}}
+                <!-- 未登录 -->
+                <a href="{{mycalculate.loginUrl}}">登录</a>
+                <strong>后投标，新朋友请先</strong>
+                <a href="{{mycalculate.registerUrl}}">注册</a>
+
+            {{else }}
+
+                <strong>
+                {{if mycalculate.errorId == 1}}
+                    <!-- 不能投资自己的转让标 -->
+                    {{codes.local_tooltip.inv_layer_fail_self}}
+                {{else if mycalculate.errorId == 2}}
+                    <!-- 投资失败，项目已投满 -->
+                    {{codes.local_tooltip.inv_layer_fail_full}}
+                {{else if mycalculate.errorId == 3}}
+                    <!-- 系统繁忙 -->
+                    {{codes.local_tooltip.inv_layer_fail_busy}}
+                {{else if mycalculate.errorId == 5}}
+                    <!-- 投资失败，转让标已过期或被撤销 -->
+                    {{codes.local_tooltip.inv_layer_fail_cancel}}
+                {{else if mycalculate.errorId == 6}}
+                    <!-- 投资金额有误，请重新输入 -->
+                    投资金额有误，请重新输入
+                {{else if mycalculate.errorId == 11}}
+                    <!-- 撤销失败，系统繁忙 -->
+                    {{codes.local_tooltip.my_tran_cancel_fail_busy}}
+                {{else if mycalculate.errorId == 22}}
+                    <!-- 转让项目撤销失败，已被人购买 -->
+                    {{codes.local_tooltip.my_tran_cancel_fail_done}}
+                {{/if}}
+                </strong>
+
+            {{/if}}
+        </span>
+    </div>
+    <!--<5>false单行失败end-->
+    <!--<6>**我的账户**转让项目已成功撤销**支持单行文本情况**-->
+    {{else if serverObj.errorCode == 5}}
+    <div class="version-popup-only">
+        <span class="version-popup-icon-only  version-bigico version-bigico-success">&nbsp;</span>
+        <span class="version-popup-prompt-name">{{codes.local_tooltip.my_tran_cancel_suc}}</span>
+    </div>
+    <!--<6>**我的账户**转让项目已成功撤销**支持单行文本情况**end-->
+    <!--成功转让-->
+    {{else if serverObj.errorCode == 6}}
+    <div class="version-popup-only">
+        <span class="version-popup-icon-only  version-bigico version-bigico-success">&nbsp;</span>
+        <span class="version-popup-prompt-name">{{codes.local_tooltip.my_tran_cancel_suc}}</span>
+    </div>
+    {{/if}}
+    <!--成功转让end-->
+</div>

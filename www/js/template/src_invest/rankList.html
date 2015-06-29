@@ -1,0 +1,17 @@
+<!-- 月豪、周豪榜单 模板 -->
+{{if data.length == 0}}
+	<div class="ver-finishing">
+	    <span><img src="https://static.souyidai.com/www/images/version/finishing.png" width="70" height="64"></span>
+	    <strong>榜单整理中......</strong>
+	</div>
+{{else}}
+	<ul class="ver-sys-ul"> 
+		{{each data as value i}}   
+		    <li {{if (i == data.length-1)}} class="border-none" {{/if}}>
+		        <span style='text-align:right; padding-right:8px;'>{{fmtMoney(value.total,2)}}元</span>
+		        <em class="version-arrow {{getRanklistClass(i)}}">{{i+1}}</em>
+		        <strong>{{value.phone}}</strong>
+		    </li>
+		{{/each}}
+	</ul>
+{{/if}}

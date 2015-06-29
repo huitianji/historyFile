@@ -1,0 +1,107 @@
+<!-- 我的账户弹出层 start -->
+<div class="version-popup-transfer">
+    <!--<1>抬头-->
+    <div class="version-popup-lookup">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td>
+                    {{if mycalculate.popupStatus == 3}}
+                        {{#codes.local_tooltip.my_tran_tip}}
+                    {{else if mycalculate.popupStatus == 4}}
+                        {{#codes.local_tooltip.my_tran_cancel_tips}}
+                    {{/if}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--<1>抬头end-->
+    <!--<2>选项卡-->
+    <div class="version-popup-talbe">
+        <!--th-->
+        <div class="version-popup-item-title">
+            <!--
+            current ->切换类
+            -->
+            <p>
+                {{if mycalculate.transfer_type == 0}}
+                    <a data-defaultBili="10000" class="bd-left current">原价转让</a>
+                    <a data-defaultBili="9990" class="">打折转让</a>
+                    <a data-defaultBili="10010" class="">溢价转让</a>
+                {{else if mycalculate.transfer_type == 1}}
+                    <a data-defaultBili="10000" class="bd-left">原价转让</a>
+                    <a data-defaultBili="9990" class="current">打折转让</a>
+                    <a data-defaultBili="10010" class="">溢价转让</a>
+                {{else if mycalculate.transfer_type == 2}}
+                    <a data-defaultBili="10000" class="bd-left">原价转让</a>
+                    <a data-defaultBili="9990" class="">打折转让</a>
+                    <a data-defaultBili="10010" class="current">溢价转让</a>
+                {{/if}}
+            </p>
+        </div>
+        <!--th-end-->
+        <div class="version-popup-cols-list">
+            <!--原价转让-->
+            {{if mycalculate.transfer_type == 0}}
+                {{include './popup_myaccount_originPrice'}}
+            <!--原价转让end-->
+            <!--打折转让-->
+            {{else if mycalculate.transfer_type == 1}}
+                {{include './popup_myaccount_lowPrice'}}
+            <!--打折转让end-->
+            <!--溢价转让-->
+            {{else if mycalculate.transfer_type == 2}}
+                {{include './popup_myaccount_highPrice'}}
+            <!--溢价转让end-->
+            {{/if}}
+        </div>
+    </div>
+    <!--<2>选项卡end-->
+    <!--<3>价格、手续费列表-->
+    <div class="version-popup-visible cf">
+        <div class="version-popup-gen-item overflow-div">
+            <span class="version-popup-gen-name">转让价格
+            {{if codes.local_tooltip.bid_sum_tran}}
+                <a href="javascript:;" data-text="{{codes.local_tooltip.bid_sum_tran}}" class="version-ico version-tooltip-css tooltipcol"></a>
+            {{/if}}
+            </span>
+            <span class="version-popup-price v-popup-totalMoney">
+                <strong>{{fmtMoney(serverObj.data.actualPrincipal,2)}}</strong>元
+            </span>
+        </div>
+        <div class="version-popup-gen-item">
+            <span class="version-popup-gen-name">转让手续费
+                {{if codes.local_tooltip.tran_fee}}
+                    <a href="javascript:;" data-text="{{codes.local_tooltip.tran_fee}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                {{/if}}
+            </span>
+            <span class="version-popup-gen-money"><strong>{{fmtMoney(serverObj.data.transferFee,2)}}</strong>元</span>
+            <div class="version-popup-odiv">
+                <span class="version-popup-html v-popup-returnMoney"><i>转让成功后预计回款</i><strong>{{fmtMoney(mycalculate.returnMoney,2)}}</strong><em>元</em></span>
+                <span class="ar_up"></span>
+                <span class="ar_up_in"></span>
+            </div>
+        </div>
+        <!--撤销转让==添加-》到期时间-->
+        {{if mycalculate.popupStatus == 4}}
+            <div class="version-popup-gen-item">
+                <span class="version-popup-gen-name">到期时间</span>
+                <span class="version-popup-gen-money"><strong>{{mycalculate.expireHours}}</strong>小时<strong>{{mycalculate.expireMinutes}}</strong>分<strong>{{mycalculate.expireSeconds}}</strong>秒</span>
+            </div>
+        {{else}}
+        <!--撤销转让==添加-》到期时间end-->
+        <!--复选框-->
+        <div class="version-popup-checkbox">
+            <span><em><input type="checkbox" id="v_chk_promiss" checked="checked"></em><label for="v_chk_promiss">{{codes.local_tooltip.inv_layer_cb_agree}}</label><a href="/agreement/sample/transfer" target="_blank">《债权转让协议》</a> </span>
+        </div>
+        <!--复选框end-->
+        {{/if}}
+    </div>
+    <!--<3>价格、手续费列表end-->
+    <!--撤销转让->透明遮罩-->
+    {{if mycalculate.popupStatus == 4 }}
+        <div class="version-popup-undo">
+
+        </div>
+    {{/if}}
+    <!--撤销转让->透明遮罩end-->
+</div>

@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正审信息列表(version)</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/add.css">-->
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/page-style.css">
+
+</head>
+<body>
+<div class="cf main-offsetHeight">
+    <!--头部-->
+    <div class="main">
+        <div class="borrow-page-top page-top33">
+            <div class="borrow-top-right">
+                <a href="javascript:void(0)">新手指引</a><a href="javascript:void(0)">帮助中心</a><a href="javascript:void(0)" class="ico-borrow ico-phone"></a><span>4008-901-280</span>
+            </div>
+            <div class="borrow-top-left">
+                <!--登录前-->
+                <div style="display: none;"> 您好，欢迎来到搜易贷！<a href="https://passport.souyidai.com">[登录]</a><a href="https://passport.souyidai.com/register">[免费注册]</a></div>
+                <!--登录前end-->
+                <!--登录后-->
+                <div class="login-after">
+                    <a href="https://passport.souyidai.com/myaccount/capital">欢迎你，张三丰</a><a href="https://passport.souyidai.com/logout?backurl=">【退出】</a>
+                </div>
+                <!--登录后end-->
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="sign-or-reg">
+                <a href="https://passport.souyidai.com/register" class="reg-a">免费注册</a>
+                <a href="https://passport.souyidai.com/" >登录</a>
+            </div>
+            <span class="borrow-logo"><img src="https://static.souyidai.com/www/images/new-logo.png"></span>
+            <ul class="nav-list">
+                <li ><a href="https://www.souyidai.com/">首页</a> </li>
+                <li><a href="https://www.souyidai.com/invest">我要投资</a> </li>
+                <li class="nav-li-active"><a href="https://www.souyidai.com/borrow" >我要借款</a> </li>
+                <li ><a href="https://passport.souyidai.com/myaccount/capital">我的账户</a> </li>
+                <li class="nav-hover"></li>
+            </ul>
+        </div>
+    </div>
+    <!--头部end-->
+    <!--面包屑-->
+    <div class="main">
+        <div class="com-bread-crumbs">当前位置：首页 > 我要借款 > 首付贷借款申请  </div>
+    </div>
+    <!--面包屑-end-->
+    <!--内容信息部分-->
+    <div class="main">
+        <!--引导步骤-->
+        <!--
+        cer-five-columns(显示5列)默认为4列
+        <div class="cer-guide-step cer-five-columns">
+        -->
+        <div class="cer-guide-step cer-five-columns">
+            <!--item1-->
+            <!--
+            cer-complete-guide-bgcolor(资料填写完成)
+            <div class="cer-guide-row lt cer-complete-guide-bgcolor">
+            -->
+            <div class="cer-guide-row lt cer-complete-guide-bgcolor">
+                <span class="cer-guide-infor"><span>&nbsp;<i class="certifi-img cer-small-basic-img"></i></span>借款基本信息</span>
+                <span class="ar_up_in"></span>
+            </div>
+            <!--item1-end-->
+            <!--箭头-->
+            <div class="cer-guide-arrow lt">
+                <strong class="certifi-img"></strong>
+            </div>
+            <!--箭头-end-->
+            <!--item2-->
+            <!--
+            cer-complete-guide-bgcolor(资料填写完成)
+            <div class="cer-guide-row lt cer-complete-guide-bgcolor">
+            -->
+            <div class="cer-guide-row lt">
+                <span class="cer-guide-infor"><span>&nbsp;<i class="certifi-img cer-small-person-img"></i></span>个人信息</span>
+                <span class="ar_up_in"></span>
+            </div>
+            <!--item2-end-->
+            <!--箭头-->
+            <div class="cer-guide-arrow lt">
+                <strong class="certifi-img"></strong>
+            </div>
+            <!--箭头-end-->
+            <!--item03-->
+            <!--
+            cer-complete-guide-bgcolor(资料填写完成)
+            <div class="cer-guide-row lt cer-complete-guide-bgcolor">
+            -->
+            <div class="cer-guide-row lt">
+                <span class="cer-guide-infor"><span>&nbsp;<i class="certifi-img cer-small-were-img"></i></span>共贷人信息</span>
+                <span class="ar_up_in"></span>
+            </div>
+            <!--item03end-->
+            <!--箭头-->
+            <div class="cer-guide-arrow lt">
+                <strong class="certifi-img"></strong>
+            </div>
+            <!--箭头-end-->
+            <!--item04-->
+            <!--
+            cer-complete-guide-bgcolor(资料填写完成)
+            <div class="cer-guide-row lt cer-complete-guide-bgcolor">
+            -->
+            <div class="cer-guide-row lt">
+                <span class="cer-guide-infor"><span>&nbsp;<i class="certifi-img cer-small-upload-img"></i></span>资料上传</span>
+                <span class="ar_up_in"></span>
+            </div>
+            <!--item04end-->
+            <!--箭头-->
+            <div class="cer-guide-arrow lt">
+                <strong class="certifi-img"></strong>
+            </div>
+            <!--箭头-end-->
+            <!--item05-->
+            <!--
+            cer-complete-guide-bgcolor(资料填写完成)
+            <div class="cer-guide-row lt cer-complete-guide-bgcolor">
+            -->
+            <div class="cer-guide-row lt">
+                <span class="cer-guide-infor"><span>&nbsp;<i class="certifi-img cer-small-upload-img"></i></span>提交成功</span>
+                <span class="ar_up_in"></span>
+            </div>
+            <!--item05end-->
+        </div>
+        <!--引导步骤-end-->
+        <!--
+        ver-input-disabled(input框禁用类)
+        -->
+        <!--借款基本信息-->
+        <div class="cer-list md-top10 input-corpora">
+            <h2 class="cer-list-title md-bottom40">借款基本信息</h2>
+            <!--item-select-list-->
+            <div class="ver-item">
+                <div class="ver-name lt">所选楼盘</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option>请选择</option>
+                        <option>1</option>
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--item-select-list-end-->
+            <!--item2-input-list-->
+            <div class="ver-item">
+                <div class="ver-name lt">购房单价</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input" data-input="input-box" data-type="请填写整数数字" value="请填写整数数字">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                   元
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--item2-input-listend-->
+            <!--购房面积-->
+            <div class="ver-item">
+                <div class="ver-name lt">购房面积</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input" data-input="input-box" data-type="请填写整数数字" value="请填写整数数字">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    米²
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--购房面积end-->
+            <!--购房首付比例-->
+            <div class="ver-item">
+                <div class="ver-name lt">购房首付比例</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写整数数字" value="请填写整数数字">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                   %
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--购房首付比例end-->
+            <!--购房银行贷款申请期限-->
+            <div class="ver-item">
+                <div class="ver-name lt">购房银行贷款申请期限</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写整数数字" value="请填写整数数字">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    年
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--购房银行贷款申请期限end-->
+            <!--借款金额-->
+            <div class="ver-item">
+                <div class="ver-name lt">借款金额</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写整数数字" value="请填写整数数字">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    元
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--借款金额end-->
+            <!--借款期限-->
+            <div class="ver-item">
+                <div class="ver-name lt">借款期限</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option value="请选择">请选择</option>
+                        <option value="6个月">6个月</option>
+                        <option value="12个月">12个月</option>
+                        <option value="18个月">18个月</option>
+                        <option value="24个月">24个月</option>
+                        <option value="36个月">36个月</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--借款期限end-->
+            <div class="ver-item">
+                <div class="ver-name lt">年化利率</div>
+                <div class="ver-center lt">
+                    <span class="cer-contents">6.5%</span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--还款方式-->
+            <div class="ver-item">
+                <div class="ver-name lt">还款方式</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option>请选择</option>
+                        <option>1</option>
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--还款方式end-->
+            <!--提交按钮组-->
+            <div class="ver-div-cols md-top40">
+                <!--
+                    默认样式
+                -->
+                <!--<input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666" value="确认" disabled><input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666 btn-margin20" value="保存草稿" disabled>-->
+                <!--
+                    填写完信息保存样式
+                -->
+                <input type="button" class="ver-btn blue-btn" value="确认"><input type="button" class="ver-btn gray-btn btn-margin20" value="保存草稿">
+            </div>
+            <!--提交按钮组end-->
+        </div>
+        <!--借款基本信息-->
+        <!--个人信息-->
+        <div class="cer-list md-top10 input-corpora">
+            <h2 class="cer-list-title md-bottom40">个人信息</h2>
+            <!--小标题-->
+            <h4 class="cer-lookup">
+                <span class="cer-looup-title-conent">基本资料</span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <!--真实姓名-->
+            <div class="ver-item">
+                <div class="ver-name lt">真实姓名</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写真实姓名" value="请填写真实姓名">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--真实姓名end-->
+            <!--身份证号-->
+            <div class="ver-item">
+                <div class="ver-name lt">身份证号</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写身份证号" value="请填写身份证号">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--身份证号end-->
+            <!--手机号码-->
+            <div class="ver-item">
+                <div class="ver-name lt">手机号码</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box"  style="color:#666;"  data-type="" value="默认填入当前账号,不可修改">
+                        <!--<i class="certifi-img ver-closed-i" data-closed="i-closed" ></i>-->
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--手机号码end-->
+            <!--婚姻状态-->
+            <div class="ver-item">
+                <div class="ver-name lt">婚姻状态</div>
+                <div class="ver-center lt">
+                    <select class="ver-select " data-type="marriage-select-change">
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="已婚">已婚</option>
+                        <option value="未婚">未婚</option>
+                        <option value="离异">离异</option>
+                        <option value="丧偶">丧偶</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--婚姻状态end-->
+            <!--添加共贷人-->
+            <div class="ver-item">
+                <div class="ver-name lt">添加共贷人</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option selected="" value="不增加共贷人">不增加共贷人</option>
+                        <option value="配偶">配偶</option>
+                        <option value="父母">父母</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--添加共贷人end-->
+            <!--最高学历-->
+            <div class="ver-item">
+                <div class="ver-name lt">最高学历</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="博士及以上">博士及以上</option>
+                        <option value="硕士">硕士</option>
+                        <option value="本科">本科</option>
+                        <option value="大专">大专</option>
+                        <option value="高职">高职</option>
+                        <option value="高中">高中</option>
+                        <option value="中专">中专</option>
+                        <option value="初中及以下">初中及以下</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--最高学历end-->
+            <!--户籍地址-->
+            <div class="ver-item">
+                <div class="ver-name lt">户籍地址</div>
+                <div class="ver-center lt">
+                    <div class="cf threeMenuLine">
+                        <div>
+                            <input type="hidden" name="province" data-type="opt" value="" >
+                            <select class="ver-select ver-select-w96 lt sheng" default-province="">
+                                <option value="请选择">请选择</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="hidden" name="city" data-type="opt" value="">
+                            <select class="ver-select ver-select-w96 mg-left6 lt shi" default-city="">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="hidden" name="county" data-type="opt" value="">
+                            <select class="ver-select ver-select-w96 rt xian" default-county="">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="margin-top10">
+                        <span class="ver-spanbox">
+                            <input type="text" class="ver-input " data-input="input-box" data-type="请填写具体街道地址，具体至单元号" value="请填写具体街道地址，具体至单元号">
+                            <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--户籍地址end-->
+            <!--现居地址-->
+            <div class="ver-item">
+                <div class="ver-name lt">现居地址</div>
+                <div class="ver-center lt">
+                    <div class="cf threeMenuLine">
+                        <div>
+                            <input type="hidden" name="province" data-type="opt" value="" >
+                            <select class="ver-select ver-select-w96 lt sheng" default-province="">
+                                <option value="请选择">请选择</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="hidden" name="city" data-type="opt" value="">
+                            <select class="ver-select ver-select-w96 mg-left6 lt shi" default-city="">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="hidden" name="county" data-type="opt" value="">
+                            <select class="ver-select ver-select-w96 rt xian" default-county="">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="margin-top10">
+                        <span class="ver-spanbox">
+                            <input type="text" class="ver-input " data-input="input-box" data-type="请填写具体街道地址，具体至单元号" value="请填写具体街道地址，具体至单元号">
+                            <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--现居地址end-->
+            <!--现居住地住宅类别-->
+            <div class="ver-item">
+                <div class="ver-name lt">现居住地住宅类别</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="自有房产">自有房产</option>
+                        <option value="亲属住房">亲属住房</option>
+                        <option value="单位房产">单位房产</option>
+                        <option value="租房">租房</option>
+                        <option value="自建房">自建房</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--现居住地住宅类别end-->
+            <!--现居住地居住年限-->
+            <div class="ver-item">
+                <div class="ver-name lt">现居住地居住年限</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="6个月以下">6个月以下</option>
+                        <option value="6个月-1年（含）">6个月-1年（含）</option>
+                        <option value="1年-2年（含）">1年-2年（含）</option>
+                        <option value="2年-3年（含）">2年-3年（含）</option>
+                        <option value="3年以上">3年以上</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--现居住地居住年限end-->
+            <!--单选按钮组-->
+            <div class="ver-item">
+                <div class="ver-name lt">子女数目</div>
+                <div class="ver-center lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio" id="rad1">
+                        <label class="ver-label" for="rad1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>没有</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad2">
+                        <label class="ver-label" for="rad2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>1个</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad3">
+                        <label class="ver-label" for="rad3"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>2个</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad4">
+                        <label class="ver-label" for="rad4"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>3个及以上</strong></label>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--end-->
+            <!--名下房产情况-->
+            <div class="ver-item">
+                <div class="ver-name lt">名下房产情况</div>
+                <div class="ver-center lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio" id="rad1-1">
+                        <label class="ver-label" for="rad1-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>没有</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad1-2">
+                        <label class="ver-label" for="rad1-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>一套</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad1-3">
+                        <label class="ver-label" for="rad1-3"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>两套</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad1-4">
+                        <label class="ver-label" for="rad1-4"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>三套及以上</strong></label>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--名下房产情况end-->
+            <!--名下车辆情况-->
+            <div class="ver-item">
+                <div class="ver-name lt">名下车辆情况</div>
+                <div class="ver-center lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio" id="rad2-1">
+                        <label class="ver-label" for="rad2-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>没有</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad2-2">
+                        <label class="ver-label" for="rad2-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>有</strong></label>
+                    </div>
+
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--名下车辆情况end-->
+            <!--小标题-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">职业信息</span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <!--职业类别-->
+            <div class="ver-item">
+                <div class="ver-name lt">职业类别</div>
+                <div class="ver-center lt">
+                    <select class="ver-select" data-type="personal-select-change">
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="工薪族">工薪族</option>
+                        <option value="企业主">企业主</option>
+                        <option value="个体户">个体户</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--职业类别end-->
+            <!--（个人信息）职业类别（盒子）-->
+            <div data-type="personal-professional-category">
+                <!--工薪族-->
+                <div data-type="personal-wage-earners" style="display: none;">
+                    <!--工作单位名称-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位名称</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写工作单位名称" value="请填写工作单位名称">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位名称end-->
+                    <!--所属行业-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">所属行业</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="制造业">制造业</option>
+                                <option value="IT">IT</option>
+                                <option value="政府机关">政府机关</option>
+                                <option value="媒体、广告">媒体、广告</option>
+                                <option value="零售">零售</option>
+                                <option value="批发">批发</option>
+                                <option value="教育、培训">教育、培训</option>
+                                <option value="公共事业">公共事业</option>
+                                <option value="交通运输业">交通运输业</option>
+                                <option value="房地产业">房地产业</option>
+                                <option value="能源业">能源业</option>
+                                <option value="金融、法律">金融、法律</option>
+                                <option value="餐饮、旅馆业">餐饮、旅馆业</option>
+                                <option value="医疗、卫生、保健">医疗、卫生、保健</option>
+                                <option value="建筑工程">建筑工程</option>
+                                <option value="农业">农业</option>
+                                <option value="娱乐服务业">娱乐服务业</option>
+                                <option value="体育、艺术">体育、艺术</option>
+                                <option value="公益组织">公益组织</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--所属行业end-->
+                    <!--单位性质-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">单位性质</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="政府机关">政府机关</option>
+                                <option value="事业单位">事业单位</option>
+                                <option value="国企">国企</option>
+                                <option value="外企">外企</option>
+                                <option value="合资">合资</option>
+                                <option value="民营">民营</option>
+                                <option value="私企">私企</option>
+                                <option value="个体">个体</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--单位性质end-->
+                    <!--工作电话-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作电话</div>
+                        <div class="ver-center lt">
+                            <span class="ver-work-phone">
+                                <input type="text"  class="ver-input ver-input-w60 lt"  data-type="区号"  value="区号">
+                                <input type="text"  class="ver-input ver-input-w160 lt mg-left10"  data-type="电话号码" value="电话号码">
+                                <input type="text"  class="ver-input ver-input-w60 rt"  data-type="可为空" value="可为空">
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作电话end-->
+                    <!--所在部门-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">所在部门</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写所在部门" value="请填写所在部门">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--所在部门end-->
+                    <!--担任职务-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">担任职务</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写担任职务" value="请填写担任职务">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--担任职务end-->
+                    <!--现单位入职日期-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">现单位入职日期</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input style="color:#666;" type="text" class="ver-input " data-input="input-box" data-type="" value="">
+                                <!--<i class="certifi-img ver-closed-i" data-closed="i-closed"></i>-->
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--现单位入职日期end-->
+                    <!--工作单位地址-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位地址</div>
+                        <div class="ver-center lt">
+                            <div class="cf threeMenuLine">
+                                <div>
+                                    <input type="hidden" name="province" data-type="opt" value="" >
+                                    <select class="ver-select ver-select-w145 lt sheng" default-province="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="hidden" name="city" data-type="opt" value="">
+                                    <select class="ver-select ver-select-w145 rt shi" default-city="">
+                                        <option>请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="margin-top10">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写详细地址" value="请填写详细地址">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位地址end-->
+                    <!--个人月收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月收入</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月收入end-->
+                    <!--个人月日常支出-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月日常支出</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                           元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月日常支出end-->
+                    <!--家庭状况-->
+                    <div data-type="cer-family">
+                        <!--家庭月收入-->
+                        <div class="ver-item">
+                            <div class="ver-name lt">家庭月收入</div>
+                            <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                            </div>
+                            <div class="ver-unit lt">
+                                元
+                            </div>
+                            <div class="ver-check lt">
+                                <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                                <div class="ver-check-error">
+                                    <strong class="certifi-img">&nbsp;</strong>
+                                    <span>请填写购房银行贷款申请期限</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--家庭月收入end-->
+                        <!--家庭月日常支出-->
+                        <div class="ver-item">
+                            <div class="ver-name lt">家庭月日常支出</div>
+                            <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                            </div>
+                            <div class="ver-unit lt">
+                                元
+                            </div>
+                            <div class="ver-check lt">
+                                <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                                <div class="ver-check-error">
+                                    <strong class="certifi-img">&nbsp;</strong>
+                                    <span>请填写购房银行贷款申请期限</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--家庭月日常支出end-->
+                    </div>
+                    <!--家庭状况end-->
+                    <!--其他收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">其他收入</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--其他收入end-->
+                </div>
+                <!--工薪族end-->
+                <!--企业主/个体户-->
+                <div data-type="personal-business-soho" style="display: none;">
+                    <!--工作单位名称-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位名称</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写工作单位名称" value="请填写工作单位名称">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位名称end-->
+                    <!--所属行业-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">所属行业</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="制造业">制造业</option>
+                                <option value="IT">IT</option>
+                                <option value="政府机关">政府机关</option>
+                                <option value="媒体、广告">媒体、广告</option>
+                                <option value="零售">零售</option>
+                                <option value="批发">批发</option>
+                                <option value="教育、培训">教育、培训</option>
+                                <option value="公共事业">公共事业</option>
+                                <option value="交通运输业">交通运输业</option>
+                                <option value="房地产业">房地产业</option>
+                                <option value="能源业">能源业</option>
+                                <option value="金融、法律">金融、法律</option>
+                                <option value="餐饮、旅馆业">餐饮、旅馆业</option>
+                                <option value="医疗、卫生、保健">医疗、卫生、保健</option>
+                                <option value="建筑工程">建筑工程</option>
+                                <option value="农业">农业</option>
+                                <option value="娱乐服务业">娱乐服务业</option>
+                                <option value="体育、艺术">体育、艺术</option>
+                                <option value="公益组织">公益组织</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--所属行业end-->
+                    <!--私营企业类型-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">私营企业类型</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="私营股份有限公司">私营股份有限公司</option>
+                                <option value="私营有限责任公司">私营有限责任公司</option>
+                                <option value="私营合作">私营合作</option>
+                                <option value="私营独资">私营独资</option>
+                                <option value="个体">个体</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--私营企业类型end-->
+                    <!--工作电话-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作电话</div>
+                        <div class="ver-center lt">
+                            <span class="ver-work-phone">
+                                <input type="text"  class="ver-input ver-input-w60 lt"  data-type="区号"  value="区号">
+                                <input type="text"  class="ver-input ver-input-w160 lt mg-left10"  data-type="电话号码" value="电话号码">
+                                <input type="text"  class="ver-input ver-input-w60 rt"  data-type="可为空" value="可为空">
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作电话end-->
+                    <!--担任职务-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">担任职务</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写担任职务" value="请填写担任职务">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--担任职务end-->
+                    <!--是否为实际控股人-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">是否为实际控股人</div>
+                        <div class="ver-center lt" data-container="radio-box">
+                            <div class="ver-radio-box">
+                                <!--
+                                ver-simulation(radio选中状态)
+                                <span class="certifi-img ver-simulation">
+                                -->
+                                <input type="radio" style="display: none" name="radio" id="rad3-1">
+                                <label class="ver-label" for="rad3-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>是</strong></label>
+                            </div>
+                            <div class="ver-radio-box">
+                                <input type="radio" style="display: none" name="radio" id="rad3-2">
+                                <label class="ver-label" for="rad3-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>否</strong></label>
+                            </div>
+
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--是否为实际控股人end-->
+                    <!--股份占比-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">股份占比</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            %
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--股份占比end-->
+                    <!--企业实际经营年限-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">企业实际经营年限</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="6个月以下">6个月以下</option>
+                                <option value="6个月~12个月">6个月~12个月</option>
+                                <option value="12个月~18个月">12个月~18个月</option>
+                                <option value="18个月~24个月">18个月~24个月</option>
+                                <option value="24个月以上">24个月以上</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--企业实际经营年限end-->
+                    <!--工作单位地址-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位地址</div>
+                        <div class="ver-center lt">
+                            <div class="cf threeMenuLine">
+                                <div>
+                                    <input type="hidden" name="province" data-type="opt" value="" >
+                                    <select class="ver-select ver-select-w145 lt sheng" default-province="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="hidden" name="city" data-type="opt" value="">
+                                    <select class="ver-select ver-select-w145 rt shi" default-city="">
+                                        <option>请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="margin-top10">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写详细地址" value="请填写详细地址">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位地址end-->
+                    <!--员工数量-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">员工数量</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="10人以下">10人以下</option>
+                                <option value="10~100人">10~100人</option>
+                                <option value="100~500人">100~500人</option>
+                                <option value="500人以上">500人以上</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--员工数量end-->
+                    <!--经营场地-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">经营场地</div>
+                        <div class="ver-center lt" data-container="radio-box">
+                            <div class="ver-radio-box">
+                                <!--
+                                ver-simulation(radio选中状态)
+                                <span class="certifi-img ver-simulation">
+                                -->
+                                <input type="radio" style="display: none" name="radio" id="rad4-1">
+                                <label class="ver-label" for="rad4-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>租用</strong></label>
+                            </div>
+                            <div class="ver-radio-box">
+                                <input type="radio" style="display: none" name="radio" id="rad4-2">
+                                <label class="ver-label" for="rad4-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>自有房产</strong></label>
+                            </div>
+
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--经营场地end-->
+                    <!--月经营收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">月经营收入</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--月经营收入end-->
+                    <!--个人月收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月收入</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月收入end-->
+                    <!--个人月日常支出-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月日常支出</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月日常支出end-->
+                    <!--家庭状况-->
+                    <div data-type="cer-family">
+                        <!--家庭月收入-->
+                        <div class="ver-item">
+                            <div class="ver-name lt">家庭月收入</div>
+                            <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                            </div>
+                            <div class="ver-unit lt">
+                                元
+                            </div>
+                            <div class="ver-check lt">
+                                <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                                <div class="ver-check-error">
+                                    <strong class="certifi-img">&nbsp;</strong>
+                                    <span>请填写购房银行贷款申请期限</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--家庭月收入end-->
+                        <!--家庭月日常支出-->
+                        <div class="ver-item">
+                            <div class="ver-name lt">家庭月日常支出</div>
+                            <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                            </div>
+                            <div class="ver-unit lt">
+                                元
+                            </div>
+                            <div class="ver-check lt">
+                                <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                                <div class="ver-check-error">
+                                    <strong class="certifi-img">&nbsp;</strong>
+                                    <span>请填写购房银行贷款申请期限</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--家庭月日常支出end-->
+                    </div>
+                    <!--家庭状况end-->
+                </div>
+                <!--企业主/个体户end-->
+            </div>
+            <!--（个人信息）职业类别（盒子）end-->
+
+            <!--小标题(信用信息)-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">信用信息</span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题(信用信息)end-->
+            <!--信用卡张数-->
+            <div class="ver-item">
+                <div class="ver-name lt">信用卡张数</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    张
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--信用卡张数end-->
+            <!--信用卡最高授信额度-->
+            <div class="ver-item">
+                <div class="ver-name lt">信用卡最高授信额度</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    元
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--信用卡最高授信额度end-->
+            <!--信用卡最长卡龄-->
+            <div class="ver-item">
+                <div class="ver-name lt">信用卡最长卡龄</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    年
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--信用卡最长卡龄end-->
+            <!--信用卡/贷款总额-->
+            <div class="ver-item">
+                <div class="ver-name lt">信用卡/贷款总额</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    元
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--信用卡/贷款总额end-->
+            <!--信用卡/贷款月还款额-->
+            <div class="ver-item">
+                <div class="ver-name lt">信用卡/贷款月还款额</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    元
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--信用卡/贷款月还款额end-->
+            <!--小标题(联系人信息)-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">联系人信息</span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题(联系人信息)end-->
+            <!--家庭联系人-->
+            <div class="ver-item">
+                <div class="ver-name lt">家庭联系人</div>
+                <div class="ver-center lt">
+                    <span class="ver-work-phone">
+                        <input type="text" class="ver-input ver-input-w100 lt" data-type="请填写姓名" value="请填写姓名">
+                        <input type="text" class="ver-input ver-input-w190 rt" data-type="请填写联系电话" value="请填写联系电话">
+                    </span>
+                </div>
+                <div class="ver-cols-3 lt ver-cols-3-w210" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio1" id="rad5">
+                        <label class="ver-label" for="rad5"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>父母</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio1" id="rad6">
+                        <label class="ver-label" for="rad6"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>子女</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio1" id="rad7">
+                        <label class="ver-label" for="rad7"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>其他亲属</strong></label>
+                    </div>
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--家庭联系人end-->
+            <!--工作联系人-->
+            <div class="ver-item">
+                <div class="ver-name lt">工作联系人</div>
+                <div class="ver-center lt">
+                    <span class="ver-work-phone">
+                        <input type="text" class="ver-input ver-input-w100 lt" data-type="请填写姓名" value="请填写姓名">
+                        <input type="text" class="ver-input ver-input-w190 rt" data-type="请填写联系电话" value="请填写联系电话">
+                    </span>
+                </div>
+                <div class="ver-cols-3 lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio1" id="rad5-1">
+                        <label class="ver-label" for="rad5-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>同事</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio1" id="rad5-2">
+                        <label class="ver-label" for="rad5-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>朋友</strong></label>
+                    </div>
+
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--工作联系人end-->
+            <!--其他联系人-->
+            <div class="ver-item">
+                <div class="ver-name lt">其他联系人</div>
+                <div class="ver-center lt">
+                    <span class="ver-work-phone">
+                        <input type="text" class="ver-input ver-input-w100 lt" data-type="请填写姓名" value="请填写姓名">
+                        <input type="text" class="ver-input ver-input-w190 rt" data-type="请填写联系电话" value="请填写联系电话">
+                    </span>
+                </div>
+                <div class="ver-cols-3 lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio1" id="rad6-1">
+                        <label class="ver-label" for="rad6-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>同事</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio1" id="rad6-2">
+                        <label class="ver-label" for="rad6-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>朋友</strong></label>
+                    </div>
+
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--其他联系人end-->
+            <!--提交按钮组-->
+            <div class="ver-div-cols md-top40">
+                <!--
+                    默认样式
+                -->
+                <!--<input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666" value="确认" disabled><input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666 btn-margin20" value="保存草稿" disabled>-->
+                <!--
+                    填写完信息保存样式
+                -->
+                <input type="button" class="ver-btn blue-btn" value="确认"><input type="button" class="ver-btn gray-btn btn-margin20" value="保存草稿">
+            </div>
+            <!--提交按钮组end-->
+            <div class="cer-height30"></div>
+        </div>
+        <!--个人信息end-->
+        <!--共贷人信息-->
+        <div class="cer-list md-top10 input-corpora">
+            <h2 class="cer-list-title md-bottom40">共贷人信息</h2>
+            <!--小标题-->
+            <h4 class="cer-lookup">
+                <span class="cer-looup-title-conent">基本资料</span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <!--真实姓名-->
+            <div class="ver-item">
+                <div class="ver-name lt">真实姓名</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写真实姓名" value="请填写真实姓名">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--真实姓名end-->
+            <!--身份证号-->
+            <div class="ver-item">
+                <div class="ver-name lt">身份证号</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input " data-input="input-box" data-type="请填写身份证号" value="请填写身份证号">
+                        <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--身份证号end-->
+            <!--手机号码-->
+            <div class="ver-item">
+                <div class="ver-name lt">手机号码</div>
+                <div class="ver-center lt">
+                    <span class="ver-spanbox">
+                        <input type="text" class="ver-input "  data-input="input-box" style="color:#666;"  data-type="" value="默认填入当前账号,不可修改">
+                        <!--<i class="certifi-img ver-closed-i" data-closed="i-closed"></i>-->
+                    </span>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--手机号码end-->
+            <!--最高学历-->
+            <div class="ver-item">
+                <div class="ver-name lt">最高学历</div>
+                <div class="ver-center lt">
+                    <select class="ver-select ">
+                        <option value="博士及以上">博士及以上</option>
+                        <option value="硕士">硕士</option>
+                        <option selected="" value="本科">本科</option>
+                        <option value="大专">大专</option>
+                        <option value="高职">高职</option>
+                        <option value="高中">高中</option>
+                        <option value="中专">中专</option>
+                        <option value="初中及以下">初中及以下</option>
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--最高学历end-->
+            <!--户籍地址-->
+            <div class="ver-item">
+                <div class="ver-name lt">户籍地址</div>
+                <div class="ver-center lt">
+                    <div class="cf threeMenuLine">
+                        <div>
+                            <input type="hidden" name="province" data-type="opt" value="" >
+                            <select class="ver-select ver-select-w145 lt sheng" default-province="">
+                                <option value="请选择">请选择</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="hidden" name="city" data-type="opt" value="">
+                            <select class="ver-select ver-select-w145 rt shi" default-city="">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="margin-top10">
+                        <span class="ver-spanbox">
+                            <input type="text" class="ver-input " data-input="input-box" data-type="请填写具体街道地址，具体至单元号" value="请填写具体街道地址，具体至单元号">
+                            <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--户籍地址end-->
+            <!--现居地址-->
+            <div class="ver-item">
+                <div class="ver-name lt">现居地址</div>
+                <div class="ver-center lt">
+                    <div class="cf threeMenuLine">
+                        <div>
+                            <input type="hidden" name="province" data-type="opt" value="" >
+                            <select class="ver-select ver-select-w145 lt sheng" default-province="">
+                                <option value="请选择">请选择</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="hidden" name="city" data-type="opt" value="">
+                            <select class="ver-select ver-select-w145 rt shi" default-city="">
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="margin-top10">
+                        <span class="ver-spanbox">
+                            <input type="text" class="ver-input " data-input="input-box" data-type="请填写具体街道地址，具体至单元号" value="请填写具体街道地址，具体至单元号">
+                            <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--现居地址end-->
+            <!--名下房产情况-->
+            <div class="ver-item">
+                <div class="ver-name lt">名下房产情况</div>
+                <div class="ver-center lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio" id="rad7-1">
+                        <label class="ver-label" for="rad7-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>没有</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad7-2">
+                        <label class="ver-label" for="rad7-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>一套</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad7-3">
+                        <label class="ver-label" for="rad7-3"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>两套</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad7-4">
+                        <label class="ver-label" for="rad7-4"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>三套及以上</strong></label>
+                    </div>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--名下房产情况end-->
+            <!--名下车辆情况-->
+            <div class="ver-item">
+                <div class="ver-name lt">名下车辆情况</div>
+                <div class="ver-center lt" data-container="radio-box">
+                    <div class="ver-radio-box">
+                        <!--
+                        ver-simulation(radio选中状态)
+                        <span class="certifi-img ver-simulation">
+                        -->
+                        <input type="radio" style="display: none" name="radio" id="rad8-1">
+                        <label class="ver-label" for="rad8-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>没有</strong></label>
+                    </div>
+                    <div class="ver-radio-box">
+                        <input type="radio" style="display: none" name="radio" id="rad8-2">
+                        <label class="ver-label" for="rad8-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>有</strong></label>
+                    </div>
+
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--名下车辆情况end-->
+            <!--小标题-->
+            <h4 class="cer-lookup">
+                <span class="cer-looup-title-conent">职业信息</span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <!--职业类别-->
+            <div class="ver-item">
+                <div class="ver-name lt">职业类别</div>
+                <div class="ver-center lt">
+                    <select class="ver-select " data-type="were-select-change">
+                        <option selected="" value="请选择">请选择</option>
+                        <option value="工薪族">工薪族</option>
+                        <option value="企业主">企业主</option>
+                        <option value="个体户">个体户</option>
+                        <option value="无工作">无工作</option>
+
+                    </select>
+                </div>
+                <div class="ver-unit lt">
+                    &nbsp;
+                </div>
+                <div class="ver-check lt">
+                    <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                    <div class="ver-check-error">
+                        <strong class="certifi-img">&nbsp;</strong>
+                        <span>请填写购房银行贷款申请期限</span>
+                    </div>
+                </div>
+            </div>
+            <!--职业类别end-->
+            <!--（共贷人信息）职业类别-->
+            <div data-type="were-professional-category">
+                <!--工薪族-->
+                <div data-type="were-wage-earners" style="display: none;">
+                    <!--工作单位名称-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位名称</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写工作单位名称" value="请填写工作单位名称">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位名称end-->
+                    <!--所属行业-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">所属行业</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="制造业">制造业</option>
+                                <option value="IT">IT</option>
+                                <option value="政府机关">政府机关</option>
+                                <option value="媒体、广告">媒体、广告</option>
+                                <option value="零售">零售</option>
+                                <option value="批发">批发</option>
+                                <option value="教育、培训">教育、培训</option>
+                                <option value="公共事业">公共事业</option>
+                                <option value="交通运输业">交通运输业</option>
+                                <option value="房地产业">房地产业</option>
+                                <option value="能源业">能源业</option>
+                                <option value="金融、法律">金融、法律</option>
+                                <option value="餐饮、旅馆业">餐饮、旅馆业</option>
+                                <option value="医疗、卫生、保健">医疗、卫生、保健</option>
+                                <option value="建筑工程">建筑工程</option>
+                                <option value="农业">农业</option>
+                                <option value="娱乐服务业">娱乐服务业</option>
+                                <option value="体育、艺术">体育、艺术</option>
+                                <option value="公益组织">公益组织</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--所属行业end-->
+                    <!--单位性质-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">单位性质</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="政府机关">政府机关</option>
+                                <option value="事业单位">事业单位</option>
+                                <option value="国企">国企</option>
+                                <option value="外企">外企</option>
+                                <option value="合资">合资</option>
+                                <option value="民营">民营</option>
+                                <option value="私企">私企</option>
+                                <option value="个体">个体</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--单位性质end-->
+                    <!--工作电话-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作电话</div>
+                        <div class="ver-center lt">
+                                <span class="ver-work-phone">
+                                    <input type="text"  class="ver-input ver-input-w60 lt"  data-type="区号"  value="区号">
+                                    <input type="text"  class="ver-input ver-input-w160 lt mg-left10"  data-type="电话号码" value="电话号码">
+                                    <input type="text"  class="ver-input ver-input-w60 rt"  data-type="可为空" value="可为空">
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作电话end-->
+                    <!--所在部门-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">所在部门</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写所在部门" value="请填写所在部门">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--所在部门end-->
+                    <!--担任职务-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">担任职务</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写担任职务" value="请填写担任职务">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--担任职务end-->
+                    <!--现单位入职日期-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">现单位入职日期</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input style="color:#666;" type="text" class="ver-input " data-input="input-box" data-type="" value="">
+                                    <!--<i class="certifi-img ver-closed-i" data-closed="i-closed"></i>-->
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--现单位入职日期end-->
+                    <!--工作单位地址-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位地址</div>
+                        <div class="ver-center lt">
+                            <div class="cf threeMenuLine">
+                                <div>
+                                    <input type="hidden" name="province" data-type="opt" value="" >
+                                    <select class="ver-select ver-select-w145 lt sheng" default-province="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="hidden" name="city" data-type="opt" value="">
+                                    <select class="ver-select ver-select-w145 rt shi" default-city="">
+                                        <option>请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="margin-top10">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写详细地址" value="请填写详细地址">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位地址end-->
+                    <!--个人月收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月收入</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月收入end-->
+                    <!--个人月日常支出-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月日常支出</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月日常支出end-->
+                    <!--其他收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">其他收入</div>
+                        <div class="ver-center lt">
+                            <span class="ver-spanbox">
+                                <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字，若无请写0" value="请填写数字，若无请写0">
+                                <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                            </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--其他收入end-->
+                </div>
+                <!--工薪族end-->
+                <!--企业主/个体户-->
+                <div data-type="were-business-soho" style="display: none;">
+                    <!--工作单位名称-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位名称</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写工作单位名称" value="请填写工作单位名称">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位名称end-->
+                    <!--所属行业-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">所属行业</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="制造业">制造业</option>
+                                <option value="IT">IT</option>
+                                <option value="政府机关">政府机关</option>
+                                <option value="媒体、广告">媒体、广告</option>
+                                <option value="零售">零售</option>
+                                <option value="批发">批发</option>
+                                <option value="教育、培训">教育、培训</option>
+                                <option value="公共事业">公共事业</option>
+                                <option value="交通运输业">交通运输业</option>
+                                <option value="房地产业">房地产业</option>
+                                <option value="能源业">能源业</option>
+                                <option value="金融、法律">金融、法律</option>
+                                <option value="餐饮、旅馆业">餐饮、旅馆业</option>
+                                <option value="医疗、卫生、保健">医疗、卫生、保健</option>
+                                <option value="建筑工程">建筑工程</option>
+                                <option value="农业">农业</option>
+                                <option value="娱乐服务业">娱乐服务业</option>
+                                <option value="体育、艺术">体育、艺术</option>
+                                <option value="公益组织">公益组织</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--所属行业end-->
+                    <!--私营企业类型-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">私营企业类型</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="私营股份有限公司">私营股份有限公司</option>
+                                <option value="私营有限责任公司">私营有限责任公司</option>
+                                <option value="私营合作">私营合作</option>
+                                <option value="私营独资">私营独资</option>
+                                <option value="个体">个体</option>
+                                <option value="其他">其他</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--私营企业类型end-->
+                    <!--工作电话-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作电话</div>
+                        <div class="ver-center lt">
+                                <span class="ver-work-phone">
+                                    <input type="text"  class="ver-input ver-input-w60 lt"  data-type="区号"  value="区号">
+                                    <input type="text"  class="ver-input ver-input-w160 lt mg-left10"  data-type="电话号码" value="电话号码">
+                                    <input type="text"  class="ver-input ver-input-w60 rt"  data-type="可为空" value="可为空">
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作电话end-->
+                    <!--担任职务-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">担任职务</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写担任职务" value="请填写担任职务">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--担任职务end-->
+                    <!--是否为实际控股人-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">是否为实际控股人</div>
+                        <div class="ver-center lt" data-container="radio-box">
+                            <div class="ver-radio-box">
+                                <!--
+                                ver-simulation(radio选中状态)
+                                <span class="certifi-img ver-simulation">
+                                -->
+                                <input type="radio" style="display: none" name="radio" id="rad9-1">
+                                <label class="ver-label" for="rad9-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>是</strong></label>
+                            </div>
+                            <div class="ver-radio-box">
+                                <input type="radio" style="display: none" name="radio" id="rad9-2">
+                                <label class="ver-label" for="rad9-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>否</strong></label>
+                            </div>
+
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--是否为实际控股人end-->
+                    <!--股份占比-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">股份占比</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            %
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--股份占比end-->
+                    <!--企业实际经营年限-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">企业实际经营年限</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="6个月以下">6个月以下</option>
+                                <option value="6个月~12个月">6个月~12个月</option>
+                                <option value="12个月~18个月">12个月~18个月</option>
+                                <option value="18个月~24个月">18个月~24个月</option>
+                                <option value="24个月以上">24个月以上</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--企业实际经营年限end-->
+                    <!--工作单位地址-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">工作单位地址</div>
+                        <div class="ver-center lt">
+                            <div class="cf threeMenuLine">
+                                <div>
+                                    <input type="hidden" name="province" data-type="opt" value="" >
+                                    <select class="ver-select ver-select-w145 lt sheng" default-province="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="hidden" name="city" data-type="opt" value="">
+                                    <select class="ver-select ver-select-w145 rt shi" default-city="">
+                                        <option>请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="margin-top10">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写详细地址" value="请填写详细地址">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--工作单位地址end-->
+                    <!--员工数量-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">员工数量</div>
+                        <div class="ver-center lt">
+                            <select class="ver-select ">
+                                <option selected="" value="请选择">请选择</option>
+                                <option value="10人以下">10人以下</option>
+                                <option value="10~100人">10~100人</option>
+                                <option value="100~500人">100~500人</option>
+                                <option value="500人以上">500人以上</option>
+                            </select>
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--员工数量end-->
+                    <!--经营场地-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">经营场地</div>
+                        <div class="ver-center lt" data-container="radio-box">
+                            <div class="ver-radio-box">
+                                <!--
+                                ver-simulation(radio选中状态)
+                                <span class="certifi-img ver-simulation">
+                                -->
+                                <input type="radio" style="display: none" name="radio" id="rad10-1">
+                                <label class="ver-label" for="rad10-1"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>租用</strong></label>
+                            </div>
+                            <div class="ver-radio-box">
+                                <input type="radio" style="display: none" name="radio" id="rad10-2">
+                                <label class="ver-label" for="rad10-2"><span class="certifi-img" data-type="radio-img">&nbsp;</span><strong>自有房产</strong></label>
+                            </div>
+
+                        </div>
+                        <div class="ver-unit lt">
+                            &nbsp;
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--经营场地end-->
+                    <!--月经营收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">月经营收入</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--月经营收入end-->
+                    <!--个人月收入-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月收入</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月收入end-->
+                    <!--个人月日常支出-->
+                    <div class="ver-item">
+                        <div class="ver-name lt">个人月日常支出</div>
+                        <div class="ver-center lt">
+                                <span class="ver-spanbox">
+                                    <input type="text" class="ver-input " data-input="input-box" data-type="请填写数字" value="请填写数字">
+                                    <i class="certifi-img ver-closed-i" data-closed="i-closed"></i>
+                                </span>
+                        </div>
+                        <div class="ver-unit lt">
+                            元
+                        </div>
+                        <div class="ver-check lt">
+                            <div class="ver-check-correct"><i class="certifi-img"></i></div>
+                            <div class="ver-check-error">
+                                <strong class="certifi-img">&nbsp;</strong>
+                                <span>请填写购房银行贷款申请期限</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人月日常支出end-->
+                </div>
+                <!--企业主/个体户end-->
+            </div>
+            <!--（共贷人信息）职业类别end-->
+            <!--提交按钮组-->
+            <div class="ver-div-cols md-top40">
+                <!--
+                    默认样式
+                -->
+                <!--<input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666" value="确认" disabled><input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666 btn-margin20" value="保存草稿" disabled>-->
+                <!--
+                    填写完信息保存样式
+                -->
+                <input type="button" class="ver-btn blue-btn" value="确认"><input type="button" class="ver-btn gray-btn btn-margin20" value="保存草稿">
+            </div>
+            <!--提交按钮组end-->
+            <div class="cer-height30"></div>
+        </div>
+        <!--共贷人信息end-->
+        <!--申请人资料上传-->
+        <div class="cer-list md-top10">
+            <h2 class="cer-list-title md-bottom40">申请人资料上传</h2>
+            <!--小标题-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">必要资料<strong>(点击添加，可一次性上传多个文件)</strong></span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <!--资料上传列表-->
+            <div class="cer-upload-infor">
+                <!--默认-->
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn" data-type="cer-add-btn">添加</span>
+                </div>
+                <!--成功-->
+                <div class="cer-upload-item lt">
+                    <!--
+                    cer-upload-success(上传成功显示状态)
+                    <span class="cer-upload-stauts cer-upload-success">
+                    -->
+                    <span class="cer-upload-stauts cer-upload-success"><strong>上传成功显示状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn" data-type="cer-add-btn">添加</span>
+                </div>
+                <!--失败-->
+                <div class="cer-upload-item lt">
+                    <!--
+                    cer-upload-failure(上传失败)
+                    <span class="cer-upload-stauts cer-upload-failure">
+                    -->
+                    <span class="cer-upload-stauts cer-upload-failure"><strong>上传失败,重新上传</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!---->
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!---->
+            </div>
+            <!--资料上传列表end-->
+            <!--小标题-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">增信资料<strong>(温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度)</strong></span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <div class="cer-upload-infor">
+                <!--默认-->
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!--默认end-->
+            </div>
+            <!---->
+            <!--提交按钮组-->
+            <div class="ver-div-cols md-top40">
+                <!--
+                    默认样式
+                -->
+                <!--<input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666" value="确认" disabled><input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666 btn-margin20" value="保存草稿" disabled>-->
+                <!--
+                    填写完信息保存样式
+                -->
+                <input type="button" class="ver-btn blue-btn" value="确认"><input type="button" class="ver-btn gray-btn btn-margin20" value="保存草稿">
+            </div>
+            <!--提交按钮组end-->
+            <div class="cer-height30"></div>
+        </div>
+        <!--申请人资料上传end-->
+        <!--共贷人资料上传-->
+        <div class="cer-list md-top10">
+            <h2 class="cer-list-title md-bottom40">共贷人资料上传</h2>
+            <!--小标题-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">必要资料<strong>(点击添加，可一次性上传多个文件)</strong></span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <!--资料上传列表-->
+            <div class="cer-upload-infor">
+                <!--默认-->
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!--成功-->
+                <div class="cer-upload-item lt">
+                    <!--
+                    cer-upload-success(上传成功显示状态)
+                    <span class="cer-upload-stauts cer-upload-success">
+                    -->
+                    <span class="cer-upload-stauts cer-upload-success"><strong>上传成功显示状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!--失败-->
+                <div class="cer-upload-item lt">
+                    <!--
+                    cer-upload-failure(上传失败)
+                    <span class="cer-upload-stauts cer-upload-failure">
+                    -->
+                    <span class="cer-upload-stauts cer-upload-failure"><strong>上传失败,重新上传</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!---->
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!---->
+            </div>
+            <!--资料上传列表end-->
+            <!--小标题-->
+            <h4 class="cer-lookup md-top20">
+                <span class="cer-looup-title-conent">增信资料<strong>(温馨提示：提交更多的增信资料，有助于您获得更优惠的借款利率，和更高的借款额度)</strong></span>
+                <span class="cer-bg-line"></span>
+            </h4>
+            <!--小标题end-->
+            <div class="cer-upload-infor">
+                <!--默认-->
+                <div class="cer-upload-item lt">
+                    <span class="cer-upload-stauts"><strong>这是默认状态</strong><i class="certifi-img"></i></span>
+                    <span class="cer-add-btn">添加</span>
+                </div>
+                <!--默认end-->
+            </div>
+            <!---->
+            <!--提交按钮组-->
+            <div class="ver-div-cols md-top40">
+                <!--
+                    默认样式
+                -->
+                <!--<input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666" value="确认" disabled><input type="button" class="ver-btn ver-bg-default ver-bg-default-w200 ver-bg-color666 btn-margin20" value="保存草稿" disabled>-->
+                <!--
+                    填写完信息保存样式
+                -->
+                <input type="button" class="ver-btn blue-btn" value="确认"><input type="button" class="ver-btn gray-btn btn-margin20" value="保存草稿">
+            </div>
+            <!--提交按钮组end-->
+            <div class="cer-height30"></div>
+        </div>
+        <!--共贷人资料上传end-->
+    </div>
+    <!--内容信息部分-end-->
+</div>
+<!--弹窗-->
+<div class="version-mask popup-mask" style=""></div>
+<div class="certifi-layer web-layer" id="version-layer" style="display: none;">
+    <h1 class="certifi-layer-title"><span class="certifi-img shut-down"></span>上传资料</h1>
+    <div class="cf">
+        <div class="certifi-layer-aside">
+            <!--单选-->
+            <div class="certifi-lay-sigle" style="display: none;">
+                <span class="certifi-sigle-title">手持身份证正面</span>
+                <p class="certifi-layer-op">这里是解释文字:这里是解释文字:这里是
+                    解释文字:这里是解释文字:这里是解释文
+                    字:这里是解释文字这里是解释文字。</p>
+            </div>
+            <!--单选end-->
+            <!--多选-->
+            <div class="certifi-multi">
+                <span class="certifi-sigle-title">
+                    <select class="ver-select ver-select-w248">
+                        <option>请选择</option>
+                        <option>1</option>
+                        <option>1</option>
+                    </select>
+                </span>
+                <p class="certifi-layer-op">这里是解释文字:这里是解释文字:这里是
+                    解释文字:这里是解释文字:这里是解释文
+                    字:这里是解释文字这里是解释文字。</p>
+            </div>
+            <!--多选end-->
+        </div>
+        <div class="certifi-layer-sample">
+            <span class="certifi-sample-title">样例</span>
+            <div class="certifi-layer-recive-img">
+
+            </div>
+        </div>
+    </div>
+    <!--链接上传按钮-->
+    <div class="certifi-file">
+        <!--
+            cer-file-overflow-y
+        -->
+        <div class="cer-file-name ">
+            <p class="cer-upload-name"><a href="####" class="cer-closed-file certifi-img"><b style="display: none;">关闭</b></a><i class="certifi-img"></i><strong>身份证反面附件文件.jpg</strong></p>
+            <!--<p class="cer-upload-name"><a href="####" class="cer-closed-file certifi-img"><b style="display: none;">关闭</b></a><i class="certifi-img"></i><strong>身份证反面附件文件.jpg</strong></p>-->
+            <!--<p class="cer-upload-name"><a href="####" class="cer-closed-file certifi-img"><b style="display: none;">关闭</b></a><i class="certifi-img"></i><strong>身份证反面附件文件.jpg</strong></p>-->
+            <!--<p class="cer-upload-name"><a href="####" class="cer-closed-file certifi-img"><b style="display: none;">关闭</b></a><i class="certifi-img"></i><strong>身份证反面附件文件.jpg</strong></p>-->
+        </div>
+        <p class="cer-op-row">
+            <span class="cer-file-btn"><input type="button" class="ver-btn" value="选择文件"></span>
+            <span class="cer-gray-bg">测试文章</span>
+        </p>
+    </div>
+    <!--链接上传按钮end-->
+    <div class="cer-upload-action">
+        <!--<input type="button" class="ver-btn ver-bg-default ver-bg-default-w160 ver-bg-color666" value="取消">-->
+        <input type="button" class="ver-btn gray-btn gray-btn-w160 " value="保存草稿"><input type="button" class="ver-btn blue-btn blue-btn-w160 btn-margin20" value="确认">
+    </div>
+    <!--提交按钮-->
+    <div>
+
+    </div>
+    <!--提交按钮end-->
+</div>
+<!--弹窗end-->
+<!--footer()-->
+<div class="footer new-footer">
+    <div class="about-us-link">
+        <div class="main">
+            <a href="https://help.souyidai.com/about/aboutus.htm">关于我们</a>|<a href="https://help.souyidai.com/about/contactus.htm">联系我们</a>|<a href="https://help.souyidai.com/about/career.htm">加入我们</a>|<a href="https://help.souyidai.com/about/media/">媒体报道</a>|<a href="https://help.souyidai.com/about/legal.htm">法律法规</a>|<a href="https://help.souyidai.com/about/security.htm">安全保障</a>|<a href="https://help.souyidai.com/about/partner.htm">合作伙伴</a>|<a href="https://help.souyidai.com/help/guide/">新手引导</a>|<a href="https://help.souyidai.com/help/">帮助中心</a>|<a href="####">意见反馈</a>
+        </div>
+    </div>
+    <div class="website">
+        <div class="webshow-row cf">
+            <div class="web-service lt">
+                <p class="service-row"><span class="ico ico-time"></span>客服工作时间 9:00-18:00（国家法定节假日除外）</p>
+                <p class="tel-row"><span class="bd-right-color">4000-168-866</span><a href="javascript:void(0)" class="bd-right-color"><em class="ico ico-footer-QQ"></em></a><a href="javascript:void(0)"><em class="ico ico-footer-email"></em></a></p>
+            </div>
+            <div class="web-experian lt">
+                <a href="javascript:void(0)">搜易贷银行级风控体系使用由全球第一大征信机构Experian特别定制的评分卡与风控模型</a>
+            </div>
+        </div>
+        <p class="picture-link">
+            <a href="javascript:void(0)" class="ico-footer a1"></a><a href="javascript:void(0)" class="ico-footer a2"></a><a href="javascript:void(0)" class="ico-footer a3"></a><a href="javascript:void(0)" class="ico-footer a4"></a><a href="javascript:void(0)" class="ico-footer a5"></a><a href="javascript:void(0)" class="ico-footer a6"></a>
+        </p>
+        <p class="new-copyright">版权所有 © 2014 搜易贷（搜狐集团（NASDAQ：SOHU）旗下公司）All Rights Reserved 京ICP备14032951号</p>
+    </div>
+</div>
+<!--footer-end-->
+<script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/areacode.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/threeMenuLinkCode.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/certification.js"></script>
+<script>
+$(function(){
+    var $addUpload = $(".cer-upload-infor").find("span[data-type='cer-add-btn']");
+    $addUpload.on("click",function(){
+        showComLayer($(".version-mask"),$("#version-layer"));
+    });
+});
+</script>
+</body>
+</html>

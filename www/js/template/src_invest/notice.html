@@ -1,0 +1,10 @@
+<!-- 公告 模板 -->
+{{each announce as value i}}
+    <div class="ver-system-item">
+        <span class="ver-system-left version-arrow">&nbsp;</span>
+        <p class="ver-system-p">
+            <span><a href="{{value.url}}" target="_blank">{{value.name}}</a></span>
+            <span class="ver-system-data">{{value.time}}</span>
+        </p>
+    </div>
+{{/each}}

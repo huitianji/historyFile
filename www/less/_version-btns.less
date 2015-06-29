@@ -1,0 +1,108 @@
+@import "_mixins.less";
+.version-btn-h30{//默认为蓝色
+  display: inline-block;
+  width:100%; text-align: center;
+  height: 30px; line-height: 30px;
+  background-color: #53a0e3;
+  color:#fff; font-size: 14px;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  cursor: pointer;
+  border: none;
+  outline: none;
+  .border-radius(4px);
+  &:hover{
+    background-color: #73bdf1;
+    color:#fff;
+  }
+  &:active{
+    background-color: #73bdf1;
+    box-shadow: inset 0px 3px 3px #5aa0d1;
+  }
+  &.disabled{
+    background-color: #b7d7f3;
+    color:#fff;
+    cursor: default;
+    background-image: linear-gradient(to bottom,#b7d7f3,#b7d7f3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#b7d7f3, endColorstr=#b7d7f3);
+  }
+
+  //green
+  &.version-btn-bg-green{
+    background-color: #77b716;
+    &:hover{
+      background-color: #8ec81c;
+    }
+    &:active{
+      box-shadow: inset 0px 3px 3px #80b419;
+    }
+    &.disabled{
+      background-color: #c5e297;
+      color:#fff;
+      cursor: default;
+      background-image: linear-gradient(to bottom,#c5e297,#c5e297);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#c5e297, endColorstr=#c5e297);
+    }
+  }
+  //深灰Dark grey
+  &.version-btn-bg-darkgrey{
+    background-color: #c2c2c2;
+    &:hover{
+      background-color: #cdcdcd;
+    }
+    &:active{
+      box-shadow: inset 0px 3px 3px #b8b8b8;
+    }
+    &.disabled{
+      background-color: #ececec;
+      color:#999;
+      cursor: default;
+      background-image: linear-gradient(to bottom,#ececec,#ececec);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ececec, endColorstr=#ececec);
+    }
+  }
+  //橘红色
+  &.version-btn-bg-orange{
+    background-color: #ff6803;
+    &:hover{
+      background-color: #ff7d04;
+    }
+    &:active{
+      box-shadow: inset 0px 3px 3px #e57004;
+    }
+    &.disabled{
+      background-color: #ffcba9;
+      color:#fff;
+      cursor: default;
+      background-image: linear-gradient(to bottom,#ffcba9,#ffcba9);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffcba9, endColorstr=#ffcba9);
+    }
+  }
+
+
+}
+.version-btn-code{
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  border:1px solid #ececec;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom,white,#f5f5f5);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#f5f5f5);
+  .border-radius(4px);
+  &:hover{
+    background-image: linear-gradient(to bottom,white,#ededed);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#ededed);
+  }
+  &.disabled{
+    background-image: linear-gradient(to bottom,white,#f5f5f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#f5f5f5);
+    cursor: default;
+  }
+}
+//火狐按钮清除行高 line-height: normal;
+@-moz-document url-prefix(){//ff
+  .version-btn-h30{
+    line-height: normal;
+  }
+}

@@ -1,0 +1,25 @@
+
+{{if data.list.length > 6}}
+	{{each data.list as list i}}
+		{{if i == 3}}
+			<p class="version-project-an-row">
+	            <a href="javascript:;" class="version-project-an-row-oa">展开<em class="ver-ico-url v-open-profit">&nbsp;</em></a>
+	        </p>
+		{{/if}}
+		
+		<p {{if (i > 2 && i < data.list.length - 3)}} class='v-invest-listOpen' style='display:none;' {{/if}}>
+			<span class="span-w27">{{i+1}}</span>
+			<span class="span-w80">{{list.date}}</span>
+			<span class="span-w111">{{fmtMoney(list.money,2)}}</span>
+		</p>
+		
+	{{/each}}
+{{else}}
+	{{each data.list as list i}}
+	<p>
+		<span class="span-w27">{{i+1}}</span>
+		<span class="span-w80">{{list.date}}</span>
+		<span class="span-w111">{{fmtMoney(list.money,2)}}</span>
+	</p>
+	{{/each}}
+{{/if}}

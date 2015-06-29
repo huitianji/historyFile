@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的账户_充值</title>
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/add.css">
+    <script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+</head>
+<body>
+<div class="main main-offsetHeight">
+    <!--<div class="page-top"><span>欢迎致电：400-068-1176</span><span>服务时间：9:00 - 21:00</span><span class="user-name">您好，juicechen</span></div>-->
+    <!--<div class="nav">-->
+        <!--<span class="logo"><img src="https://static.souyidai.com/www/images/logo.png"></span>-->
+        <!--<ul class="nav-list">-->
+            <!--<li ><a href="####">首页</a> </li>-->
+            <!--<li><a href="####">我要投资</a> </li>-->
+            <!--<li><a href="####" >我要借款</a> </li>-->
+            <!--<li class="nav-li-active"><a href="####">我的账户</a> </li>-->
+            <!--<li class="nav-hover"></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--头部-->
+    <div class="main">
+        <div class="borrow-page-top page-top33">
+            <div class="borrow-top-right">
+                <a href="javascript:void(0)">新手指引</a><a href="javascript:void(0)">帮助中心</a><a href="javascript:void(0)" class="ico-borrow ico-phone"></a><span>4008-901-280</span>
+            </div>
+            <div class="borrow-top-left">
+                <!--登录前-->
+                <div style="display: none;"> 您好，欢迎来到搜易贷！<a href="https://passport.souyidai.com">[登录]</a><a href="https://passport.souyidai.com/register">[免费注册]</a></div>
+                <!--登录前end-->
+                <!--登录后-->
+                <div class="login-after">
+                    <a href="https://passport.souyidai.com/myaccount/capital">欢迎你，张三丰</a><a href="https://passport.souyidai.com/logout?backurl=">【退出】</a>
+                </div>
+                <!--登录后end-->
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="sign-or-reg">
+                <a href="https://passport.souyidai.com/register" class="reg-a">免费注册</a>
+                <a href="https://passport.souyidai.com/" >登录</a>
+            </div>
+            <span class="borrow-logo"><img src="https://static.souyidai.com/www/images/new-logo.png"></span>
+            <ul class="nav-list">
+                <li ><a href="https://www.souyidai.com/">首页</a> </li>
+                <li><a href="https://www.souyidai.com/invest">我要投资</a> </li>
+                <li class="nav-li-active"><a href="https://www.souyidai.com/borrow" >我要借款</a> </li>
+                <li ><a href="https://passport.souyidai.com/myaccount/capital">我的账户</a> </li>
+                <li class="nav-hover"></li>
+            </ul>
+        </div>
+    </div>
+    <!--头部end-->
+    <div class="point-to">我的账户 > 我的投资 > 投资列表 </div>
+    <div class="content">
+        <div class="menu-xs">
+            <h3 class="xs-title"><span class="ico ico-funds"></span>我的资金</h3>
+            <ul class="detail-list">
+                <li><a href="####">资金概览</a></li>
+                <li ><a href="####">资金明细</a></li>
+                <li class="current-select"><a href="####">充值</a> </li>
+                <li><a href="####">取现</a></li>
+            </ul>
+            <h3 class="xs-title"><span class="ico ico-invest"></span>我的投资</h3>
+            <ul class="detail-list">
+                <li ><a href="####">投资列表</a></li>
+                <li ><a href="####">债权转让</a></li>
+            </ul>
+            <h3 class="xs-title"><span class="ico ico-jie"></span>我的借款</h3>
+            <ul class="detail-list">
+                <li ><a href="####">借款列表</a></li>
+            </ul>
+            <h3 class="xs-title"><span class="ico ico-loan"></span>我的账户</h3>
+            <ul class="detail-list">
+                <li><a href="####">基本信息</a></li>
+                <li ><a href="####">安全设置</a></li>
+                <li><a href="####">账户关联</a></li>
+                <li><a href="####">我的消息</a></li>
+
+                <li><a href="####">我的任务</a></li>
+                <li><a href="####">我的奖励</a></li>
+            </ul>
+        </div>
+        <div class="aside-right"><!--borrowing-tab切换-->
+            <div class="headline borrowing-tab"><span class="default-left-bg headline-current">账户充值</span><span class="">充值历史</span></div>
+            <!--账户充值-->
+            <div class="invest-main" style="display: block">
+                <div class="information mar-top20" >
+                    <!--常用银行-->
+                    <div class="common-bank cf i7-padding">
+                        <div class="bank-name">常用银行</div>
+                        <div class="row-fluid cf">
+                            <div class="bank-item">
+                                <label><input type="radio" name="common-bankId" checked><span class="rechargebank-abc"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--常用银行end-->
+                    <!--选择银行-->
+                    <div class="choose-bank">
+                        <div class="choose-row">
+                            <div class="bank-name">选择银行</div>
+                            <div class="row-fluid cf default-ht" >
+                                <div class="bank-item">
+                                    <label ><input type="radio" name="bankId"><span class="rechargebank-icbc"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-abc"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-boc"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-ccb"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-comm"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-psbc"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-citic"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-cib"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-ceb"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-cmbc"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-gdb"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-cmb"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-spdb"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-szpab"></span></label>
+                                </div>
+                                <div class="bank-item">
+                                    <label><input type="radio" name="bankId"><span class="rechargebank-bccb"></span></label>
+                                </div>
+                                <!--<div class="bank-item">-->
+                                    <!--<label><input type="radio" name="bankId"><span class="rechargebank-hxb"></span></label>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <div class="btn-more-bank"><a href="####"><span class="ico-borrow ico-more-bank"></span>更多银行</a></div>
+                    </div>
+                    <!--选择银行end-->
+                    <!--平台支付-->
+                    <div class="common-bank cf i7-padding">
+                        <div class="bank-name">平台支付</div>
+                        <div class="row-fluid cf">
+                            <div class="bank-item">
+                                <label><input type="radio" name="common-bankId"><span class="rechargebank-cft"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--平台支付end-->
+                    <!--银行对应信息-->
+                    <div class="remarks">
+                        <!--中国工商银行ICBC-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>中国工商银行客服热线：<strong>95588</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>电子口令卡</td>
+                                    <td>500</td>
+                                    <td>1000</td>
+                                    <td rowspan="4" class="conditions-padding">请到中国工商银行各营业网点办理成为个人网上银行客户并开通网上支付功能（静态密码用户进行网上支付如超过累计金额请直接到营业网点申领电子口令卡或USB Key）</td>
+                                </tr>
+                                <tr>
+                                    <td>短信认证</td>
+                                    <td>2000</td>
+                                    <td>5000</td>
+
+                                </tr>
+                                <tr>
+                                    <td>电子密码</td>
+                                    <td>50万</td>
+                                    <td>100万</td>
+                                </tr>
+                                <tr>
+                                    <td>U盾</td>
+                                    <td>100万</td>
+                                    <td>100万</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--中国工商银行end-->
+                        <!--中国农业银行ABC-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>中国农业银行客服热线：<strong>95599</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>动态口令</td>
+                                    <td>1000</td>
+                                    <td>3000</td>
+                                    <td rowspan="4" class="conditions-padding">动态密码用户：请到各营业网点申请成为动态密码用户；K宝用户：请到各营业网点办理成为K宝用户</td>
+                                </tr>
+                                <tr>
+                                    <td>移动证书（一代k宝）</td>
+                                    <td>50万</td>
+                                    <td>100万</td>
+
+                                </tr>
+                                <tr>
+                                    <td>移动证书（二代k宝）</td>
+                                    <td>100万</td>
+                                    <td>500万</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--中国农业银行end-->
+                        <!--中国银行BOC-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>中国银行客服热线：<strong>95566</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>USBKey证书认证、令牌+动态口令</td>
+                                    <td>1万</td>
+                                    <td>20万</td>
+                                    <td rowspan="2" class="conditions-padding">请到各营业网点办理开通个人网上银行，申请动态口令e-token，再登陆中国银行网上银行开通网上支付功能并设置网上支付限额</td>
+                                </tr>
+                                <tr>
+                                    <td>大额</td>
+                                    <td>无限额，自行设置</td>
+                                    <td>无限额，自行设置</td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <!--中国银行end-->
+                        <!--中国建设银行CCB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>中国建设银行客服热线：<strong>95533</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>账号直接支付</td>
+                                    <td>1000</td>
+                                    <td>1000</td>
+                                    <td rowspan="4" class="conditions-padding">请到各营业网点办理签约，再登陆个人网银激活；或先登陆个人网银注册，再到各营业网点办理签约</td>
+                                </tr>
+                                <tr>
+                                    <td>动态口令</td>
+                                    <td>5000</td>
+                                    <td>5000</td>
+
+                                </tr>
+                                <tr>
+                                    <td>网银盾1代</td>
+                                    <td>5万</td>
+                                    <td>10万</td>
+
+                                </tr>
+                                <tr>
+                                    <td>网银盾2代</td>
+                                    <td>50万</td>
+                                    <td>50万</td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <!--中国建设银行end-->
+                        <!--交通银行COMM-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>交通银行客服热线：<strong>95559</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>手机短信密码验证</td>
+                                    <td>5万</td>
+                                    <td>10万</td>
+                                    <td rowspan="2" class="conditions-padding">请到交通银行各营业网点办理开通手续，再登陆个人网上银行进行激活</td>
+                                </tr>
+                                <tr>
+                                    <td>USBKey证书认证</td>
+                                    <td>100万</td>
+                                    <td>100万</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--交通银行end-->
+                        <!--中国邮政储蓄银行PSBC-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>中国邮政储蓄银行客服热线：<strong>95580</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>手机短信客户</td>
+                                    <td>1万</td>
+                                    <td>1万</td>
+                                    <td rowspan="2" class="conditions-padding">请持银行卡和有效证件到中国邮政储蓄银行各营业网点柜面办理个人网上银行业务，并选择成为手机短信客户、电子令牌客户或“UKey+短信”客户。</td>
+                                </tr>
+                                <tr>
+                                    <td>Ukey+短信客户</td>
+                                    <td>200万</td>
+                                    <td>200万</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--中国邮政储蓄银行end-->
+                        <!--中信银行CITIC-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>中信银行客服热线：<strong>95558</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>手机动态密码</td>
+                                    <td>1000</td>
+                                    <td>5000</td>
+                                    <td rowspan="2" class="conditions-padding">请您到中信银行各营业网点办理开通个人网上银行加强版，选择申请数字文件证书或USB Key，登陆个人网上银行加强版设置网上支付限额。</td>
+                                </tr>
+                                <tr>
+                                    <td>U盾</td>
+                                    <td>100万</td>
+                                    <td>100万</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--中信银行end-->
+                        <!--兴业银行CIB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>兴业银行客服热线：<strong>95561</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th>客户类型</th>
+                                    <th>单笔限额(元)</th>
+                                    <th>日累计限额(元)</th>
+                                    <th>开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td>手机动态密码版</td>
+                                    <td>日累积范围内无限额</td>
+                                    <td>初始5000</td>
+                                    <td rowspan="2" class="conditions-padding">1、网银自助开通；2、手机银行自助开通</td>
+                                </tr>
+                                <tr>
+                                    <td>U盾</td>
+                                    <td>100万</td>
+                                    <td>100万</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--兴业银行end-->
+                        <!--光大银行CEB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>光大银行客服热线：<strong>95595</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >手机动态密码</td>
+                                    <td >1万</td>
+                                    <td >1万</td>
+                                    <td style="width:300px;" class="conditions-padding">手机动态密码：指个人客户以通过输入银行账号和指定手机中接受到的动态密码进行支付的方式；签约渠道为网点柜台、个人网上银行（专业版）；</td>
+                                </tr>
+                                <tr>
+                                    <td>令牌动态密码及阳光网盾验证方式</td>
+                                    <td>50万</td>
+                                    <td>50万</td>
+                                    <td class="conditions-padding">阳光网盾：指个人客户以阳光网盾作为身份标识，通过登录个人网上银行（专业版）进行支付的方式；签约渠道为网点柜台、个人网上银行（专业版）；</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--光大银行CEBend-->
+                        <!--民生银行CMBC-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>民生银行客服热线：<strong>95568</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >大众版</td>
+                                    <td >300</td>
+                                    <td >300</td>
+                                    <td rowspan="2" class="conditions-padding">大众版：请先登陆网银大众版开通民生卡支付功能并设置网上支付限额，每个帐户开通和关闭只能各申请一次；</td>
+                                </tr>
+                                <tr>
+                                    <td>U宝用户</td>
+                                    <td>50万</td>
+                                    <td>50万</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--民生银行end-->
+                        <!--广东发展银行GDB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>广东发展银行客服热线：<strong>4008308003</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >手机动态密码版</td>
+                                    <td >5000</td>
+                                    <td >5000</td>
+                                    <td rowspan="2" class="conditions-padding">手机动态密码用户：在广发个人网银上申请开通个人网银功能，凭借广发银行向个人网银用户预留手机号发送的六位数字密码进行交易；</td>
+                                </tr>
+                                <tr>
+                                    <td>key令</td>
+                                    <td>5万</td>
+                                    <td>5万</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--广东发展银行END-->
+                        <!--招商银行CMB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>招商银行客服热线：<strong>95555</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >大众版</td>
+                                    <td >500</td>
+                                    <td >500</td>
+                                    <td  class="conditions-padding">一卡通大众版：请登陆招行网站，或通过电话银行人工服务，或到网点柜面申请开通一卡通网上支付功能，并设定网上支付密码；</td>
+                                </tr>
+                                <tr>
+                                    <td >专业版</td>
+                                    <td >无限额</td>
+                                    <td >无限额</td>
+                                    <td  class="conditions-padding">一卡通专业版：请到各营业网点办理成为个人网上银行专业版用户；</td>
+                                </tr>
+                                <tr>
+                                    <td >大额信用卡网银支付</td>
+                                    <td >信用卡本身透支额度</td>
+                                    <td >信用卡本身透支额度</td>
+                                    <td ROWSPAN="2"  class="conditions-padding">信用卡：请通过招商银行信用卡网站申请网上支付功能，同时设定您的网上支付密码；</td>
+                                </tr>
+                                <tr>
+                                    <td >小额信用卡网银支付</td>
+                                    <td >2000</td>
+                                    <td >信用卡本身透支额度</td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--招商银行end-->
+                        <!--上海浦东发展银行SPDB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>上海浦东发展银行客服热线：<strong>95528</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >手机动态密码</td>
+                                    <td >20万</td>
+                                    <td >20万</td>
+                                    <td class="conditions-padding">请到浦发银行各营业网点办理成为网上银行专业版用户的手续，并选择申请手机支付安全动态密码或使用网上银行数字证书来进行网上支付交易。</td>
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <!--上海浦东发展银行SPDB-->
+                        <!--平安银行SZPAB-->
+                        <div class="remards-row" style="display: none">
+                            <h1 class="remards-title"><span>平安银行客服热线：<strong>4006699999</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >网银</td>
+                                    <td >无限额</td>
+                                    <td >5万</td>
+                                    <td class="conditions-padding">请到银行各营业网点办理成为一账通网银高级客户，预留接收动态密码的电话/手机号码，再登陆银行个人网银操作激活（2009年12月之后申请银行卡的客户可以直接登陆个人网银开通一账通网银）</td>
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <!--平安银行end-->
+                        <!--北京银行-->
+                        <div class="remards-row" style="display: none;">
+                            <h1 class="remards-title"><span>北京银行客服热线：<strong>95526</strong></span>请关注您的充值金额是否超限</h1>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="th-w20">客户类型</th>
+                                    <th class="th-w15">单笔限额(元)</th>
+                                    <th class="th-w15">日累计限额(元)</th>
+                                    <th class="th-w50">开通条件</th>
+                                </tr>
+                                <tr>
+                                    <td >普通版</td>
+                                    <td >&nbsp;</td>
+                                    <td >总累计限额为300元</td>
+                                    <td class="conditions-padding">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td >动态密码版</td>
+                                    <td >1000</td>
+                                    <td >5000</td>
+                                    <td class="conditions-padding">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td >证书版</td>
+                                    <td >100万</td>
+                                    <td >100万</td>
+                                    <td class="conditions-padding">&nbsp;</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <!--北京银行end-->
+                        <!--华夏银行HXB-->
+                        <!--<div class="remards-row" style="display: none">-->
+                            <!--<h1 class="remards-title"><span>华夏银行客服热线：<strong>95577</strong></span>请关注您的充值金额是否超限</h1>-->
+                            <!--<table border="0" cellpadding="0" cellspacing="0">-->
+                                <!--<tr>-->
+                                    <!--<th class="th-w20">客户类型</th>-->
+                                    <!--<th class="th-w15">单笔限额(元)</th>-->
+                                    <!--<th class="th-w15">日累计限额(元)</th>-->
+                                    <!--<th class="th-w50">开通条件</th>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td >大众版</td>-->
+                                    <!--<td >300</td>-->
+                                    <!--<td >1000</td>-->
+                                    <!--<td class="conditions-padding">使用华夏银行E商宝网上支付，请先在华夏银行营业网点或网上银行进行签约手续。已经开通华夏银行个人网银功能的客户，可直接在网上银行进行签约手续，如使用华夏盾的客户，请在插上华夏盾之后再在网上银行进行签约手续。<br>-->
+                                        <!--普通支付方式：凭ATM密码通过华夏银行的“直接支付”方式进行网上支付；-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td >手机动态</td>-->
+                                    <!--<td >300</td>-->
+                                    <!--<td >1000</td>-->
+                                    <!--<td class="conditions-padding">使用华夏银行E商宝网上支付，请先在华夏银行营业网点或网上银行进行签约手续。已经开通华夏银行个人网银功能的客户，可直接在网上银行进行签约手续，如使用华夏盾的客户，请在插上华夏盾之后再在网上银行进行签约手续。<br>-->
+                                        <!--普通支付方式：凭ATM密码通过华夏银行的“直接支付”方式进行网上支付；-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td >数字证书</td>-->
+                                    <!--<td >50000</td>-->
+                                    <!--<td >100000</td>-->
+                                    <!--<td class="conditions-padding">数字证书验证方式：客户请到华夏银行营业网点办理个人网上银行签约手续，领取网银客户号和华夏盾后，通过数字证书验证方式进行网上支付-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+
+                            <!--</table>-->
+                        <!--</div>-->
+                        <!--华夏银行-->
+                    </div>
+                    <!--银行对应信息end-->
+                    <!--财付通对应信息-->
+                    <div class="rechargebankst-cft-infor">
+                        <span>腾讯财付通是国内领先的第三方支付平台，您可以通过财付通余额进行充值。</span>
+                        <span>腾讯财付通客服热线: <strong> 0755-86013860</strong></span>
+                    </div>
+                    <!--财付通对应信息end-->
+                    <!--quota-->
+                    <div class="quota-row">
+                        <div class="quota-span3">
+                            <span class="quota-name">充值前余额:</span><span class="quota-center"><strong>1,234,567.89</strong><label>元</label></span><span class="quota-remark">（其中冻结金额：  200.00 元）</span>
+                        </div>
+                        <div class="quota-span3">
+                           <span class="quota-name">充值前余额:</span><span class="quota-center"><input type="text"><label>元</label></span>
+                        </div>
+                        <div class="quota-span3">
+                            <span class="quota-name">手续费:</span><span class="quota-center"><strong>0.00</strong><label>元</label></span>
+                        </div>
+                        <div class="quota-span3">
+                            <span class="quota-name">充值后余额:</span><span class="quota-center"><strong>1,234,567.89</strong><label>元</label></span>
+                        </div>
+                    </div>
+                    <!--Quota-->
+                    <div class="btn-next">
+                        <a href="####" class="btn-prepaid-phone">确认充值</a>
+                        <span class="btn-sunshine-insurance">
+                            <em class="version-details-img"></em>
+                            <a href="https://help.souyidai.com/help/security/ZHZJX/" target="_blank">账户资金安全由阳光财产保险承保</a>
+                        </span>
+                    </div>
+                    <div class="point-out">
+                        <span>温馨提示：</span>
+                        <p> 1.提示文字提示文字提示文字提示文字提示文字提示文字<br>
+                            2.提示文字提示文字提示文字提示文字提示文字提示文字<br>
+                            3.提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字</p>
+                    </div>
+                </div>
+            </div>
+            <!--账户充值end-->
+            <!--充值历史-->
+            <div class="invest-main" style="display: none">
+                <!--时间范围-->
+                <div class="range">
+                    <span class="capital-type">时间范围</span>
+                    <div class="type-data">
+                        <input type="text" data-target="start" value="" onclick="SelectDate(this,'yyyy-MM-dd')"><label class="cut-off"> - </label><input data-target="last" type="text" onclick="SelectDate(this,'yyyy-MM-dd')"><label class="day-time"><a href="####" data-type="lastSeven">最近7天</a><a href="####" data-type="lastThirty">最近30天</a><a href="####" data-type="lastNinety">最近90天</a><a href="####" data-type="lastYear">最近一年</a> </label>
+                    </div>
+                </div>
+                <!--end-->
+                <!--1-->
+                <div class="information mar-top20">
+                    <!--th-->
+                    <div class="borrow-title-th">
+                        <span class="p-w140">充值时间</span>
+                        <span class="p-w90 p-text-right">充值金额(元)</span>
+                        <span class="p-w80 p-text-right">手续费(元)</span>
+                        <span class="p-w90 p-text-right">充值前余额(元)</span>
+                        <span class="p-w90 p-text-right">充值后余额(元)</span>
+
+                        <span class="p-w90">状态</span>
+
+                        <span class="p-w180">备注</span>
+                    </div>
+                    <!--th_end-->
+                    <div>
+                        <!--item-list-->
+                        <div class="inform-list borrow-list">
+                            <p class="p-w140">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w80 p-text-right">1,33,000.00</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 pay-money">处理中</p>
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <!--item-list-end-->
+                        <!--item-list-->
+                        <div class="inform-list borrow-list">
+                            <p class="p-w140">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w80 p-text-right">0.00</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 pay-money">处理中</p>
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <div class="inform-list borrow-list">
+                            <p class="p-w140">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w80 p-text-right">0.00</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 pay-money">处理中</p>
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <div class="inform-list borrow-list">
+                            <p class="p-w140">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w80 p-text-right">0.00</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <p class="p-w90 pay-money">处理中</p>
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <!--item-list-end-->
+                    </div>
+                    <!---->
+                    <!--page-->
+                    <div class="paging page-margin">
+                        <a href="####" class="arrow-left prev">&nbsp;<b style="display: none">left</b></a>
+                        <span class="current prev">&nbsp;</span>
+                        <span class="current">0</span>
+
+                        <a href="####" class="digital-active">1</a><a href="####">2</a><a href="####">3</a><span class="digital-dotted">...</span><a href="####">6</a>
+                        <span>...</span>
+                        <span class="current next">&nbsp;</span>
+                        <a href="####" class="arrow-right next">&nbsp;<b style="display: none">right</b></a>
+                    </div>
+                    <!--page-end-->
+                </div>
+                <!--1-end-->
+            </div>
+            <!--充值历史end-->
+            <!--充值历史（港澳）-->
+            <div class="invest-main" style="display: none">
+                <!--时间范围-->
+                <div class="range">
+                    <span class="capital-type">时间范围</span>
+                    <div class="type-data">
+                        <input type="text" data-target="start" value="" onclick="SelectDate(this,'yyyy-MM-dd')"><label class="cut-off"> - </label><input data-target="last" type="text" onclick="SelectDate(this,'yyyy-MM-dd')"><label class="day-time"><a href="####" data-type="lastSeven">最近7天</a><a href="####" data-type="lastThirty">最近30天</a><a href="####" data-type="lastNinety">最近90天</a><a href="####" data-type="lastYear">最近一年</a> </label>
+                    </div>
+                </div>
+                <!--end-->
+                <div class="information mar-top20">
+                    <!--th-->
+                    <div class="borrow-title-th">
+                        <span class="p-w140">充值时间</span>
+                        <span class="p-w90 p-text-right">充值金额(元)</span>
+                        <span class="p-w170">充值单号</span>
+
+                        <span class="p-w90">状态</span>
+                        <span class="p-w90">上传截图</span>
+
+                        <span class="p-w180">备注</span>
+                    </div>
+                    <!--th_end-->
+                    <div>
+                        <!--item-list-->
+                        <div class="inform-list borrow-list">
+                            <p class="p-w130">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <div class="p-w190 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <span>sinapay-20141021095122700-WZCFV</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w80 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer  充值成功
+                                                transfer-in   处理中
+                                            -->
+                                            <span class="transfer">充值成功</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w90 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer-in   (上传中 、已上传/待审核、上传失败、待审核)
+                                                transfer            (已审核)
+                                            -->
+                                            <div><a href="####">上传</a></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <!--item-list-end-->
+                        <!--item-list-->
+                        <div class="inform-list borrow-list">
+                            <p class="p-w130">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <div class="p-w190 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <span>sinapay-20141021095122700-WZCFV</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w80 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer  充值成功
+                                                transfer-in   处理中
+                                            -->
+                                            <span class="transfer">充值成功</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w90 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer-in   (上传中 、已上传/待审核、上传失败、待审核)
+                                                transfer            (已审核)
+                                            -->
+                                            <div><span class="transfer-in">上传中 </span></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <div class="inform-list borrow-list">
+                            <p class="p-w130">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <div class="p-w190 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <span>sinapay-20141021095122700-WZCFV</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w80 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer  充值成功
+                                                transfer-in   处理中
+                                            -->
+                                            <span class="transfer">充值成功</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w90 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer-in   (上传中 、已上传/待审核、上传失败、待审核)
+                                                transfer            (已审核)
+                                            -->
+                                            <div><span class="transfer-in">待审核 </span></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <div class="inform-list borrow-list">
+                            <p class="p-w130">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <div class="p-w190 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <span>sinapay-20141021095122700-WZCFV</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w80 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer  充值成功
+                                                transfer-in   处理中
+                                            -->
+                                            <span class="transfer-in">处理中</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w90 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer-in   (上传中 、已上传/待审核、上传失败、待审核)
+                                                transfer            (已审核)
+                                            -->
+                                            <div><span class="transfer-in">上传失败</span></div>
+                                            <a href="####">重新上传</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <div class="inform-list borrow-list">
+                            <p class="p-w130">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <div class="p-w190 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <span>sinapay-20141021095122700-WZCFV</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w80 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer  充值成功
+                                                transfer-in   处理中
+                                            -->
+                                            <span class="transfer-in">处理中</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w90 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer-in   (上传中 、已上传/待审核、上传失败、待审核)
+                                                transfer            (已审核)
+                                            -->
+                                            <div>
+                                                <span class="transfer-in relative">
+                                                    未通过<a href="####" class="relative-a ico ico-tooltip tooltipcol patch-tooltip version-tooltip-csshover" data-text="投资定存宝可获得的收益"></a>
+                                                </span>
+                                            </div>
+                                            <a href="####">重新上传</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <div class="inform-list borrow-list">
+                            <p class="p-w130">2014-08-09 15:09</p>
+                            <p class="p-w90 p-text-right">1,234,567.89</p>
+                            <div class="p-w190 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <span>sinapay-20141021095122700-WZCFV</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w80 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer  充值成功
+                                                transfer-in   处理中
+                                            -->
+                                            <span class="transfer-in">处理中</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="p-w90 lt">
+                                <table class="modify-table" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                        <td>
+                                            <!--
+                                                transfer-in   (上传中 、已上传/待审核、上传失败、待审核)
+                                                transfer            (已审核)
+                                            -->
+                                            <div><span class="transfer">已审核</span></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="p-w180">支付宝 juice****@sohu.com</p>
+                        </div>
+                        <!--item-list-end-->
+                    </div>
+                    <!---->
+                    <!--page-->
+                    <div class="paging page-margin">
+                        <a href="####" class="arrow-left prev">&nbsp;<b style="display: none">left</b></a>
+                        <span class="current prev">&nbsp;</span>
+                        <span class="current">0</span>
+
+                        <a href="####" class="digital-active">1</a><a href="####">2</a><a href="####">3</a><span class="digital-dotted">...</span><a href="####">6</a>
+                        <span>...</span>
+                        <span class="current next">&nbsp;</span>
+                        <a href="####" class="arrow-right next">&nbsp;<b style="display: none">right</b></a>
+                    </div>
+                    <!--page-end-->
+                </div>
+            </div>
+            <!--充值历史（港澳）end-->
+        </div>
+
+    </div>
+</div>
+<!--弹窗box-->
+<div class="popup-mask" style="display: none; width:2100px; height: 1999px;"></div>
+<div class="popup recharge-layer" style="display: none;">
+    <h1 class="title-row margin-bottom25"><a href="####" class="ico shut-down"></a> 正在支付</h1>
+    <p class="row-ms-1">请您在新打开的网上银行页面进行支付，支付完成前请不要关闭该窗口。</p>
+    <p class="row-ms-2 cf"><a class="btn btn-w150 btn-default-color shut-down" href="####">已充值成功</a><a class="btn btn-w150 shut-down" href="####">充值失败，重试</a> </p>
+</div>
+<!--弹窗boxend-->
+<!--footer-->
+<div class="footer fixedToBottom">
+    <div class="footer-box">
+        <div class="footer-infromation">
+            <p><a href="####">公司介绍</a><a href="####">加入我们</a><a href="####">联系我们</a><a href="####">意见反馈</a><a href="####">权利说明</a><a href="####">帮助中心</a><a href="####">论坛</a>
+                <br>
+                &copy; 搜易贷 (souyidai.com) | 京ICP备12345678号
+            </p>
+            <p class="link">友情链接： <a href="####">慧聪金融</a>
+                <a href="####">易观智库</a>
+                <a href="####">好贷网</a>
+                <a href="####">银率网</a>
+                <a href="####">和讯银行</a>
+                <a href="####">国美在线</a>
+                <a href="####">财经道</a>
+                <a href="####">电商服务</a>
+                <a href="####">ShopEx</a>
+
+                <a href="####">58投资担保</a>
+                <br>
+                <a href="####">网贷之家</a><a href="####">挖财社区</a><a href="####">随手记</a><a href="####">融360理财</a>
+            </p>
+        </div>
+        <div class="footer-img">
+            <a href="####"><span class="ico-mixbg wx"></span><br>搜易贷微信</a>
+            <a href="####"><span class="ico-mixbg wb"></span><br>新浪微博</a>
+        </div>
+    </div>
+</div>
+<!--footer-end-->
+
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/data.js"></script>
+</body>
+</html>

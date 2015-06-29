@@ -1,0 +1,310 @@
+@import "_mixins.less";
+.financial-cal-content{
+  border: 1px solid #ececec;
+  background-color: #fff;
+  min-height: 440px;
+  padding: 29px;
+  .clearfix();
+}
+
+.financial-cal-detailed{
+  width:890px;
+  float: right;
+  .financial-cal-detailed-title{
+    display: block;
+    color:#666;
+    height: 38px; line-height: 38px;
+    border-bottom: 2px solid #ececec;
+  }
+  .financial-cal-detailed-name{
+    font-size: 18px;
+  }
+  .financial-cal-detailed-more{
+    font-size: 14px;
+    float: right;
+    color:#666;
+  }
+  .financial-cal-detailed-infor{
+    line-height: 24px;
+    font-size: 14px;
+    text-indent: 2em;
+    padding: 4px 0px 23px 0px;
+  }
+  .financial-cal-conversion{
+    min-height: 100px;
+
+  }
+  .financial-cal-conversion-item{
+    min-height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    .clearfix();
+  }
+  .financial-cal-conversion-name{
+    width:316px;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+    padding-right: 9px;
+  }
+  .financial-cal-conversion-infor{
+    .clearfix();
+    float: left;
+  }
+  .financial-cal-unit{
+    display: block;
+    font-size: 14px;
+    float: left;
+    padding-left: 10px;
+    &.font-arial{
+      font-size: 18px;
+      font-family: Arial;
+    }
+  }
+  .financial-cal-input{
+    width:198px;
+    border: 1px solid #ececec;
+    height: 28px; line-height: 28px;
+    outline: none;
+    padding-left: 10px;
+    vertical-align: top;
+    float: left;
+    .border-radius(4px);
+    font-size: 14px;
+    color:#999999;
+    &.focus{
+      border:1px solid #4b89dc;
+      font-size: 18px;
+      font-family: Arial;
+    }
+    &.default-arial{
+      font-size: 18px;
+      font-family: Arial;
+      color:#333;
+    }
+  }
+
+  /*chrome和safari hank*/
+  @media screen and (-webkit-min-device-pixel-ratio:0){
+    .financial-cal-input{
+      line-height:normal;
+    }
+  }
+  .financial-cal-radio{
+    font-size: 14px;
+    input{
+      float: left;
+      margin-top: 9px;margin-right: 3px;
+      *margin-top: 5px;*margin-right: 0px;
+      vertical-align: top;
+    }
+    label{
+      float: left;
+      margin-right: 20px;
+    }
+  }
+  .financial-cal-btn-box{
+    .clearfix();
+    padding: 12px 0px 20px 0px;
+    span{
+      display: block;
+      float: left;
+      margin-right: 10px;
+      height: 40px;
+      width:120px;
+      float: left;
+      input{
+        height: 40px; line-height: 40px;
+        font-size: 18px;
+      }
+    }
+  }
+  .financial-cal-banner{
+    padding: 40px 0px 38px 0px;
+  }
+  .financial-cal-consulting{
+    border-bottom: 1px dotted #e2e2e2;
+//    padding-bottom: 10px;
+    padding-bottom: 15px;
+    &.bd-bottom0{
+      border-bottom: 0px solid #e2e2e2;
+    }
+
+    span{
+      display: block;
+      font-size: 18px;
+      height: 35px; line-height: 35px;
+//      padding-top: 5px;
+      padding-top: 22px;
+      padding-bottom: 2px;
+      a{
+        font-size: 18px;
+        color:#666;
+        &:hover{
+          color:#53a0e3;
+        }
+      }
+    }
+    p{
+      font-size: 14px; line-height: 24px;
+      a{
+        font-size: 14px;
+        color:#666;
+        &:hover{
+          color:#53a0e3;
+        }
+      }
+    }
+  }
+  .financial-cal-article{
+    padding-top: 15px;
+    min-height: 500px;
+    color:#666;
+    span{
+      display: block;
+      height: 25px; line-height:25px;
+      text-align: center;
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    strong{
+      display: block;
+      font-size: 14px;
+      line-height: 24px;
+      color:#333;
+      padding-top: 20px;
+    }
+    p{
+      text-indent: 2em;
+      font-size: 14px;
+      line-height: 24px;
+      color:#333;
+    }
+  }
+  .financial-cal-h1{
+    font-size: 24px;
+    color:#666;
+    text-align: center;
+    line-height: 36px;
+    font-weight: normal;
+  }
+  .financial-cal-article-btn{
+    padding-top: 20px;
+    .clearfix();
+    a{
+      display: block;
+      width:410px;
+      float: left;
+      color:#333;
+      font-size: 14px;
+      &:hover{
+        color:#53a0e3;
+      }
+    }
+  }
+  .financial-cal-list{
+    .clearfix();
+    padding: 7px 0px 7px 0px;
+    li{
+      width:415px;
+      float: left;
+      height: 27px; line-height: 27px;
+      i{
+        display: block;
+        height: 4px;
+        width: 4px;
+        float: left;
+        background-position: -56px 0;
+        margin-top: 12px;
+        margin-right: 7px;
+      }
+      a{
+        font-size: 14px; color:#666;
+        &:hover{
+          color:#53a0e3;
+        }
+      }
+    }
+  }
+  .financial-cal-page{
+    height: 30px;
+    .clearfix();
+    *margin-bottom: 29px;
+  }
+  .financial-cal-page-row{
+    float: right;
+    padding-top: 25px;
+    .clearfix();
+    a{
+      display:inline-block;
+      width:30px; height: 30px;line-height: 30px;
+      text-align: center;
+      font-size: 14px;
+//      background-color: red;
+      color:#666;
+      float: left;
+      margin-left: 5px;
+      .border-radius(4px);
+      &:hover{
+        background-color: #53a0e3;
+        color:#fff;
+      }
+    }
+    .current{
+      background-color: #53a0e3;
+      color:#fff;
+    }
+    .financial-cal-page-prep{
+      font-family: "Segoe UI Symbol",PMingLiU,SimSun,arial,sans-serif;
+      color:#ececec;
+      font-weight: bold;
+      &:hover{
+        color:#666;
+        background-color:#fff;
+      }
+      &.current{
+        color:#666;
+        background-color:#fff;
+      }
+    }
+    span{
+      display: inline-block;
+      height: 30px; line-height: 30px;
+      float: left;
+      font-size: 14px;
+      color:#666;
+    }
+    input{
+      display: inline-block;
+      float: left;
+      width:28px; height: 28px; line-height: 28px;
+      text-align: center;
+      outline: none;
+      border: 1px solid #ececec;
+      .border-radius(4px);
+    }
+  }
+  a.financial-cal-page-go{
+    background-color: #53a0e3;
+    color:#fff;
+    text-transform:uppercase;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0){
+    .financial-cal-page-row input{
+      line-height:normal;
+    }
+  }
+}
+.financial-cal-label{
+  .clearfix();
+  padding-top: 12px;
+  a{
+    display: inline-block;
+    float: left;
+    height: 20px; line-height: 20px;
+    padding: 0px 10px;
+    color:#fff;
+    background-color: #c8dcf0;
+    margin-right: 5px;
+  }
+}

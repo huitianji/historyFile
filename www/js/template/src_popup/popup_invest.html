@@ -1,0 +1,59 @@
+<div class="version-popup-envelope">
+    <!--<1>利率、期限、还款方式-->
+    {{include "./popup_bidBaseInfo"}}
+    <!--<1>利率、期限、还款方式end-->
+    
+    <!-- 温馨提示： 由于余额不足，已为您调整投资金额，立刻充值；或调整限额 -->    
+    {{if mycalculate.reminder}}
+        {{include "./show_warmReminder"}}
+    {{/if}}
+    <!--温馨提示end-->
+    <div class="version-poput-amount">投资金额<span>{{fmtMoney(mycalculate.investMoney,2)}}元</span></div>
+    <!--<2>-->
+    <div class="version-popup-list">
+        <!--使用红包con-->
+        <div class="version-popup-start" data-popup-type="hongbao" style="z-index:2;">
+            {{include "./show_Hongbao"}}
+        </div>
+        {{if mycalculate.showInterest}}
+            <!--使用加息券con-->
+            <div class="version-popup-start" data-popup-type="jiaxi" style="z-index:1;">
+                {{include "./show_jiaxi"}}
+            </div>
+        {{/if}}
+        <!--使用红包con-end-->
+        <!--使用余额-->
+        <div class="version-popup-balance">
+            <i class="version-popup-use-i">使用余额</i>
+            <span class="version-popup-momey"><strong id="v_usedMoney">{{fmtMoney(mycalculate.usedAmount,2)}}</strong><em>元</em>
+            </span>
+        </div>
+        <!--使用余额end-->
+        <!--复选框-->
+        <div class="version-popup-checkbox">
+            {{if baseInfo.url != 6}}       <!-- 非定期宝业务才需要扫尾 -->
+                <!--若标的剩余金额不足，则自动投满-->
+                <span>
+                    <em><input type="checkbox" id="auto_1" {{mycalculate.auto_disabled}} {{mycalculate.auto_checked}}></em>
+                    <label for="auto_1">{{codes.local_tooltip.inv_layer_cb_tail}}</label>
+                    <strong class="version-popup-checkbox-tip">
+                        <a href="javascrpt:;" data-text="{{codes.local_tooltip.inv_layer_tail}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                    </strong>
+                </span>
+            {{/if}}
+            <span><em><input type="checkbox" id="v_chk_promiss" checked="checked"></em><label for="v_chk_promiss">{{codes.local_tooltip.inv_layer_cb_agree}}</label>
+                {{if baseInfo.url == 6}}       <!-- 定期宝 -->
+                    <a href="https://www.souyidai.com/agreement/sample/dqb/" target="_blank">《定期宝服务协议》</a>
+                {{else}}
+                    <a href="https://www.souyidai.com/agreement/sample/{{baseInfo.bid}}" target="_blank">《借款协议》</a>
+                    {{if mycalculate.isMortgage}}
+                        <!-- <a href="http://events.souyidai.com/info/727.htm" target="_blank">《投资人授权投资人代表说明》</a> -->
+                    {{/if}} 
+                {{/if}}
+                
+            </span>
+        </div>
+        <!--复选框end-->
+    </div>
+    <!--<2>end-->
+</div>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>财付通-充值成功/失败</title>
+    <link rel="stylesheet" type="text/css" href="https://static.souyidai.com/www/css/main.css">
+    <script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+</head>
+<body class="light-page-bg">
+<script type="text/javascript">
+    var currentUrl = document.URL;
+</script>
+<div class="main-offsetHeight">
+    <!--头部start-->
+    <div class="main">
+        <div class="borrow-page-top page-top33">
+            <div class="borrow-top-right">
+                <a href="https://help.souyidai.com/help/guide/">新手指引</a><a href="https://help.souyidai.com/help/">帮助中心</a><a href="javascript:void(0);" class="ico-borrow ico-phone"></a><span>4000-168-866</span>
+            </div>
+            <div class="borrow-top-left">
+                <div id="login_before" style="display: none;"> 您好，欢迎来到搜易贷！<a href="#" onclick="javascript:window.location.href='https://passport.souyidai.com/?backurl='+currentUrl;">[登录]</a><a href="https://passport.souyidai.com/regist">[免费注册]</a></div>
+            <!--登录前end-->
+            <!--登录后-->
+            <div class="login-after" id="login_after">
+            </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <span class="borrow-logo"><img src="https://static.souyidai.com/www/images/new-logo.png"></span>
+        </div>
+    </div>
+    <!--头部end-->
+    <!--内容部分-->
+    <div class="main">
+        <div class="report-errors">
+            <!--
+                充值失败-》false
+                例：
+                <div class="choi-tenpay-box false">
+            -->
+            <!--充值成功-->
+            <div class="choi-tenpay-box">
+                <div class="choi-tenpay-infor">
+                    <div class="choi-tenpay-bank"></div>
+                    <span class="choi-tenpay-status">
+                        <em class="version-bigico">&nbsp;</em>
+                        <span>充值成功！</span>
+                    </span>
+                    <span class="choi-tenpay-money">充值金额<strong>10,000.00</strong>元</span>
+                    <span class="choi-tenpay-false-reason">&nbsp;</span>
+                </div>
+                <div class="choi-tenpay-button">
+                    <a href="####">回到我的账户</a><a href="####">查看投资项目</a>
+                </div>
+            </div>
+            <!--充值成功end-->
+            <!--充值失败-->
+            <div class="choi-tenpay-box false">
+                <div class="choi-tenpay-infor">
+                    <div class="choi-tenpay-bank"></div>
+                    <span class="choi-tenpay-status ">
+                        <em class="version-bigico">&nbsp;</em>
+                        <span>充值失败！</span>
+                    </span>
+                    <span class="choi-tenpay-money">充值金额<strong>10,000.00</strong>元</span>
+                    <span class="choi-tenpay-false-reason">失败原因 XXXXXXXXXXXXXXXXXXXX</span>
+                </div>
+                <div class="choi-tenpay-button">
+                    <a href="####">重新充值</a><a href="####">查看我的帐户</a>
+                </div>
+            </div>
+            <!--充值失败end-->
+        </div>
+        <p class="busy-bg"></p>
+    </div>
+    <!--内容部分end-->
+</div>
+<!--footer-->
+<div class="footer light-page-footer">
+    <p class="main">版权所有 &copy; 2014 搜易贷（搜狐集团（NASDAQ：SOHU）旗下公司）All Rights Reserved 京ICP备14032951号</p>
+</div>
+<!--footer-end-->
+<!--页脚end-->
+<script language="javascript" src="https://static.souyidai.com/www/js/jquery1.10.2.min.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/validator_login.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/jquery.base64.js"></script>
+<script language="javascript" src="https://static.souyidai.com/www/js/jquery.cookie.js"></script>
+<SCRIPT language="JavaScript" src="https://static.souyidai.com/pv/spv20140822.js"></SCRIPT>
+<script language="javascript" src="https://static.souyidai.com/www/js/main.js"></script>
+<script type="text/javascript">
+    function login(){
+        window.location.href="https://passport.souyidai.com/?backurl="+currentUrl;
+    }
+    $().ready(function(){
+        var url=document.URL;
+        var login_name='';
+        if($.cookie("syd_name")!=null){
+            login_name = $.base64.atob($.cookie("syd_name"));
+        }
+        if(login_name.length>0){
+            $("#login_before").hide();
+            $("#login_after").show();
+            $("#login_after").html("您好，<a href='https://www.souyidai.com/myaccount/capital'>"+login_name+"</a><a href='https://passport.souyidai.com/logout'>【退出】</a>");
+            $("#login_before_t").hide();
+        }else{
+            $("#login_before").show();
+            $("#login_after").hide();
+            $("#login_before_t").show();
+        }
+	 });
+</script>
+</body>
+</html>

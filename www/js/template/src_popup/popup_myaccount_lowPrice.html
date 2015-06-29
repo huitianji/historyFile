@@ -1,0 +1,92 @@
+<!-- 降价转让内容层 -->
+<div class="version-popup-general">
+    <div class="version-popup-gen-item">
+        <span class="version-popup-gen-name">转让本金
+        {{if codes.local_tooltip.transfer_principal}}
+            <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_principal}}" class="version-ico version-tooltip-css tooltipcol"></a>
+        {{/if}}
+        </span>
+        <span class="version-popup-gen-money"><strong>{{fmtMoney(serverObj.data.principal,2)}}</strong>元</span>
+    </div>
+    <div class="version-popup-gen-item">
+        <span class="version-popup-gen-name">打折比例
+        {{if codes.local_tooltip.inv_layer_percent}}
+            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_percent}}" class="version-ico version-tooltip-css tooltipcol"></a>
+        {{/if}}
+        </span>
+        <div class="version-popup-gen-box">
+            <!--
+            disabled  ->禁用状态
+            <span class="version-popup-rate disabled"><i class="ver-ico-url an"></i>99.9%</span>
+
+            an->展开状态
+            -->
+            <span class="version-popup-rate"><i class="ver-ico-url"></i><span>{{serverObj.data.discountRate/100}}%</span></span>
+            {{if serverObj.data.actualYearRate >= codes.globalRules.tran_raise_rate_limit}}
+                <div class="version-popup-odiv">
+                    <span class="version-popup-html"><i>收益损失</i>           
+                        {{if codes.local_tooltip.inv_layer_discount}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_discount}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                        <strong>{{fmtMoney(mycalculate.changeMoney,2)}}元</strong><i>，受让人利率</i>
+                        {{if codes.local_tooltip.inv_layer_interest}}
+                            <a href="javascript:;" data-text="{{codes.local_tooltip.inv_layer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+                        {{/if}}
+                        <strong>{{serverObj.data.actualYearRate/100}}%</strong></span>
+                    <span class="ar_up"></span>
+                    <span class="ar_up_in"></span>
+                </div>
+            {{else}}
+                <!-- 受让人利率低于固定利率 错误提示 -->
+                <div class="version-popup-error-message">
+                    <div class="version-popup-odiv-message">
+                        <div class="version-popup-odiv-message-con">
+                            <span class="version-popup-html-msg">
+                                <em class="certifi-img"></em>
+                                <i>收益损失</i>
+                                <strong>{{fmtMoney(mycalculate.changeMoney,2)}}元</strong><i>，受让人利率</i>
+                                <strong>{{serverObj.data.actualYearRate/100}}%</strong>
+                            </span>
+                            <span class="version-popup-compare">
+                                {{replace(codes.local_tooltip.tran_raise_rate_limit,/\{0\}/g,(codes.globalRules.tran_raise_rate_limit/100)+'%')}}
+                            </span>
+                        </div>
+                        <span class="ar_up"></span>
+                        <span class="ar_up_in"></span>
+                    </div>
+                </div>
+                <!-- 受让人利率低于固定利率 错误提示end -->       
+            {{/if}}
+            
+            <!--利率列表-->
+            <div class="version-popup-rate-list" style="display: none;">
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.9)}}class="current"{{/if}}>99.9%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.8)}}class="current"{{/if}}>99.8%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.7)}}class="current"{{/if}}>99.7%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.6)}}class="current"{{/if}}>99.6%</a>
+
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.5)}}class="current"{{/if}}>99.5%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.4)}}class="current"{{/if}}>99.4%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.3)}}class="current"{{/if}}>99.3%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.2)}}class="current"{{/if}}>99.2%</a>
+
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99.1)}}class="current"{{/if}}>99.1%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 99)}}class="current"{{/if}}>99%</a>
+
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 98.5)}}class="current"{{/if}}>98.5%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 98)}}class="current"{{/if}}>98%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 97.5)}}class="current"{{/if}}>97.5%</a>
+                <a href="javascript:;" {{if (serverObj.data.discountRate/100 == 97)}}class="current"{{/if}}>97%</a>
+            </div>
+            <!--利率列表end-->
+        </div>
+    </div>
+    <div class="version-popup-gen-item">
+        <span class="version-popup-gen-name">转让结息
+            {{if codes.local_tooltip.transfer_interest}}
+                <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+            {{/if}}
+        </span>
+        <span class="version-popup-gen-money"><strong>{{fmtMoney(serverObj.data.interest,2)}}</strong>元</span>
+    </div>
+</div>

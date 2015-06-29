@@ -1,0 +1,9 @@
+<div class="version-popup-list-item">
+    <span class="version-popup-use-name">转让结息</span>
+    <span class="version-popup-variable">
+        <strong>{{fmtMoney(serverObj.data.bidTransfer.interest,2)}}</strong>元
+        {{if codes.local_tooltip.transfer_interest}}
+            <a href="javascript:;" data-text="{{codes.local_tooltip.transfer_interest}}" class="version-ico version-tooltip-css tooltipcol"></a>
+        {{/if}}
+    </span>
+</div>

@@ -1,0 +1,37 @@
+<div class="version-popup-use">
+    <i class="version-popup-use-i">使用红包</i>
+    <span class="version-popup-recive">
+        <!-- <i class="ver-ico-url an"></i>  an - 展开 -->
+        {{if mycalculate.notUseCoupon}}
+            <!-- 不可使用红包 -->
+            <strong>不可使用红包</strong>
+        {{else if serverObj.data.hasCoupon == 1}}
+            <!-- 有红包 -->
+            <i class="ver-ico-url"></i>
+            <strong>自动匹配</strong>
+        {{else if serverObj.data.hasCoupon == 2}}
+            <!--无可用红包 -->
+            <i class="ver-ico-url"></i>
+            <strong style="#999">无可用红包</strong>
+        {{else if serverObj.data.hasCoupon == 0}}
+            <!--无红包 -->
+            <strong style="#999">无红包</strong>
+        {{/if}}
+    </span>
+    <span class="version-popup-use-tip">
+        <a href="javascrpt:;" data-text="{{codes.local_tooltip.inv_layer_coupon}}" class="version-ico version-tooltip-css tooltipcol"></a>
+    </span>
+</div>
+{{if serverObj.data.hasCoupon == 1 || serverObj.data.hasCoupon == 2}}
+    <div class="version-popup-an" style="display:none;">
+        <div class="version-popup-th">
+            <!-- icon-down  降序 ico-up  升序  -->
+            <span class="version-popup-updown version-popup-expiredTime"><a href="javascript:;">过期日期<em class="certifi-img "></em></a></span>
+            <span class="version-popup-updown version-popup-minBidAmount current"><a href="javascript:;">起投金额<em class="certifi-img icon-up"></em></a></span>
+            <span class="version-popup-updown version-popup-amount"><a href="javascript:;">红包面额<em class="certifi-img "></em></a></span>
+        </div>
+        <div class="version-popup-ul" data-popup-type="hongbao">
+            {{include './show_Hongbao_detail'}}
+        </div>
+    </div>
+{{/if}}
